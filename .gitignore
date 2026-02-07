@@ -1,0 +1,7 @@
+data/01-raw/*
+logs/*.log
+__pycache__/
+.venv_ds/
+.DS_Store
+
+
