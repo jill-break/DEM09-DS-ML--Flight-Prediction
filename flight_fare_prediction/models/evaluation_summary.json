@@ -1,0 +1,53 @@
+{
+    "total_models_evaluated": 5,
+    "metrics_compared": [
+        "r2_score",
+        "rmse",
+        "mae",
+        "mape"
+    ],
+    "best_model": {
+        "r2_score": {
+            "model_name": "Random Forest",
+            "value": 0.9931
+        },
+        "rmse": {
+            "model_name": "Random Forest",
+            "value": 0.3361
+        },
+        "mae": {
+            "model_name": "Random Forest",
+            "value": 0.201
+        },
+        "mape": {
+            "model_name": "Random Forest",
+            "value": 4.8537
+        }
+    },
+    "metric_statistics": {
+        "r2_score": {
+            "mean": -1037.43418,
+            "std": 2303.0831283929456,
+            "min": -5157.2344,
+            "max": 0.9931
+        },
+        "rmse": {
+            "mean": 63.54144,
+            "std": 127.287607840681,
+            "min": 0.3361,
+            "max": 290.5866
+        },
+        "mae": {
+            "mean": 17.14006,
+            "std": 32.89667163054646,
+            "min": 0.201,
+            "max": 75.756
+        },
+        "mape": {
+            "mean": 1108.91312,
+            "std": 2168.134884832638,
+            "min": 4.8537,
+            "max": 4974.066
+        }
+    }
+}
