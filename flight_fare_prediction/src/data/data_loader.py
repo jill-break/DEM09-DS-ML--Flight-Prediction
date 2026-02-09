@@ -10,6 +10,7 @@ the Single Responsibility Principle and makes the pipeline modular.
 """
 
 import pandas as pd
+from pandas.errors import EmptyDataError
 from pathlib import Path
 from typing import Optional
 from src.utils.logger import get_logger
@@ -65,6 +66,11 @@ class DataLoader:
             self.data = pd.read_csv(self.filepath)
             logger.info(f"Successfully loaded data from {self.filepath}")
             self._log_data_info()
+            return self.data
+        
+        except EmptyDataError:
+            logger.warning(f"Empty CSV file detected: {self.filepath}")
+            self.data = pd.DataFrame()
             return self.data
         
         except pd.errors.ParserError as e:

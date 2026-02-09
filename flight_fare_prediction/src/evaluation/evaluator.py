@@ -244,7 +244,7 @@ class ModelEvaluator:
         for metric in self.results[model1].keys():
             val1 = self.results[model1][metric]
             val2 = self.results[model2][metric]
-            difference = val1 - val2
+            difference = round(val1 - val2, 4)
             pct_change = (difference / val2 * 100) if val2 != 0 else 0
             
             comparison[metric] = {

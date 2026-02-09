@@ -113,7 +113,13 @@ class DataPreprocessor:
                 missing_count = self.data[col].isnull().sum()
                 self.data[col].fillna(fill_value, inplace=True)
                 logger.info(f"Filled {missing_count} missing values in '{col}' with {strategy['categorical']}: {fill_value}")
-        
+        before = len(self.data)
+        self.data = self.data.drop_duplicates()
+        after = len(self.data)
+
+        if before != after:
+            logger.info(f"Removed {before - after} duplicate rows after imputation")
+
         return self
     
     def convert_date_columns(self, date_columns: List[str]) -> 'DataPreprocessor':
@@ -154,45 +160,103 @@ class DataPreprocessor:
     
     def fix_invalid_values(self, target_column: str, min_value: float = 0) -> 'DataPreprocessor':
         """
-        Remove or fix invalid values in target column.
-        
+        Remove invalid values in target column.
+
         Args:
             target_column: Column to validate
             min_value: Minimum valid value (default: 0)
-        
+
         Returns:
             Self for method chaining
-        
-        Design Decision: Domain-specific validation (e.g., non-negative fares)
-        improves data quality and model reliability.
+
+        Design Decision:
+            Domain-specific validation (e.g., non-negative fares)
+            improves data quality and model reliability.
         """
+    #     if target_column not in self.data.columns:
+    #         logger.warning(f"Column '{target_column}' not found, skipping validation")
+    #         return self
+
+    #     initial_rows = len(self.data)
+
+    #     invalid_mask = self.data[target_column] < min_value
+    #     invalid_count = invalid_mask.sum()
+
+    #     if invalid_count > 0:
+    #         self.data = self.data[~invalid_mask]
+    #         logger.info(
+    #             f"Removed {invalid_count} rows with {target_column} < {min_value}"
+    #         )
+
+    #     final_rows = len(self.data)
+    #     logger.info(
+    #         f"Data validation complete: {initial_rows - final_rows} rows removed"
+    #     )
+
+    #     return self
+    
+    # def remove_outliers(
+    #     self,
+    #     column: str,
+    #     quantile: float = 0.999
+    # ) -> 'DataPreprocessor':
+    #     """
+    #     Remove extreme outliers using quantile-based filtering.
+    #     """
+    #     if column not in self.data.columns:
+    #         logger.warning(f"Column '{column}' not found, skipping outlier removal")
+    #         return self
+
+    #     threshold = self.data[column].quantile(quantile)
+    #     initial_rows = len(self.data)
+
+    #     self.data = self.data[self.data[column] <= threshold]
+
+    #     removed = initial_rows - len(self.data)
+    #     if removed > 0:
+    #         logger.info(
+    #             f"Removed {removed} outliers from '{column}' (> {threshold:.2f})"
+    #         )
+
+    #     return self
+
         if target_column not in self.data.columns:
             logger.warning(f"Column '{target_column}' not found, skipping validation")
             return self
-        
+
         initial_rows = len(self.data)
-        
-        # Remove negative values
+
+        # Remove invalid values
         invalid_mask = self.data[target_column] < min_value
-        invalid_count = invalid_mask.sum()
-        
-        if invalid_count > 0:
+        if invalid_mask.any():
             self.data = self.data[~invalid_mask]
-            logger.info(f"Removed {invalid_count} rows with {target_column} < {min_value}")
-        
-        # Remove extreme outliers (values beyond 99.9th percentile)
-        upper_threshold = self.data[target_column].quantile(0.999)
-        outlier_mask = self.data[target_column] > upper_threshold
-        outlier_count = outlier_mask.sum()
-        
-        if outlier_count > 0:
-            self.data = self.data[~outlier_mask]
-            logger.info(f"Removed {outlier_count} extreme outliers from '{target_column}' (>{upper_threshold:.2f})")
-        
+            logger.info(
+                f"Removed {invalid_mask.sum()} rows with {target_column} < {min_value}"
+            )
+
+        # Remove extreme outliers using IQR
+        q1 = self.data[target_column].quantile(0.25)
+        q3 = self.data[target_column].quantile(0.75)
+        iqr = q3 - q1
+
+        if iqr > 0:
+            upper_bound = q3 + 3 * iqr  # conservative threshold
+            outlier_mask = self.data[target_column] > upper_bound
+
+            if outlier_mask.any():
+                self.data = self.data[~outlier_mask]
+                logger.info(
+                    f"Removed {outlier_mask.sum()} extreme outliers from '{target_column}'"
+                )
+
         final_rows = len(self.data)
-        logger.info(f"Data validation complete: {initial_rows - final_rows} total rows removed")
-        
+        logger.info(
+            f"Data validation complete: {initial_rows - final_rows} rows removed"
+        )
+
         return self
+
+
     
     def standardize_categorical_values(self, column: str) -> 'DataPreprocessor':
         """
