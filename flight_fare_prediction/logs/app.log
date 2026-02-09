@@ -1,0 +1,329 @@
+2026-02-07 14:23:57,860 - __main__ - INFO - ================================================================================
+2026-02-07 14:23:57,861 - __main__ - INFO - FLIGHT FARE PREDICTION - ML PIPELINE STARTED
+2026-02-07 14:23:57,861 - __main__ - INFO - ================================================================================
+2026-02-07 14:23:57,861 - src.utils.helpers - INFO - Random seed set to 42 for reproducibility
+2026-02-07 14:23:57,861 - __main__ - INFO - 
+================================================================================
+2026-02-07 14:23:57,861 - __main__ - INFO - STEP 1: DATA LOADING
+2026-02-07 14:23:57,861 - __main__ - INFO - ================================================================================
+2026-02-07 14:23:57,863 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\data\raw\Flight_Price_Dataset_of_Bangladesh.csv
+2026-02-07 14:23:57,863 - src.utils.helpers - INFO - File validated: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\data\raw\Flight_Price_Dataset_of_Bangladesh.csv
+2026-02-07 14:23:58,260 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\data\raw\Flight_Price_Dataset_of_Bangladesh.csv
+2026-02-07 14:23:58,260 - src.data.data_loader - INFO - ============================================================
+2026-02-07 14:23:58,261 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-07 14:23:58,261 - src.data.data_loader - INFO - ============================================================
+2026-02-07 14:23:58,261 - src.data.data_loader - INFO - Shape: 57000 rows × 17 columns
+2026-02-07 14:23:58,407 - src.data.data_loader - INFO - Memory usage: 48.22 MB
+2026-02-07 14:23:58,408 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-07 14:23:58,410 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,413 - src.data.data_loader - INFO -   - Source: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,416 - src.data.data_loader - INFO -   - Source Name: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,419 - src.data.data_loader - INFO -   - Destination: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,422 - src.data.data_loader - INFO -   - Destination Name: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,426 - src.data.data_loader - INFO -   - Departure Date & Time: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,428 - src.data.data_loader - INFO -   - Arrival Date & Time: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,429 - src.data.data_loader - INFO -   - Duration (hrs): float64 | Missing: 0 (0.00%)
+2026-02-07 14:23:58,432 - src.data.data_loader - INFO -   - Stopovers: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,434 - src.data.data_loader - INFO -   - Aircraft Type: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,439 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,442 - src.data.data_loader - INFO -   - Booking Source: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,443 - src.data.data_loader - INFO -   - Base Fare (BDT): float64 | Missing: 0 (0.00%)
+2026-02-07 14:23:58,443 - src.data.data_loader - INFO -   - Tax & Surcharge (BDT): float64 | Missing: 0 (0.00%)
+2026-02-07 14:23:58,444 - src.data.data_loader - INFO -   - Total Fare (BDT): float64 | Missing: 0 (0.00%)
+2026-02-07 14:23:58,447 - src.data.data_loader - INFO -   - Seasonality: object | Missing: 0 (0.00%)
+2026-02-07 14:23:58,448 - src.data.data_loader - INFO -   - Days Before Departure: int64 | Missing: 0 (0.00%)
+2026-02-07 14:23:58,448 - src.data.data_loader - INFO - ============================================================
+2026-02-07 14:23:58,507 - src.data.data_loader - INFO - No missing values detected in dataset
+2026-02-07 14:23:58,508 - __main__ - INFO - 
+================================================================================
+2026-02-07 14:23:58,508 - __main__ - INFO - STEP 2: DATA PREPROCESSING
+2026-02-07 14:23:58,509 - __main__ - INFO - ================================================================================
+2026-02-07 14:23:58,514 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (57000, 17)
+2026-02-07 14:23:58,677 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-07 14:23:58,677 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-07 14:23:58,722 - src.data.preprocessor - INFO - Returning processed data with shape: (57000, 17)
+2026-02-07 14:23:58,722 - __main__ - INFO - Preprocessing complete. Final shape: (57000, 17)
+2026-02-07 14:23:58,722 - __main__ - INFO - 
+================================================================================
+2026-02-07 14:23:58,723 - __main__ - INFO - STEP 3: EXPLORATORY DATA ANALYSIS
+2026-02-07 14:23:58,723 - __main__ - INFO - ================================================================================
+2026-02-07 14:23:58,729 - src.eda.analyzer - INFO - EDAAnalyzer initialized with 57000 rows and 17 columns
+2026-02-07 14:23:58,730 - src.visualization.plotter - INFO - Plotter initialized with output directory: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures
+2026-02-07 14:23:59,120 - src.eda.analyzer - INFO - Generated descriptive statistics for all features
+2026-02-07 14:23:59,143 - __main__ - INFO - 
+Descriptive Statistics:
+                         count  unique                                            top  ... missing missing_pct    dtype
+Airline                  57000      24                             US-Bangla Airlines  ...       0         0.0   object
+Source                   57000       8                                            CGP  ...       0         0.0   object
+Source Name              57000       8  Shah Amanat International Airport, Chittagong  ...       0         0.0   object
+Destination              57000      20                                            JED  ...       0         0.0   object
+Destination Name         57000      20   King Abdulaziz International Airport, Jeddah  ...       0         0.0   object
+Departure Date & Time    57000   54126                            2025-11-15 15:33:00  ...       0         0.0   object
+Arrival Date & Time      57000   56944                            2025-12-10 21:54:33  ...       0         0.0   object
+Duration (hrs)         57000.0   53135                                            NaN  ...       0         0.0  float64
+Stopovers                57000       3                                         Direct  ...       0         0.0   object
+Aircraft Type            57000       5                                    Airbus A320  ...       0         0.0   object
+
+[10 rows x 14 columns]
+2026-02-07 14:23:59,145 - __main__ - INFO - Using 'Duration (hrs)' as target variable for demonstration
+2026-02-07 14:23:59,158 - src.eda.analyzer - INFO - Target 'Duration (hrs)' distribution:
+2026-02-07 14:23:59,159 - src.eda.analyzer - INFO -   Mean: 3.99, Median: 2.64
+2026-02-07 14:23:59,159 - src.eda.analyzer - INFO -   Std: 4.09, IQR: 4.49
+2026-02-07 14:23:59,159 - src.eda.analyzer - INFO -   Skewness: 1.47, Kurtosis: 1.13
+2026-02-07 14:24:02,063 - src.visualization.plotter - INFO - Saved distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures\target_distribution.png
+2026-02-07 14:24:02,107 - src.eda.analyzer - INFO - Top 10 categories for 'Airline':
+2026-02-07 14:24:02,108 - src.eda.analyzer - INFO -   US-Bangla Airlines: 4496 (7.89%)
+2026-02-07 14:24:02,108 - src.eda.analyzer - INFO -   Lufthansa: 2368 (4.15%)
+2026-02-07 14:24:02,109 - src.eda.analyzer - INFO -   Vistara: 2368 (4.15%)
+2026-02-07 14:24:02,109 - src.eda.analyzer - INFO -   FlyDubai: 2346 (4.12%)
+2026-02-07 14:24:02,109 - src.eda.analyzer - INFO -   Biman Bangladesh Airlines: 2344 (4.11%)
+2026-02-07 14:24:03,122 - src.visualization.plotter - INFO - Saved categorical distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures\Airline_distribution.png
+2026-02-07 14:24:03,171 - src.eda.analyzer - INFO - Top 10 categories for 'Source':
+2026-02-07 14:24:03,172 - src.eda.analyzer - INFO -   CGP: 7241 (12.7%)
+2026-02-07 14:24:03,173 - src.eda.analyzer - INFO -   ZYL: 7179 (12.59%)
+2026-02-07 14:24:03,173 - src.eda.analyzer - INFO -   JSR: 7149 (12.54%)
+2026-02-07 14:24:03,175 - src.eda.analyzer - INFO -   DAC: 7146 (12.54%)
+2026-02-07 14:24:03,175 - src.eda.analyzer - INFO -   BZL: 7102 (12.46%)
+2026-02-07 14:24:03,831 - src.visualization.plotter - INFO - Saved categorical distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures\Source_distribution.png
+2026-02-07 14:24:03,855 - src.eda.analyzer - INFO - Top 10 categories for 'Source Name':
+2026-02-07 14:24:03,856 - src.eda.analyzer - INFO -   Shah Amanat International Airport, Chittagong: 7241 (12.7%)
+2026-02-07 14:24:03,856 - src.eda.analyzer - INFO -   Osmani International Airport, Sylhet: 7179 (12.59%)
+2026-02-07 14:24:03,856 - src.eda.analyzer - INFO -   Jessore Airport: 7149 (12.54%)
+2026-02-07 14:24:03,857 - src.eda.analyzer - INFO -   Hazrat Shahjalal International Airport, Dhaka: 7146 (12.54%)
+2026-02-07 14:24:03,857 - src.eda.analyzer - INFO -   Barisal Airport: 7102 (12.46%)
+2026-02-07 14:24:04,500 - src.visualization.plotter - INFO - Saved categorical distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures\Source Name_distribution.png
+2026-02-07 14:24:04,532 - src.eda.analyzer - INFO - Computed pearson correlation matrix for 5 features
+2026-02-07 14:24:04,533 - src.eda.analyzer - INFO - Found 3 highly correlated feature pairs (|r| > 0.8):
+2026-02-07 14:24:04,534 - src.eda.analyzer - INFO -   Base Fare (BDT) <-> Tax & Surcharge (BDT): 0.978
+2026-02-07 14:24:04,534 - src.eda.analyzer - INFO -   Base Fare (BDT) <-> Total Fare (BDT): 0.998
+2026-02-07 14:24:04,534 - src.eda.analyzer - INFO -   Tax & Surcharge (BDT) <-> Total Fare (BDT): 0.982
+2026-02-07 14:24:05,373 - src.visualization.plotter - INFO - Saved correlation heatmap to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures\correlation_heatmap.png
+2026-02-07 14:24:05,397 - src.eda.analyzer - INFO - Generated 3 insights from EDA
+2026-02-07 14:24:05,398 - __main__ - INFO - 
+================================================================================
+2026-02-07 14:24:05,398 - __main__ - INFO - KEY INSIGHTS FROM EDA:
+2026-02-07 14:24:05,400 - __main__ - INFO - ================================================================================
+2026-02-07 14:24:05,401 - __main__ - INFO - 1. Target variable is highly skewed (1.47). Consider transformation.
+2026-02-07 14:24:05,401 - __main__ - INFO - 2. Target variable has high variance (CV=1.02)
+2026-02-07 14:24:05,401 - __main__ - INFO - 3. High multicollinearity detected between 3 feature pairs
+2026-02-07 14:24:05,402 - __main__ - INFO - 
+================================================================================
+2026-02-07 14:24:05,402 - __main__ - INFO - STEP 4: FEATURE ENGINEERING & DATA SPLITTING
+2026-02-07 14:24:05,402 - __main__ - INFO - ================================================================================
+2026-02-07 14:24:05,403 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-07 14:24:05,409 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (57000, 17)
+2026-02-07 14:24:05,441 - src.data.preprocessor - INFO - Data split completed:
+2026-02-07 14:24:05,441 - src.data.preprocessor - INFO -   Training set: 45600 samples (80%)
+2026-02-07 14:24:05,442 - src.data.preprocessor - INFO -   Test set: 11400 samples (20%)
+2026-02-07 14:24:05,442 - src.data.preprocessor - INFO -   Features: 16
+2026-02-07 14:24:05,485 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-07 14:24:05,507 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-07 14:24:05,538 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-07 14:24:05,563 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-07 14:24:05,585 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-07 14:24:05,723 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-07 14:24:05,915 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-07 14:24:05,930 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-07 14:24:05,944 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-07 14:24:05,962 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-07 14:24:05,977 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-07 14:24:05,993 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-07 14:24:07,653 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-07 14:24:09,322 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-07 14:24:10,713 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-07 14:24:12,340 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-07 14:24:13,690 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-07 14:25:45,329 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-07 14:26:21,740 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-07 14:26:22,915 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-07 14:26:24,189 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-07 14:26:25,448 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-07 14:26:26,822 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-07 14:26:28,251 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-07 14:26:28,270 - src.features.feature_engineer - INFO - Scaled 'Airline' using standard scaling
+2026-02-07 14:26:28,283 - src.features.feature_engineer - INFO - Scaled 'Source' using standard scaling
+2026-02-07 14:26:28,296 - src.features.feature_engineer - INFO - Scaled 'Source Name' using standard scaling
+2026-02-07 14:26:28,305 - src.features.feature_engineer - INFO - Scaled 'Destination' using standard scaling
+2026-02-07 14:26:28,315 - src.features.feature_engineer - INFO - Scaled 'Destination Name' using standard scaling
+2026-02-07 14:26:28,323 - src.features.feature_engineer - INFO - Scaled 'Departure Date & Time' using standard scaling
+2026-02-07 14:26:28,334 - src.features.feature_engineer - INFO - Scaled 'Arrival Date & Time' using standard scaling
+2026-02-07 14:26:28,349 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-07 14:26:28,360 - src.features.feature_engineer - INFO - Scaled 'Aircraft Type' using standard scaling
+2026-02-07 14:26:28,374 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-07 14:26:28,394 - src.features.feature_engineer - INFO - Scaled 'Booking Source' using standard scaling
+2026-02-07 14:26:28,403 - src.features.feature_engineer - INFO - Scaled 'Base Fare (BDT)' using standard scaling
+2026-02-07 14:26:28,420 - src.features.feature_engineer - INFO - Scaled 'Tax & Surcharge (BDT)' using standard scaling
+2026-02-07 14:26:28,431 - src.features.feature_engineer - INFO - Scaled 'Total Fare (BDT)' using standard scaling
+2026-02-07 14:26:28,444 - src.features.feature_engineer - INFO - Scaled 'Seasonality' using standard scaling
+2026-02-07 14:26:28,453 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-07 14:26:28,463 - src.features.feature_engineer - INFO - Scaled 'Airline' using standard scaling
+2026-02-07 14:26:28,466 - src.features.feature_engineer - INFO - Scaled 'Source' using standard scaling
+2026-02-07 14:26:28,471 - src.features.feature_engineer - INFO - Scaled 'Source Name' using standard scaling
+2026-02-07 14:26:28,476 - src.features.feature_engineer - INFO - Scaled 'Destination' using standard scaling
+2026-02-07 14:26:28,482 - src.features.feature_engineer - INFO - Scaled 'Destination Name' using standard scaling
+2026-02-07 14:26:28,485 - src.features.feature_engineer - INFO - Scaled 'Departure Date & Time' using standard scaling
+2026-02-07 14:26:28,491 - src.features.feature_engineer - INFO - Scaled 'Arrival Date & Time' using standard scaling
+2026-02-07 14:26:28,497 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-07 14:26:28,501 - src.features.feature_engineer - INFO - Scaled 'Aircraft Type' using standard scaling
+2026-02-07 14:26:28,505 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-07 14:26:28,510 - src.features.feature_engineer - INFO - Scaled 'Booking Source' using standard scaling
+2026-02-07 14:26:28,513 - src.features.feature_engineer - INFO - Scaled 'Base Fare (BDT)' using standard scaling
+2026-02-07 14:26:28,516 - src.features.feature_engineer - INFO - Scaled 'Tax & Surcharge (BDT)' using standard scaling
+2026-02-07 14:26:28,520 - src.features.feature_engineer - INFO - Scaled 'Total Fare (BDT)' using standard scaling
+2026-02-07 14:26:28,526 - src.features.feature_engineer - INFO - Scaled 'Seasonality' using standard scaling
+2026-02-07 14:26:28,529 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-07 14:26:28,529 - src.features.feature_engineer - INFO - Total features: 16
+2026-02-07 14:26:28,530 - __main__ - INFO - 
+================================================================================
+2026-02-07 14:26:28,530 - __main__ - INFO - STEP 5: BASELINE MODEL TRAINING
+2026-02-07 14:26:28,530 - __main__ - INFO - ================================================================================
+2026-02-07 14:26:28,530 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-07 14:26:28,531 - src.models.trainer - INFO - Training baseline models...
+2026-02-07 14:26:28,531 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-07 14:26:28,577 - src.models.trainer - INFO - Linear Regression - Train R²: 0.7366, RMSE: 2.11, MAE: 1.56
+2026-02-07 14:26:28,578 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-07 14:26:28,609 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.6820, RMSE: 2.32, MAE: 1.65
+2026-02-07 14:26:28,610 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-07 14:26:28,663 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.4429, RMSE: 3.06, MAE: 2.22
+2026-02-07 14:26:28,664 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-07 14:26:29,929 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9941, RMSE: 0.32, MAE: 0.19
+2026-02-07 14:26:29,930 - src.models.trainer - INFO - Training Random Forest...
+2026-02-07 14:27:25,831 - src.models.trainer - INFO - Random Forest - Train R²: 0.9990, RMSE: 0.13, MAE: 0.08
+2026-02-07 14:27:25,832 - src.models.trainer - INFO - Baseline model training completed
+2026-02-07 14:27:25,832 - __main__ - INFO - 
+================================================================================
+2026-02-07 14:27:25,832 - __main__ - INFO - STEP 6: MODEL EVALUATION
+2026-02-07 14:27:25,832 - __main__ - INFO - ================================================================================
+2026-02-07 14:27:25,832 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-07 14:27:25,833 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-07 14:27:25,843 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-07 14:27:25,843 - src.models.trainer - INFO -   R² Score: -5157.2344
+2026-02-07 14:27:25,844 - src.models.trainer - INFO -   RMSE: 290.59
+2026-02-07 14:27:25,844 - src.models.trainer - INFO -   MAE: 75.76
+2026-02-07 14:27:25,844 - src.models.trainer - INFO -   MAPE: 4974.07%
+2026-02-07 14:27:25,846 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=-5157.234397294357
+2026-02-07 14:27:28,170 - src.visualization.plotter - INFO - Saved actual vs predicted plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures\linear_regression_predictions.png
+2026-02-07 14:27:29,282 - src.visualization.plotter - INFO - Saved residual plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures\linear_regression_residuals.png
+2026-02-07 14:27:29,313 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-07 14:27:29,325 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-07 14:27:29,326 - src.models.trainer - INFO -   R² Score: -32.3598
+2026-02-07 14:27:29,329 - src.models.trainer - INFO -   RMSE: 23.37
+2026-02-07 14:27:29,329 - src.models.trainer - INFO -   MAE: 7.34
+2026-02-07 14:27:29,330 - src.models.trainer - INFO -   MAPE: 443.42%
+2026-02-07 14:27:29,330 - src.evaluation.evaluator - INFO - Added results for Ridge (alpha=1.0): R²=-32.359753772525
+2026-02-07 14:27:29,331 - src.models.trainer - INFO - Evaluating Lasso (alpha=1.0) on test set...
+2026-02-07 14:27:29,342 - src.models.trainer - INFO - Lasso (alpha=1.0) Test Metrics:
+2026-02-07 14:27:29,342 - src.models.trainer - INFO -   R² Score: 0.4393
+2026-02-07 14:27:29,343 - src.models.trainer - INFO -   RMSE: 3.03
+2026-02-07 14:27:29,344 - src.models.trainer - INFO -   MAE: 2.19
+2026-02-07 14:27:29,345 - src.models.trainer - INFO -   MAPE: 116.93%
+2026-02-07 14:27:29,345 - src.evaluation.evaluator - INFO - Added results for Lasso (alpha=1.0): R²=0.43931476452164964
+2026-02-07 14:27:29,346 - src.models.trainer - INFO - Evaluating Decision Tree on test set...
+2026-02-07 14:27:29,358 - src.models.trainer - INFO - Decision Tree Test Metrics:
+2026-02-07 14:27:29,358 - src.models.trainer - INFO -   R² Score: 0.9909
+2026-02-07 14:27:29,358 - src.models.trainer - INFO -   RMSE: 0.39
+2026-02-07 14:27:29,359 - src.models.trainer - INFO -   MAE: 0.22
+2026-02-07 14:27:29,359 - src.models.trainer - INFO -   MAPE: 5.30%
+2026-02-07 14:27:29,360 - src.evaluation.evaluator - INFO - Added results for Decision Tree: R²=0.9908956909304089
+2026-02-07 14:27:29,360 - src.models.trainer - INFO - Evaluating Random Forest on test set...
+2026-02-07 14:27:29,469 - src.models.trainer - INFO - Random Forest Test Metrics:
+2026-02-07 14:27:29,469 - src.models.trainer - INFO -   R² Score: 0.9931
+2026-02-07 14:27:29,470 - src.models.trainer - INFO -   RMSE: 0.34
+2026-02-07 14:27:29,470 - src.models.trainer - INFO -   MAE: 0.20
+2026-02-07 14:27:29,470 - src.models.trainer - INFO -   MAPE: 4.85%
+2026-02-07 14:27:29,470 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.9930992505474494
+2026-02-07 14:27:30,404 - src.visualization.plotter - INFO - Saved actual vs predicted plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures\random_forest_predictions.png
+2026-02-07 14:27:31,550 - src.visualization.plotter - INFO - Saved residual plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures\random_forest_residuals.png
+2026-02-07 14:27:31,571 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-07 14:27:31,573 - src.evaluation.evaluator - INFO - 
+                    r2_score      rmse      mae       mape
+Random Forest         0.9931    0.3361   0.2010     4.8537
+Decision Tree         0.9909    0.3861   0.2204     5.2959
+Lasso (alpha=1.0)     0.4393    3.0296   2.1857   116.9316
+Ridge (alpha=1.0)   -32.3598   23.3688   7.3372   443.4184
+Linear Regression -5157.2344  290.5866  75.7560  4974.0660
+2026-02-07 14:27:31,574 - src.evaluation.evaluator - INFO - 
+======================================================================
+2026-02-07 14:27:31,575 - src.evaluation.evaluator - INFO - MODEL RANKING BY R2_SCORE
+2026-02-07 14:27:31,575 - src.evaluation.evaluator - INFO - ======================================================================
+2026-02-07 14:27:31,575 - src.evaluation.evaluator - INFO - 1. Random Forest                  | r2_score: 0.9931
+2026-02-07 14:27:31,576 - src.evaluation.evaluator - INFO - 2. Decision Tree                  | r2_score: 0.9909
+2026-02-07 14:27:31,576 - src.evaluation.evaluator - INFO - 3. Lasso (alpha=1.0)              | r2_score: 0.4393
+2026-02-07 14:27:31,576 - src.evaluation.evaluator - INFO - 4. Ridge (alpha=1.0)              | r2_score: -32.3598
+2026-02-07 14:27:31,576 - src.evaluation.evaluator - INFO - 5. Linear Regression              | r2_score: -5157.2344
+2026-02-07 14:27:31,577 - src.evaluation.evaluator - INFO - ======================================================================
+
+2026-02-07 14:27:31,577 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.9931)
+2026-02-07 14:27:31,578 - __main__ - INFO - 
+Best Model: Random Forest with R² = 0.9931
+2026-02-07 14:27:31,578 - __main__ - INFO - 
+================================================================================
+2026-02-07 14:27:31,578 - __main__ - INFO - STEP 7: HYPERPARAMETER TUNING
+2026-02-07 14:27:31,578 - __main__ - INFO - ================================================================================
+2026-02-07 14:27:31,579 - __main__ - INFO - Tuning Random Forest hyperparameters...
+2026-02-07 14:27:31,579 - src.models.trainer - INFO - Tuning hyperparameters for random_forest using grid search...
+2026-02-07 18:23:04,850 - src.models.trainer - INFO - Best parameters: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 200}
+2026-02-07 18:23:04,855 - src.models.trainer - INFO - Best CV RMSE: 0.33
+2026-02-07 18:23:04,858 - src.models.trainer - INFO - Evaluating Random Forest (Tuned) on test set...
+2026-02-07 18:23:05,081 - src.models.trainer - INFO - Random Forest (Tuned) Test Metrics:
+2026-02-07 18:23:05,082 - src.models.trainer - INFO -   R² Score: 0.9934
+2026-02-07 18:23:05,082 - src.models.trainer - INFO -   RMSE: 0.33
+2026-02-07 18:23:05,082 - src.models.trainer - INFO -   MAE: 0.20
+2026-02-07 18:23:05,083 - src.models.trainer - INFO -   MAPE: 4.96%
+2026-02-07 18:23:05,083 - src.evaluation.evaluator - INFO - Added results for Random Forest (Tuned): R²=0.9934074272982367
+2026-02-07 18:23:05,085 - __main__ - INFO - 
+================================================================================
+2026-02-07 18:23:05,085 - __main__ - INFO - STEP 8: FEATURE IMPORTANCE ANALYSIS
+2026-02-07 18:23:05,087 - __main__ - INFO - ================================================================================
+2026-02-07 18:23:05,503 - src.models.trainer - INFO - Extracted Feature Importance for 16 features
+2026-02-07 18:23:05,507 - src.models.trainer - INFO - Top 5 features: ['Stopovers', 'Destination', 'Aircraft Type', 'Destination Name', 'Source']
+2026-02-07 18:23:05,510 - __main__ - INFO - 
+Top 10 Most Important Features:
+2026-02-07 18:23:05,528 - __main__ - INFO -                   Feature  Importance
+7               Stopovers    0.559688
+3             Destination    0.254168
+8           Aircraft Type    0.106021
+4        Destination Name    0.071393
+1                  Source    0.001688
+15  Days Before Departure    0.001196
+2             Source Name    0.001069
+0                 Airline    0.000930
+6     Arrival Date & Time    0.000784
+5   Departure Date & Time    0.000779
+2026-02-07 18:23:09,441 - src.visualization.plotter - INFO - Saved feature importance plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures\feature_importance.png
+2026-02-07 18:23:09,481 - __main__ - INFO - 
+================================================================================
+2026-02-07 18:23:09,483 - __main__ - INFO - STEP 9: SAVING RESULTS
+2026-02-07 18:23:09,483 - __main__ - INFO - ================================================================================
+2026-02-07 18:23:10,425 - src.utils.helpers - INFO - Object successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\models\best_model.pkl
+2026-02-07 18:23:10,427 - src.models.trainer - INFO - Model saved successfully to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\models\best_model.pkl
+2026-02-07 18:23:10,441 - src.evaluation.evaluator - INFO - Saved comparison table to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\models\model_comparison.csv
+2026-02-07 18:23:10,447 - src.utils.helpers - INFO - JSON data successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\models\evaluation_results.json
+2026-02-07 18:23:10,448 - src.evaluation.evaluator - INFO - Saved detailed results to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\models\evaluation_results.json
+2026-02-07 18:23:10,448 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.9931)
+2026-02-07 18:23:10,450 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=0.3361)
+2026-02-07 18:23:10,453 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=0.2010)
+2026-02-07 18:23:10,455 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=4.8537)
+2026-02-07 18:23:10,462 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-07 18:23:10,466 - src.utils.helpers - INFO - JSON data successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\models\evaluation_summary.json
+2026-02-07 18:23:10,466 - src.evaluation.evaluator - INFO - Saved summary report to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\models\evaluation_summary.json
+2026-02-07 18:23:10,468 - __main__ - INFO - 
+================================================================================
+2026-02-07 18:23:10,469 - __main__ - INFO - PIPELINE EXECUTION COMPLETED SUCCESSFULLY
+2026-02-07 18:23:10,469 - __main__ - INFO - ================================================================================
+2026-02-07 18:23:10,470 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.9931)
+2026-02-07 18:23:10,470 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=0.3361)
+2026-02-07 18:23:10,472 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=0.2010)
+2026-02-07 18:23:10,474 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=4.8537)
+2026-02-07 18:23:10,478 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-07 18:23:10,480 - __main__ - INFO - 
+Total Models Evaluated: 5
+2026-02-07 18:23:10,480 - __main__ - INFO - Best Model: Random Forest
+2026-02-07 18:23:10,482 - __main__ - INFO - Best R² Score: 0.9931
+2026-02-07 18:23:10,483 - __main__ - INFO - 
+Output Files:
+2026-02-07 18:23:10,484 - __main__ - INFO -   - Best Model: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\models\best_model.pkl
+2026-02-07 18:23:10,484 - __main__ - INFO -   - Visualizations: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\reports\figures
+2026-02-07 18:23:10,484 - __main__ - INFO -   - Evaluation Results: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\models
+2026-02-07 18:23:10,484 - __main__ - INFO -   - Logs: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\flight_fare_prediction\logs\app.log
