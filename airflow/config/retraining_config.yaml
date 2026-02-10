@@ -1,0 +1,28 @@
+# Model Retraining Configuration
+
+## Data Quality Requirements
+model:
+  min_data_size: 1000
+  performance_improvement_threshold: 0.02  # 2% improvement required for deployment
+  backup_retention_days: 30
+
+## Email Notifications
+notifications:
+  email: colatlin@gmail.com
+  # To enable email, configure SMTP in docker-compose.yml:
+  # AIRFLOW__SMTP__SMTP_HOST: smtp.gmail.com
+  # AIRFLOW__SMTP__SMTP_USER: your-email@gmail.com
+  # AIRFLOW__SMTP__SMTP_PASSWORD: your-app-password
+  # AIRFLOW__SMTP__SMTP_PORT: 587
+  # AIRFLOW__SMTP__SMTP_MAIL_FROM: your-email@gmail.com
+
+## Training Schedule
+schedule:
+  # Cron format: "minute hour day-of-month month day-of-week"
+  retraining: "0 2 * * 0"  # Every Sunday at 2:00 AM
+  
+## Model Training Parameters
+training:
+  test_size: 0.2
+  random_state: 42
+  cross_validation_folds: 5

@@ -5,3 +5,16 @@ test_datetime_fix.py
 test_prediction.py
 inspect_model.py
 verify_model_features.py
+
+# Airflow
+airflow/logs/
+airflow/*.db
+airflow/*.pid
+models/backups/
+models/new_model.pkl
+models/training_metrics.json
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/

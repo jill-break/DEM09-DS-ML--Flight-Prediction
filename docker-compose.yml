@@ -1,0 +1,191 @@
+x-airflow-common: &airflow-common
+  build: .
+  environment: &airflow-common-env
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres_airflow/airflow
+    AIRFLOW__CORE__FERNET_KEY: '${AIRFLOW_FERNET_KEY}'
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
+    AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
+    AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: 10
+    PYTHONPATH: /opt/airflow
+    # Connection configurations (COMMENTED - not using external databases for model training)
+    # AIRFLOW_CONN_SPARK_DEFAULT: 'spark://local[*]'
+    # AIRFLOW_CONN_MYSQL_STAGING: 'mysql://mysql_user:mysql_pass@mysql:3306/mysql_db'
+    # AIRFLOW_CONN_POSTGRES_ANALYTICS: 'postgres://psql_user:psql_pass@postgres_analytics:5432/psql_db'
+    # AIRFLOW_CONN_FS_DEFAULT: '{"conn_type": "fs", "extra": {"path": "/opt/data"}}'
+  volumes:
+    - ./airflow/dags:/opt/airflow/dags
+    - ./airflow/logs:/opt/airflow/logs
+    - ./airflow/plugins:/opt/airflow/plugins
+    - ./data:/opt/data
+    - ./data:/opt/airflow/data
+    - ./src:/opt/airflow/src
+    - ./models:/opt/airflow/models
+    - ./requirements.txt:/opt/airflow/requirements.txt
+    - ./main.py:/opt/airflow/main.py
+  depends_on: &airflow-common-depends-on
+    postgres_airflow:
+      condition: service_healthy
+
+services:
+  # PostgreSQL for Airflow metadata
+  postgres_airflow:
+    image: postgres:13
+    container_name: model_retraining_postgres
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_airflow_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "airflow" ]
+      interval: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - flight_network
+
+  # Airflow Init - MUST come before webserver and scheduler
+  airflow-init:
+    <<: *airflow-common
+    entrypoint: /bin/bash
+    container_name: model_retraining_init
+    command:
+      - -c
+      - |
+        airflow db migrate
+        airflow users create \
+          --username admin \
+          --firstname Admin \
+          --lastname User \
+          --role Admin \
+          --email admin@flight.com \
+          --password admin 2>/dev/null || true
+        echo "Airflow initialized successfully"
+    environment:
+      <<: *airflow-common-env
+      _AIRFLOW_DB_MIGRATE: 'true'
+      _AIRFLOW_WWW_USER_CREATE: 'true'
+      _AIRFLOW_WWW_USER_USERNAME: 'admin'
+      _AIRFLOW_WWW_USER_PASSWORD: 'admin'
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+    networks:
+      - flight_network
+    restart: "no" # Don't restart - it should run once and exit
+
+  # Airflow Webserver
+  airflow-server:
+    <<: *airflow-common
+    command: webserver
+    container_name: model_retraining_server
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      # Spark volumes (COMMENTED - not using Spark)
+      # - ./spark:/opt/jobs
+      # - ./jars:/opt/jars
+      - ./data:/opt/data
+      - ./data:/opt/airflow/data
+      - ./src:/opt/airflow/src
+      - ./models:/opt/airflow/models
+      - ./requirements.txt:/opt/airflow/requirements.txt
+      - ./main.py:/opt/airflow/main.py
+    healthcheck:
+      test: [ "CMD", "curl", "--fail", "http://localhost:8080/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
+    depends_on:
+      postgres_airflow:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully # Wait for init to complete
+    networks:
+      - flight_network
+
+  # Airflow Scheduler
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+    container_name: model_retraining_scheduler
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./airflow/logs:/opt/airflow/logs
+      - ./airflow/plugins:/opt/airflow/plugins
+      # Spark volumes (COMMENTED - not using Spark)
+      # - ./spark:/opt/jobs
+      # - ./jars:/opt/jars
+      - ./data:/opt/data
+      - ./data:/opt/airflow/data
+      - ./src:/opt/airflow/src
+      - ./models:/opt/airflow/models
+      - ./requirements.txt:/opt/airflow/requirements.txt
+      - ./main.py:/opt/airflow/main.py
+    restart: unless-stopped
+    depends_on:
+      postgres_airflow:
+        condition: service_healthy
+      airflow-init:
+        condition: service_completed_successfully # Wait for init to complete
+    networks:
+      - flight_network
+  # MySQL for staging (COMMENTED - not needed for model retraining)
+  # mysql:
+  #   image: mysql:8.4
+  #   container_name: staging
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: root
+  #     MYSQL_DATABASE: mysql_db
+  #     MYSQL_USER: mysql_user
+  #     MYSQL_PASSWORD: mysql_pass
+  #   volumes:
+  #     - mysql_staging_data:/var/lib/mysql
+  #     - ./sql/init_staging.sql:/docker-entrypoint-initdb.d/init.sql
+  #   healthcheck:
+  #     test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "mysql_user", "-pmysql_pass"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+  #   restart: unless-stopped
+  #   networks:
+  #     - flight_network
+
+  # PostgreSQL for Analytics (COMMENTED - not needed for model retraining)
+  # postgres_analytics:
+  #   image: postgres:14-alpine
+  #   container_name: analytics
+  #   environment:
+  #     POSTGRES_USER: psql_user
+  #     POSTGRES_PASSWORD: psql_pass
+  #     POSTGRES_DB: psql_db
+  #   volumes:
+  #     - postgres_analytics_data:/var/lib/postgresql/data,
+  #   ports:
+  #     - "5433:5432"
+  #   healthcheck:
+  #     test: ["CMD-SHELL", "pg_isready -U psql_user -d psql_db"]
+  #     interval: 10s
+  #     timeout: 5s
+  #     retries: 5
+  #   restart: unless-stopped
+  #   networks:
+  #     - flight_network
+
+volumes:
+  postgres_airflow_data:
+    # Commented out unused database volumes
+    # postgres_analytics_data:
+    # mysql_staging_data:
+
+networks:
+  flight_network:
+    driver: bridge
