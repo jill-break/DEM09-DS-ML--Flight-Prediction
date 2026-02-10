@@ -8256,3 +8256,1845 @@ Linear Regression   -0.6498  4121.7239  3181.5869  74.9892
 2026-02-10 10:11:33,311 - src.data.preprocessor - INFO - Filled 3 missing values in 'A' with median: nan
 2026-02-10 10:11:33,344 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (1, 2)
 2026-02-10 10:11:33,345 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:14:06,044 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:14:06,482 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:14:06,527 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:06,531 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:14:06,532 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-10 10:14:06,534 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-10 10:14:06,534 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-10 10:14:06,535 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-10 10:14:06,539 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-10 10:14:06,541 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-10 10:14:06,541 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-10 10:14:06,543 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-10 10:14:06,543 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:14:06,544 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-10 10:14:06,546 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-10 10:14:06,547 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:14:06,548 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-10 10:14:06,549 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-10 10:14:06,549 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-10 10:14:06,551 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-10 10:14:06,551 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-10 10:14:06,552 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-10 10:14:06,553 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-10 10:14:06,553 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-10 10:14:06,554 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:14:06,555 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-10 10:14:06,556 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-10 10:14:06,561 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-10 10:14:06,565 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-10 10:14:06,567 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-10 10:14:06,567 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-10 10:14:06,567 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-10 10:14:06,567 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-10 10:14:06,567 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-10 10:14:06,568 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-10 10:14:06,568 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-10 10:14:06,570 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-10 10:14:06,570 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-10 10:14:06,571 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-10 10:14:06,571 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-10 10:14:06,571 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-10 10:14:06,571 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-10 10:14:06,573 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-10 10:14:06,574 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-10 10:14:06,612 - src.app.model_service - INFO - Prediction made successfully: 198507.12
+2026-02-10 10:14:07,046 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:14:07,057 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:07,060 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:14:07,061 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-10 10:14:07,062 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-10 10:14:07,063 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-10 10:14:07,065 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-10 10:14:07,067 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-10 10:14:07,068 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-10 10:14:07,069 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-10 10:14:07,070 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-10 10:14:07,071 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:14:07,072 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-10 10:14:07,073 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-10 10:14:07,073 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:14:07,074 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-10 10:14:07,075 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-10 10:14:07,075 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-10 10:14:07,076 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-10 10:14:07,077 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-10 10:14:07,078 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-10 10:14:07,079 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-10 10:14:07,080 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-10 10:14:07,081 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:14:07,082 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-10 10:14:07,083 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-10 10:14:07,089 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-10 10:14:07,092 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-10 10:14:07,093 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-10 10:14:07,093 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-10 10:14:07,094 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-10 10:14:07,094 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-10 10:14:07,094 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-10 10:14:07,094 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-10 10:14:07,094 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-10 10:14:07,099 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-10 10:14:07,099 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-10 10:14:07,099 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-10 10:14:07,100 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-10 10:14:07,100 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-10 10:14:07,100 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-10 10:14:07,102 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-10 10:14:07,102 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-10 10:14:07,133 - src.app.model_service - INFO - Prediction made successfully: 66293.31
+2026-02-10 10:14:07,505 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:14:17,877 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:17,885 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:17,886 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:17,906 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:17,906 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:17,906 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:17,907 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:17,907 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:14:17,910 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:14:17,910 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:17,911 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,911 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,912 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,912 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,912 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:17,913 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,914 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:17,914 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:17,914 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:17,917 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\nonexistent.csv
+2026-02-10 10:14:17,917 - src.utils.helpers - WARNING - File not found: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\nonexistent.csv
+2026-02-10 10:14:17,917 - src.data.data_loader - ERROR - Data file not found: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\nonexistent.csv
+2026-02-10 10:14:17,920 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\invalid.csv
+2026-02-10 10:14:17,920 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\invalid.csv
+2026-02-10 10:14:17,935 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\invalid.csv
+2026-02-10 10:14:17,935 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:17,935 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:17,935 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:17,935 - src.data.data_loader - INFO - Shape: 1 rows × 3 columns
+2026-02-10 10:14:17,936 - src.data.data_loader - INFO - Memory usage: 0.00 MB
+2026-02-10 10:14:17,936 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:17,937 - src.data.data_loader - INFO -   - invalid: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,937 - src.data.data_loader - INFO -   - csv: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,937 - src.data.data_loader - INFO -   - data: float64 | Missing: 1 (100.00%)
+2026-02-10 10:14:17,937 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:17,946 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:17,946 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:17,966 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:17,966 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:17,966 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:17,966 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:17,966 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:14:17,967 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:14:17,967 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:17,967 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,968 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,968 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,969 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,969 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:17,969 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:14:17,969 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:17,970 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:17,970 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:17,980 - src.data.data_loader - INFO - Generated basic statistics for dataset
+2026-02-10 10:14:17,987 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:17,988 - src.data.data_loader - ERROR - No data loaded. Call load_data() first.
+2026-02-10 10:14:17,995 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:17,995 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,019 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,019 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,019 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:18,019 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,019 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:14:18,021 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:14:18,021 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:18,022 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,022 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,024 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,024 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,025 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,025 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,026 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,027 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,027 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,030 - src.data.data_loader - INFO - No missing values detected in dataset
+2026-02-10 10:14:18,036 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\missing_data.csv
+2026-02-10 10:14:18,036 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\missing_data.csv
+2026-02-10 10:14:18,057 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\missing_data.csv
+2026-02-10 10:14:18,057 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,058 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:18,058 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,058 - src.data.data_loader - INFO - Shape: 4 rows × 3 columns
+2026-02-10 10:14:18,059 - src.data.data_loader - INFO - Memory usage: 0.00 MB
+2026-02-10 10:14:18,059 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:18,060 - src.data.data_loader - INFO -   - A: float64 | Missing: 1 (25.00%)
+2026-02-10 10:14:18,060 - src.data.data_loader - INFO -   - B: object | Missing: 1 (25.00%)
+2026-02-10 10:14:18,060 - src.data.data_loader - INFO -   - C: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,061 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,062 - src.data.data_loader - INFO - Found missing values in 2 columns
+2026-02-10 10:14:18,070 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,071 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,097 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,098 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,098 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:18,098 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,098 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:14:18,100 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:14:18,100 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:18,100 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,101 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,101 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,101 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,102 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,102 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,102 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,103 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,103 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,113 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,114 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,141 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,141 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,141 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:18,142 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,142 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:14:18,143 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:14:18,144 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:18,144 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,144 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,145 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,145 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,145 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,146 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,146 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,147 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,147 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,156 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,156 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,178 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,178 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,178 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:18,178 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,178 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:14:18,179 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:14:18,180 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:18,180 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,181 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,181 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,181 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,182 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,182 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,182 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,182 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,182 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,187 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\empty.csv
+2026-02-10 10:14:18,187 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\empty.csv
+2026-02-10 10:14:18,188 - src.data.data_loader - WARNING - Empty CSV file detected: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\empty.csv
+2026-02-10 10:14:18,195 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\single_row.csv
+2026-02-10 10:14:18,195 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\single_row.csv
+2026-02-10 10:14:18,216 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\single_row.csv
+2026-02-10 10:14:18,217 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,217 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:18,217 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,217 - src.data.data_loader - INFO - Shape: 1 rows × 2 columns
+2026-02-10 10:14:18,218 - src.data.data_loader - INFO - Memory usage: 0.00 MB
+2026-02-10 10:14:18,218 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:18,219 - src.data.data_loader - INFO -   - A: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,219 - src.data.data_loader - INFO -   - B: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,220 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,245 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\large.csv
+2026-02-10 10:14:18,246 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\large.csv
+2026-02-10 10:14:18,271 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\large.csv
+2026-02-10 10:14:18,272 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,272 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:18,272 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,273 - src.data.data_loader - INFO - Shape: 10000 rows × 2 columns
+2026-02-10 10:14:18,274 - src.data.data_loader - INFO - Memory usage: 0.15 MB
+2026-02-10 10:14:18,274 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:18,274 - src.data.data_loader - INFO -   - col1: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,275 - src.data.data_loader - INFO -   - col2: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,276 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,278 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,281 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,281 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,281 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,281 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,283 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,284 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,284 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,284 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,285 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,289 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:14:18,292 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,292 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,293 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,293 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,294 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,296 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:14:18,298 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,299 - src.evaluation.evaluator - WARNING - No results to compare
+2026-02-10 10:14:18,301 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,302 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,302 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,302 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,303 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,305 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:14:18,305 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:14:18,308 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,308 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,309 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,309 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,310 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,313 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:14:18,313 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-10 10:14:18,316 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,316 - src.evaluation.evaluator - ERROR - No comparison data available. Run create_comparison_table() first.
+2026-02-10 10:14:18,317 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,318 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,318 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,318 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,318 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,321 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:14:18,321 - src.evaluation.evaluator - ERROR - Metric 'nonexistent' not found in results
+2026-02-10 10:14:18,324 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,324 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,324 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,324 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,326 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,330 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:14:18,331 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:14:18,331 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-10 10:14:18,331 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-10 10:14:18,331 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-10 10:14:18,333 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-10 10:14:18,335 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,335 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,335 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,335 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,337 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,338 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:14:18,339 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:14:18,339 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-10 10:14:18,339 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-10 10:14:18,340 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-10 10:14:18,342 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-10 10:14:18,344 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,344 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,345 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,345 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,346 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,347 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:14:18,348 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:14:18,348 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-10 10:14:18,349 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-10 10:14:18,349 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-10 10:14:18,351 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-10 10:14:18,352 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,353 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,353 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,353 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,353 - src.evaluation.evaluator - INFO - 
+Comparison: Linear Regression vs Random Forest
+2026-02-10 10:14:18,353 - src.evaluation.evaluator - INFO -   r2_score: 0.7500 vs 0.8500 (diff: -0.1000, -11.76%)
+2026-02-10 10:14:18,353 - src.evaluation.evaluator - INFO -   rmse: 1500.0000 vs 1200.0000 (diff: 300.0000, 25.00%)
+2026-02-10 10:14:18,353 - src.evaluation.evaluator - INFO -   mae: 1200.0000 vs 950.0000 (diff: 250.0000, 26.32%)
+2026-02-10 10:14:18,353 - src.evaluation.evaluator - INFO -   mape: 12.5000 vs 10.2000 (diff: 2.3000, 22.55%)
+2026-02-10 10:14:18,356 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,356 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,356 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,356 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,356 - src.evaluation.evaluator - ERROR - One or both models not found in results
+2026-02-10 10:14:18,359 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,359 - src.evaluation.evaluator - INFO - Added results for Model1: R²=0.8
+2026-02-10 10:14:18,359 - src.evaluation.evaluator - INFO - Added results for Model2: R²=0.9
+2026-02-10 10:14:18,360 - src.evaluation.evaluator - INFO - 
+Comparison: Model1 vs Model2
+2026-02-10 10:14:18,360 - src.evaluation.evaluator - INFO -   r2_score: 0.8000 vs 0.9000 (diff: -0.1000, -11.11%)
+2026-02-10 10:14:18,360 - src.evaluation.evaluator - INFO -   rmse: 100.0000 vs 80.0000 (diff: 20.0000, 25.00%)
+2026-02-10 10:14:18,363 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,364 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:14:18,364 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:14:18,364 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:14:18,366 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,367 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:14:18,368 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:14:18,368 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:14:18,368 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-10 10:14:18,368 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-10 10:14:18,369 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-10 10:14:18,370 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-10 10:14:18,372 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,373 - src.evaluation.evaluator - INFO - Added results for OnlyModel: R²=0.75
+2026-02-10 10:14:18,374 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,376 - src.evaluation.evaluator - INFO - 
+           r2_score   rmse
+OnlyModel      0.75  100.0
+2026-02-10 10:14:18,378 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,379 - src.evaluation.evaluator - INFO - Added results for Model1: R²=0.8
+2026-02-10 10:14:18,379 - src.evaluation.evaluator - INFO - Added results for Model2: R²=0.8
+2026-02-10 10:14:18,380 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,382 - src.evaluation.evaluator - INFO - 
+        r2_score   rmse
+Model1       0.8  100.0
+Model2       0.8  100.0
+2026-02-10 10:14:18,382 - src.evaluation.evaluator - INFO - Best model by r2_score: Model1 (r2_score=0.8000)
+2026-02-10 10:14:18,385 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,388 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,392 - src.features.feature_engineer - INFO - Created temporal features from 'date': month, day, weekday, season, is_weekend
+2026-02-10 10:14:18,395 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,400 - src.features.feature_engineer - INFO - Created temporal features from 'date': month, day, weekday, season, is_weekend
+2026-02-10 10:14:18,403 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,403 - src.features.feature_engineer - WARNING - Column 'nonexistent' not found, skipping temporal features
+2026-02-10 10:14:18,406 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,408 - src.features.feature_engineer - INFO - OneHot encoded 'category' into 2 features
+2026-02-10 10:14:18,411 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,412 - src.features.feature_engineer - INFO - Label encoded 'category'
+2026-02-10 10:14:18,415 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,417 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 2 features
+2026-02-10 10:14:18,419 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 2 features
+2026-02-10 10:14:18,421 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,422 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 1 features
+2026-02-10 10:14:18,425 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 1 features
+2026-02-10 10:14:18,428 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,432 - src.features.feature_engineer - INFO - Scaled 'num1' using standard scaling
+2026-02-10 10:14:18,435 - src.features.feature_engineer - INFO - Scaled 'num2' using standard scaling
+2026-02-10 10:14:18,438 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,442 - src.features.feature_engineer - INFO - Scaled 'num1' using minmax scaling
+2026-02-10 10:14:18,447 - src.features.feature_engineer - INFO - Scaled 'num2' using minmax scaling
+2026-02-10 10:14:18,450 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,454 - src.features.feature_engineer - INFO - Scaled 'num1' using robust scaling
+2026-02-10 10:14:18,458 - src.features.feature_engineer - INFO - Scaled 'num2' using robust scaling
+2026-02-10 10:14:18,461 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,465 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-10 10:14:18,467 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-10 10:14:18,470 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,471 - src.features.feature_engineer - INFO - Created interaction feature: A_x_B
+2026-02-10 10:14:18,473 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,475 - src.features.feature_engineer - INFO - Created interaction feature: A_x_B
+2026-02-10 10:14:18,476 - src.features.feature_engineer - INFO - Created interaction feature: A_x_C
+2026-02-10 10:14:18,479 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,479 - src.features.feature_engineer - WARNING - Cannot create interaction between 'A' and 'B': columns not found
+2026-02-10 10:14:18,483 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,484 - src.features.feature_engineer - INFO - Dropped 2 features: ['B', 'C']
+2026-02-10 10:14:18,486 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,487 - src.features.feature_engineer - WARNING - None of the specified columns found: ['B', 'C']
+2026-02-10 10:14:18,489 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,489 - src.features.feature_engineer - INFO - Total features: 3
+2026-02-10 10:14:18,493 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,497 - src.features.feature_engineer - INFO - Created temporal features from 'date': month, day, weekday, season, is_weekend
+2026-02-10 10:14:18,498 - src.features.feature_engineer - INFO - Label encoded 'category'
+2026-02-10 10:14:18,502 - src.features.feature_engineer - INFO - Scaled 'value' using standard scaling
+2026-02-10 10:14:18,505 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,506 - src.features.feature_engineer - INFO - Label encoded 'cat'
+2026-02-10 10:14:18,510 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-10 10:14:18,512 - src.features.feature_engineer - INFO - Label encoded 'cat'
+2026-02-10 10:14:18,513 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-10 10:14:18,516 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,516 - src.features.feature_engineer - WARNING - Column 'date' not found, skipping temporal features
+2026-02-10 10:14:18,518 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,520 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 0 features
+2026-02-10 10:14:18,528 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,529 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,548 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,549 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,549 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:18,549 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,549 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:14:18,550 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:14:18,550 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:18,551 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,551 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,551 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,551 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,552 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,552 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,552 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,552 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,553 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,553 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:18,554 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:14:18,554 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:14:18,557 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-10 10:14:18,565 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:18,566 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:14:18,566 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-10 10:14:18,567 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,567 - src.data.preprocessor - INFO - Converted 'Date' to datetime type
+2026-02-10 10:14:18,567 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-10 10:14:18,571 - src.features.feature_engineer - INFO - Created temporal features from 'Date': month, day, weekday, season, is_weekend
+2026-02-10 10:14:18,572 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:14:18,572 - src.features.feature_engineer - INFO - Label encoded 'From'
+2026-02-10 10:14:18,573 - src.features.feature_engineer - INFO - Label encoded 'To'
+2026-02-10 10:14:18,574 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:14:18,574 - src.features.feature_engineer - INFO - Label encoded 'season'
+2026-02-10 10:14:18,578 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,581 - src.features.feature_engineer - INFO - Scaled 'feature_0' using standard scaling
+2026-02-10 10:14:18,584 - src.features.feature_engineer - INFO - Scaled 'feature_1' using standard scaling
+2026-02-10 10:14:18,586 - src.features.feature_engineer - INFO - Scaled 'feature_2' using standard scaling
+2026-02-10 10:14:18,589 - src.features.feature_engineer - INFO - Scaled 'feature_3' using standard scaling
+2026-02-10 10:14:18,592 - src.features.feature_engineer - INFO - Scaled 'feature_4' using standard scaling
+2026-02-10 10:14:18,595 - src.features.feature_engineer - INFO - Scaled 'feature_0' using standard scaling
+2026-02-10 10:14:18,597 - src.features.feature_engineer - INFO - Scaled 'feature_1' using standard scaling
+2026-02-10 10:14:18,599 - src.features.feature_engineer - INFO - Scaled 'feature_2' using standard scaling
+2026-02-10 10:14:18,600 - src.features.feature_engineer - INFO - Scaled 'feature_3' using standard scaling
+2026-02-10 10:14:18,602 - src.features.feature_engineer - INFO - Scaled 'feature_4' using standard scaling
+2026-02-10 10:14:18,602 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:18,602 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:14:18,603 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:14:18,607 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-10 10:14:18,607 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:14:18,613 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.19, MAE: 3221.20
+2026-02-10 10:14:18,613 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:14:18,618 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.62
+2026-02-10 10:14:18,618 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:14:18,624 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-10 10:14:18,624 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:14:18,821 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-10 10:14:18,822 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:14:18,822 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:18,822 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-10 10:14:18,824 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-10 10:14:18,825 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-10 10:14:18,825 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-10 10:14:18,825 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-10 10:14:18,825 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-10 10:14:18,826 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=-0.5274555792231657
+2026-02-10 10:14:18,826 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-10 10:14:18,828 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-10 10:14:18,828 - src.models.trainer - INFO -   R² Score: -0.5152
+2026-02-10 10:14:18,829 - src.models.trainer - INFO -   RMSE: 3837.86
+2026-02-10 10:14:18,829 - src.models.trainer - INFO -   MAE: 3116.43
+2026-02-10 10:14:18,829 - src.models.trainer - INFO -   MAPE: 40.82%
+2026-02-10 10:14:18,829 - src.evaluation.evaluator - INFO - Added results for Ridge (alpha=1.0): R²=-0.5151538566488965
+2026-02-10 10:14:18,830 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:18,832 - src.evaluation.evaluator - INFO - 
+                   r2_score       rmse        mae     mape
+Ridge (alpha=1.0)   -0.5152  3837.8633  3116.4295  40.8167
+Linear Regression   -0.5275  3853.4119  3128.9991  40.9553
+2026-02-10 10:14:18,838 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,838 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,857 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpkagtsq3h\test_flight_data.csv
+2026-02-10 10:14:18,857 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,857 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:14:18,857 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,857 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:14:18,859 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:14:18,859 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:14:18,859 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,859 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,860 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,860 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,861 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,861 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:14:18,861 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,861 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:14:18,861 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:14:18,862 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:18,863 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:14:18,863 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:14:18,865 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-10 10:14:18,866 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:18,867 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:14:18,867 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-10 10:14:18,867 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-10 10:14:18,868 - src.data.preprocessor - INFO -   Features: 7
+2026-02-10 10:14:18,868 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:18,868 - src.features.feature_engineer - INFO - Label encoded 'Date'
+2026-02-10 10:14:18,869 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:14:18,870 - src.features.feature_engineer - INFO - Label encoded 'From'
+2026-02-10 10:14:18,870 - src.features.feature_engineer - INFO - Label encoded 'To'
+2026-02-10 10:14:18,871 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:14:18,871 - src.features.feature_engineer - INFO - Label encoded 'Date'
+2026-02-10 10:14:18,874 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:14:18,876 - src.features.feature_engineer - INFO - Label encoded 'From'
+2026-02-10 10:14:18,879 - src.features.feature_engineer - INFO - Label encoded 'To'
+2026-02-10 10:14:18,882 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:14:18,885 - src.features.feature_engineer - INFO - Scaled 'Date' using standard scaling
+2026-02-10 10:14:18,888 - src.features.feature_engineer - INFO - Scaled 'Airline' using standard scaling
+2026-02-10 10:14:18,891 - src.features.feature_engineer - INFO - Scaled 'From' using standard scaling
+2026-02-10 10:14:18,894 - src.features.feature_engineer - INFO - Scaled 'To' using standard scaling
+2026-02-10 10:14:18,897 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-10 10:14:18,900 - src.features.feature_engineer - INFO - Scaled 'Duration' using standard scaling
+2026-02-10 10:14:18,903 - src.features.feature_engineer - INFO - Scaled 'Stops' using standard scaling
+2026-02-10 10:14:18,904 - src.features.feature_engineer - INFO - Scaled 'Date' using standard scaling
+2026-02-10 10:14:18,906 - src.features.feature_engineer - INFO - Scaled 'Airline' using standard scaling
+2026-02-10 10:14:18,908 - src.features.feature_engineer - INFO - Scaled 'From' using standard scaling
+2026-02-10 10:14:18,910 - src.features.feature_engineer - INFO - Scaled 'To' using standard scaling
+2026-02-10 10:14:18,912 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-10 10:14:18,914 - src.features.feature_engineer - INFO - Scaled 'Duration' using standard scaling
+2026-02-10 10:14:18,915 - src.features.feature_engineer - INFO - Scaled 'Stops' using standard scaling
+2026-02-10 10:14:18,915 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:18,915 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:14:18,915 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:14:18,920 - src.models.trainer - INFO - Linear Regression - Train R²: 0.1050, RMSE: 3625.40, MAE: 3070.10
+2026-02-10 10:14:18,920 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:14:18,925 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.1050, RMSE: 3625.45, MAE: 3070.07
+2026-02-10 10:14:18,925 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:14:18,929 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.1050, RMSE: 3625.40, MAE: 3070.16
+2026-02-10 10:14:18,929 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:14:18,934 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9913, RMSE: 358.07, MAE: 114.18
+2026-02-10 10:14:18,935 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:14:19,118 - src.models.trainer - INFO - Random Forest - Train R²: 0.8632, RMSE: 1417.15, MAE: 1182.85
+2026-02-10 10:14:19,118 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:14:19,119 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:14:19,119 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-10 10:14:19,122 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-10 10:14:19,122 - src.models.trainer - INFO -   R² Score: -0.6498
+2026-02-10 10:14:19,122 - src.models.trainer - INFO -   RMSE: 4121.72
+2026-02-10 10:14:19,122 - src.models.trainer - INFO -   MAE: 3181.59
+2026-02-10 10:14:19,122 - src.models.trainer - INFO -   MAPE: 74.99%
+2026-02-10 10:14:19,122 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=-0.6497722624211368
+2026-02-10 10:14:19,123 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-10 10:14:19,126 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-10 10:14:19,126 - src.models.trainer - INFO -   R² Score: -0.6363
+2026-02-10 10:14:19,126 - src.models.trainer - INFO -   RMSE: 4104.80
+2026-02-10 10:14:19,126 - src.models.trainer - INFO -   MAE: 3170.28
+2026-02-10 10:14:19,126 - src.models.trainer - INFO -   MAPE: 74.73%
+2026-02-10 10:14:19,126 - src.evaluation.evaluator - INFO - Added results for Ridge (alpha=1.0): R²=-0.636254970777524
+2026-02-10 10:14:19,127 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:14:19,129 - src.evaluation.evaluator - INFO - 
+                   r2_score       rmse        mae     mape
+Ridge (alpha=1.0)   -0.6363  4104.8037  3170.2831  74.7269
+Linear Regression   -0.6498  4121.7239  3181.5869  74.9892
+2026-02-10 10:14:19,129 - src.evaluation.evaluator - INFO - Best model by r2_score: Ridge (alpha=1.0) (r2_score=-0.6363)
+2026-02-10 10:14:19,133 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (53, 6)
+2026-02-10 10:14:19,135 - src.data.preprocessor - INFO - Removed 3 duplicate rows (5.66%)
+2026-02-10 10:14:19,135 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:14:19,136 - src.data.preprocessor - INFO - Filled 6 missing values in 'Fare' with median: 8008.32
+2026-02-10 10:14:19,137 - src.data.preprocessor - INFO - Filled 3 missing values in 'Airline' with mode: Novoair
+2026-02-10 10:14:19,139 - src.data.preprocessor - INFO - Removed 1 rows with Fare < 0
+2026-02-10 10:14:19,142 - src.data.preprocessor - INFO - Removed 1 extreme outliers from 'Fare'
+2026-02-10 10:14:19,143 - src.data.preprocessor - INFO - Data validation complete: 2 rows removed
+2026-02-10 10:14:19,143 - src.data.preprocessor - INFO - Returning processed data with shape: (48, 6)
+2026-02-10 10:14:19,146 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (5, 3)
+2026-02-10 10:14:19,148 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:14:19,148 - src.data.preprocessor - INFO -   Training set: 4 samples (80%)
+2026-02-10 10:14:19,148 - src.data.preprocessor - INFO -   Test set: 1 samples (20%)
+2026-02-10 10:14:19,148 - src.data.preprocessor - INFO -   Features: 2
+2026-02-10 10:14:19,148 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:19,148 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:14:19,149 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:14:19,152 - src.models.trainer - INFO - Linear Regression - Train R²: 0.9257, RMSE: 2.15, MAE: 1.86
+2026-02-10 10:14:19,152 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:14:19,155 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.9230, RMSE: 2.19, MAE: 1.89
+2026-02-10 10:14:19,156 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:14:19,162 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.9184, RMSE: 2.26, MAE: 1.91
+2026-02-10 10:14:19,162 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:14:19,168 - src.models.trainer - INFO - Decision Tree - Train R²: 1.0000, RMSE: 0.00, MAE: 0.00
+2026-02-10 10:14:19,168 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:14:19,323 - src.models.trainer - INFO - Random Forest - Train R²: 0.9262, RMSE: 2.15, MAE: 1.91
+2026-02-10 10:14:19,323 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:14:20,373 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:14:20,726 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:14:20,728 - src.app.model_service - WARNING - Could not load training data sample: [Errno 2] No such file or directory: 'data/raw/Flight_Price_Dataset_of_Bangladesh.csv'
+2026-02-10 10:14:20,728 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:20,730 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-10 10:14:20,731 - src.app.model_service - ERROR - Prediction failed: could not convert string to float: 'Emirates'
+2026-02-10 10:14:21,218 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:14:21,220 - src.app.model_service - WARNING - Could not load training data sample: [Errno 2] No such file or directory: 'data/raw/Flight_Price_Dataset_of_Bangladesh.csv'
+2026-02-10 10:14:21,220 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:14:21,221 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-10 10:14:21,222 - src.app.model_service - ERROR - Prediction failed: could not convert string to float: 'Emirates'
+2026-02-10 10:14:21,566 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:14:21,602 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:21,604 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:21,605 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:14:21,605 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:14:21,609 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-10 10:14:21,609 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:14:21,615 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-10 10:14:21,615 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:14:21,620 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-10 10:14:21,620 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:14:21,625 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-10 10:14:21,625 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:14:21,810 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-10 10:14:21,811 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:14:21,814 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:21,814 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:14:21,814 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:14:21,818 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-10 10:14:21,818 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:14:21,822 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-10 10:14:21,823 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:14:21,827 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-10 10:14:21,827 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:14:21,833 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-10 10:14:21,833 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:14:22,021 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-10 10:14:22,022 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:14:22,024 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:22,025 - src.models.trainer - INFO - Performing 3-fold cross-validation...
+2026-02-10 10:14:29,697 - src.models.trainer - INFO - CV Results - R²: -0.1392 (±0.1538)
+2026-02-10 10:14:29,697 - src.models.trainer - INFO - CV Results - RMSE: 3912.78 (±148.19)
+2026-02-10 10:14:29,701 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:29,701 - src.models.trainer - INFO - Performing 3-fold cross-validation...
+2026-02-10 10:14:29,764 - src.models.trainer - INFO - CV Results - R²: -0.1392 (±0.1538)
+2026-02-10 10:14:29,765 - src.models.trainer - INFO - CV Results - RMSE: 3912.78 (±148.19)
+2026-02-10 10:14:29,768 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:29,768 - src.models.trainer - INFO - Tuning hyperparameters for ridge using grid search...
+2026-02-10 10:14:29,809 - src.models.trainer - INFO - Best parameters: {'alpha': 10.0}
+2026-02-10 10:14:29,809 - src.models.trainer - INFO - Best CV RMSE: 3991.96
+2026-02-10 10:14:29,812 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:29,812 - src.models.trainer - INFO - Tuning hyperparameters for random_forest using grid search...
+2026-02-10 10:14:30,417 - src.models.trainer - INFO - Best parameters: {'max_depth': 5, 'n_estimators': 10}
+2026-02-10 10:14:30,417 - src.models.trainer - INFO - Best CV RMSE: 3677.80
+2026-02-10 10:14:30,421 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:30,421 - src.models.trainer - INFO - Tuning hyperparameters for ridge using grid search...
+2026-02-10 10:14:30,455 - src.models.trainer - INFO - Best parameters: {'alpha': 1.0}
+2026-02-10 10:14:30,455 - src.models.trainer - INFO - Best CV RMSE: 4040.51
+2026-02-10 10:14:30,461 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:30,461 - src.models.trainer - INFO - Evaluating Test Model on test set...
+2026-02-10 10:14:30,464 - src.models.trainer - INFO - Test Model Test Metrics:
+2026-02-10 10:14:30,464 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-10 10:14:30,464 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-10 10:14:30,464 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-10 10:14:30,465 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-10 10:14:30,470 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:30,470 - src.models.trainer - INFO - Evaluating Test on test set...
+2026-02-10 10:14:30,475 - src.models.trainer - INFO - Test Test Metrics:
+2026-02-10 10:14:30,475 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-10 10:14:30,475 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-10 10:14:30,475 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-10 10:14:30,476 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-10 10:14:30,505 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:30,509 - src.models.trainer - INFO - Extracted Feature Importance for 5 features
+2026-02-10 10:14:30,509 - src.models.trainer - INFO - Top 5 features: ['feature_3', 'feature_0', 'feature_4', 'feature_2', 'feature_1']
+2026-02-10 10:14:30,515 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:30,516 - src.models.trainer - INFO - Extracted Coefficient Magnitude for 5 features
+2026-02-10 10:14:30,516 - src.models.trainer - INFO - Top 5 features: ['feature_1', 'feature_0', 'feature_3', 'feature_2', 'feature_4']
+2026-02-10 10:14:30,544 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:30,547 - src.models.trainer - INFO - Extracted Feature Importance for 5 features
+2026-02-10 10:14:30,547 - src.models.trainer - INFO - Top 5 features: ['feature_3', 'feature_0', 'feature_4', 'feature_2', 'feature_1']
+2026-02-10 10:14:30,550 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:30,551 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:14:30,551 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:14:30,556 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-10 10:14:30,557 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:14:30,562 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-10 10:14:30,562 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:14:30,568 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-10 10:14:30,568 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:14:30,575 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-10 10:14:30,575 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:14:30,773 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-10 10:14:30,773 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:14:30,773 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-10 10:14:30,776 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-10 10:14:30,776 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-10 10:14:30,777 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-10 10:14:30,777 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-10 10:14:30,777 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-10 10:14:30,777 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-10 10:14:30,780 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-10 10:14:30,780 - src.models.trainer - INFO -   R² Score: -0.5127
+2026-02-10 10:14:30,780 - src.models.trainer - INFO -   RMSE: 3834.75
+2026-02-10 10:14:30,780 - src.models.trainer - INFO -   MAE: 3114.07
+2026-02-10 10:14:30,780 - src.models.trainer - INFO -   MAPE: 40.79%
+2026-02-10 10:14:30,780 - src.models.trainer - INFO - Evaluating Lasso (alpha=1.0) on test set...
+2026-02-10 10:14:30,783 - src.models.trainer - INFO - Lasso (alpha=1.0) Test Metrics:
+2026-02-10 10:14:30,783 - src.models.trainer - INFO -   R² Score: -0.5254
+2026-02-10 10:14:30,783 - src.models.trainer - INFO -   RMSE: 3850.85
+2026-02-10 10:14:30,783 - src.models.trainer - INFO -   MAE: 3126.99
+2026-02-10 10:14:30,783 - src.models.trainer - INFO -   MAPE: 40.93%
+2026-02-10 10:14:30,783 - src.models.trainer - INFO - Evaluating Decision Tree on test set...
+2026-02-10 10:14:30,787 - src.models.trainer - INFO - Decision Tree Test Metrics:
+2026-02-10 10:14:30,787 - src.models.trainer - INFO -   R² Score: -1.5132
+2026-02-10 10:14:30,787 - src.models.trainer - INFO -   RMSE: 4942.80
+2026-02-10 10:14:30,787 - src.models.trainer - INFO -   MAE: 4075.88
+2026-02-10 10:14:30,787 - src.models.trainer - INFO -   MAPE: 55.74%
+2026-02-10 10:14:30,787 - src.models.trainer - INFO - Evaluating Random Forest on test set...
+2026-02-10 10:14:30,817 - src.models.trainer - INFO - Random Forest Test Metrics:
+2026-02-10 10:14:30,817 - src.models.trainer - INFO -   R² Score: -0.5440
+2026-02-10 10:14:30,817 - src.models.trainer - INFO -   RMSE: 3874.26
+2026-02-10 10:14:30,818 - src.models.trainer - INFO -   MAE: 3250.06
+2026-02-10 10:14:30,818 - src.models.trainer - INFO -   MAPE: 45.06%
+2026-02-10 10:14:30,820 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:30,820 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:14:30,820 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:14:30,825 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-10 10:14:30,825 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:14:30,829 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-10 10:14:30,829 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:14:30,833 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-10 10:14:30,833 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:14:30,838 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-10 10:14:30,838 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:14:31,027 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-10 10:14:31,027 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:14:31,028 - src.models.trainer - INFO - Performing 3-fold cross-validation...
+2026-02-10 10:14:31,067 - src.models.trainer - INFO - CV Results - R²: -0.1392 (±0.1538)
+2026-02-10 10:14:31,067 - src.models.trainer - INFO - CV Results - RMSE: 3912.78 (±148.19)
+2026-02-10 10:14:31,067 - src.models.trainer - INFO - Tuning hyperparameters for ridge using grid search...
+2026-02-10 10:14:31,096 - src.models.trainer - INFO - Best parameters: {'alpha': 1.0}
+2026-02-10 10:14:31,097 - src.models.trainer - INFO - Best CV RMSE: 4040.51
+2026-02-10 10:14:31,097 - src.models.trainer - INFO - Evaluating Tuned Ridge on test set...
+2026-02-10 10:14:31,100 - src.models.trainer - INFO - Tuned Ridge Test Metrics:
+2026-02-10 10:14:31,100 - src.models.trainer - INFO -   R² Score: -0.5127
+2026-02-10 10:14:31,100 - src.models.trainer - INFO -   RMSE: 3834.75
+2026-02-10 10:14:31,101 - src.models.trainer - INFO -   MAE: 3114.07
+2026-02-10 10:14:31,101 - src.models.trainer - INFO -   MAPE: 40.79%
+2026-02-10 10:14:31,104 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:31,104 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:14:31,104 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:14:31,111 - src.models.trainer - INFO - Linear Regression - Train R²: 1.0000, RMSE: 0.00, MAE: 0.00
+2026-02-10 10:14:31,111 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:14:31,116 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.9917, RMSE: 0.13, MAE: 0.11
+2026-02-10 10:14:31,116 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:14:31,121 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.7500, RMSE: 0.71, MAE: 0.60
+2026-02-10 10:14:31,122 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:14:31,125 - src.models.trainer - INFO - Decision Tree - Train R²: 1.0000, RMSE: 0.00, MAE: 0.00
+2026-02-10 10:14:31,126 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:14:31,303 - src.models.trainer - INFO - Random Forest - Train R²: 0.9547, RMSE: 0.30, MAE: 0.28
+2026-02-10 10:14:31,303 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:14:31,307 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:31,307 - src.models.trainer - INFO - Evaluating Single Feature on test set...
+2026-02-10 10:14:31,311 - src.models.trainer - INFO - Single Feature Test Metrics:
+2026-02-10 10:14:31,311 - src.models.trainer - INFO -   R² Score: 1.0000
+2026-02-10 10:14:31,311 - src.models.trainer - INFO -   RMSE: 0.00
+2026-02-10 10:14:31,311 - src.models.trainer - INFO -   MAE: 0.00
+2026-02-10 10:14:31,311 - src.models.trainer - INFO -   MAPE: 0.00%
+2026-02-10 10:14:31,315 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:14:31,315 - src.models.trainer - INFO - Evaluating Perfect on test set...
+2026-02-10 10:14:31,318 - src.models.trainer - INFO - Perfect Test Metrics:
+2026-02-10 10:14:31,319 - src.models.trainer - INFO -   R² Score: 1.0000
+2026-02-10 10:14:31,319 - src.models.trainer - INFO -   RMSE: 0.00
+2026-02-10 10:14:31,319 - src.models.trainer - INFO -   MAE: 0.00
+2026-02-10 10:14:31,319 - src.models.trainer - INFO -   MAPE: inf%
+2026-02-10 10:14:31,325 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:31,329 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:31,334 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-10 10:14:31,335 - src.data.preprocessor - INFO - Removed 1 duplicate rows (25.00%)
+2026-02-10 10:14:31,340 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:31,341 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:14:31,347 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:31,349 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:14:31,351 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-10 10:14:31,351 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:14:31,352 - src.data.preprocessor - INFO - Filled 1 missing values in 'num1' with median: 2.00
+2026-02-10 10:14:31,353 - src.data.preprocessor - INFO - Filled 1 missing values in 'num2' with median: 30.00
+2026-02-10 10:14:31,354 - src.data.preprocessor - INFO - Removed 1 duplicate rows after imputation
+2026-02-10 10:14:31,357 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-10 10:14:31,357 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:14:31,359 - src.data.preprocessor - INFO - Filled 1 missing values in 'cat1' with mode: a
+2026-02-10 10:14:31,359 - src.data.preprocessor - INFO - Filled 1 missing values in 'cat2' with mode: x
+2026-02-10 10:14:31,363 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-10 10:14:31,364 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:14:31,365 - src.data.preprocessor - INFO - Filled 1 missing values in 'num' with median: 1.50
+2026-02-10 10:14:31,365 - src.data.preprocessor - INFO - Filled 1 missing values in 'cat' with mode: a
+2026-02-10 10:14:31,369 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-10 10:14:31,372 - src.data.preprocessor - INFO - Converted 'date_str' to datetime type
+2026-02-10 10:14:31,375 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-10 10:14:31,377 - src.data.preprocessor - INFO - Converted 'date_str' to datetime type
+2026-02-10 10:14:31,377 - src.data.preprocessor - WARNING - Failed to parse 1 dates in 'date_str'
+2026-02-10 10:14:31,380 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 1)
+2026-02-10 10:14:31,381 - src.data.preprocessor - WARNING - Column 'nonexistent' not found in dataset, skipping
+2026-02-10 10:14:31,382 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (5, 2)
+2026-02-10 10:14:31,383 - src.data.preprocessor - INFO - Removed 2 rows with Fare < 0
+2026-02-10 10:14:31,385 - src.data.preprocessor - INFO - Data validation complete: 2 rows removed
+2026-02-10 10:14:31,387 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (5, 1)
+2026-02-10 10:14:31,390 - src.data.preprocessor - INFO - Removed 1 extreme outliers from 'Fare'
+2026-02-10 10:14:31,390 - src.data.preprocessor - INFO - Data validation complete: 1 rows removed
+2026-02-10 10:14:31,393 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 1)
+2026-02-10 10:14:31,394 - src.data.preprocessor - INFO - Standardized categorical values in 'City'
+2026-02-10 10:14:31,399 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:31,401 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:14:31,401 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-10 10:14:31,401 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-10 10:14:31,401 - src.data.preprocessor - INFO -   Features: 7
+2026-02-10 10:14:31,406 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:31,409 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:14:31,410 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-10 10:14:31,410 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-10 10:14:31,410 - src.data.preprocessor - INFO -   Features: 7
+2026-02-10 10:14:31,415 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:31,416 - src.data.preprocessor - ERROR - Target column 'NonExistentColumn' not found in dataset
+2026-02-10 10:14:31,420 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:31,422 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:14:31,422 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-10 10:14:31,423 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-10 10:14:31,423 - src.data.preprocessor - INFO -   Features: 7
+2026-02-10 10:14:31,423 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:31,426 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:14:31,426 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-10 10:14:31,426 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-10 10:14:31,426 - src.data.preprocessor - INFO -   Features: 7
+2026-02-10 10:14:31,431 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:14:31,433 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:14:31,433 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-10 10:14:31,435 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-10 10:14:31,436 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:14:31,436 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:14:31,437 - src.data.preprocessor - INFO - Filled 1 missing values in 'B' with median: 3.00
+2026-02-10 10:14:31,438 - src.data.preprocessor - INFO - Removed 1 duplicate rows after imputation
+2026-02-10 10:14:31,442 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (0, 0)
+2026-02-10 10:14:31,445 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-10 10:14:31,445 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:14:31,446 - src.data.preprocessor - INFO - Filled 3 missing values in 'A' with median: nan
+2026-02-10 10:14:31,481 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (1, 2)
+2026-02-10 10:14:31,483 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:24:02,418 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,428 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,430 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,452 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,453 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,453 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:02,453 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,453 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:24:02,457 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:24:02,458 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:02,458 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,459 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,459 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,459 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,460 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,461 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,461 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,461 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,462 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,466 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\nonexistent.csv
+2026-02-10 10:24:02,467 - src.utils.helpers - WARNING - File not found: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\nonexistent.csv
+2026-02-10 10:24:02,467 - src.data.data_loader - ERROR - Data file not found: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\nonexistent.csv
+2026-02-10 10:24:02,470 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\invalid.csv
+2026-02-10 10:24:02,470 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\invalid.csv
+2026-02-10 10:24:02,474 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\invalid.csv
+2026-02-10 10:24:02,475 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,475 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:02,475 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,475 - src.data.data_loader - INFO - Shape: 1 rows × 3 columns
+2026-02-10 10:24:02,476 - src.data.data_loader - INFO - Memory usage: 0.00 MB
+2026-02-10 10:24:02,476 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:02,477 - src.data.data_loader - INFO -   - invalid: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,477 - src.data.data_loader - INFO -   - csv: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,477 - src.data.data_loader - INFO -   - data: float64 | Missing: 1 (100.00%)
+2026-02-10 10:24:02,477 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,488 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,488 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,504 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,505 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,505 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:02,505 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,505 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:24:02,507 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:24:02,507 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:02,508 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,509 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,509 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,510 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,510 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,511 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,511 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,511 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,512 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,526 - src.data.data_loader - INFO - Generated basic statistics for dataset
+2026-02-10 10:24:02,536 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,536 - src.data.data_loader - ERROR - No data loaded. Call load_data() first.
+2026-02-10 10:24:02,547 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,547 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,563 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,563 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,563 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:02,564 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,564 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:24:02,566 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:24:02,566 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:02,566 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,567 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,567 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,567 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,568 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,569 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,569 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,569 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,570 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,574 - src.data.data_loader - INFO - No missing values detected in dataset
+2026-02-10 10:24:02,580 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\missing_data.csv
+2026-02-10 10:24:02,581 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\missing_data.csv
+2026-02-10 10:24:02,583 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\missing_data.csv
+2026-02-10 10:24:02,583 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,584 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:02,584 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,584 - src.data.data_loader - INFO - Shape: 4 rows × 3 columns
+2026-02-10 10:24:02,584 - src.data.data_loader - INFO - Memory usage: 0.00 MB
+2026-02-10 10:24:02,585 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:02,586 - src.data.data_loader - INFO -   - A: float64 | Missing: 1 (25.00%)
+2026-02-10 10:24:02,587 - src.data.data_loader - INFO -   - B: object | Missing: 1 (25.00%)
+2026-02-10 10:24:02,587 - src.data.data_loader - INFO -   - C: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,587 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,590 - src.data.data_loader - INFO - Found missing values in 2 columns
+2026-02-10 10:24:02,599 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,599 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,616 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,617 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,617 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:02,617 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,618 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:24:02,619 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:24:02,619 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:02,619 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,620 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,620 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,620 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,621 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,622 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,622 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,622 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,622 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,631 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,632 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,649 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,650 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,650 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:02,650 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,650 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:24:02,652 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:24:02,652 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:02,653 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,653 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,653 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,654 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,655 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,655 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,655 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,656 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,656 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,667 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,668 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,685 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:02,685 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,685 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:02,685 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,685 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:24:02,688 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:24:02,688 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:02,688 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,688 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,689 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,689 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,689 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,690 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,690 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,691 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,691 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,697 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\empty.csv
+2026-02-10 10:24:02,697 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\empty.csv
+2026-02-10 10:24:02,698 - src.data.data_loader - WARNING - Empty CSV file detected: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\empty.csv
+2026-02-10 10:24:02,703 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\single_row.csv
+2026-02-10 10:24:02,704 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\single_row.csv
+2026-02-10 10:24:02,707 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\single_row.csv
+2026-02-10 10:24:02,707 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,707 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:02,708 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,708 - src.data.data_loader - INFO - Shape: 1 rows × 2 columns
+2026-02-10 10:24:02,709 - src.data.data_loader - INFO - Memory usage: 0.00 MB
+2026-02-10 10:24:02,710 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:02,710 - src.data.data_loader - INFO -   - A: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,710 - src.data.data_loader - INFO -   - B: object | Missing: 0 (0.00%)
+2026-02-10 10:24:02,711 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,729 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\large.csv
+2026-02-10 10:24:02,729 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\large.csv
+2026-02-10 10:24:02,749 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\large.csv
+2026-02-10 10:24:02,749 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,749 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:02,749 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,749 - src.data.data_loader - INFO - Shape: 10000 rows × 2 columns
+2026-02-10 10:24:02,751 - src.data.data_loader - INFO - Memory usage: 0.15 MB
+2026-02-10 10:24:02,751 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:02,752 - src.data.data_loader - INFO -   - col1: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,752 - src.data.data_loader - INFO -   - col2: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:02,752 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:02,756 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,760 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,760 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,761 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,761 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,765 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,766 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,766 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,766 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,767 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,774 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:24:02,779 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,779 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,780 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,780 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,782 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,785 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:24:02,788 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,789 - src.evaluation.evaluator - WARNING - No results to compare
+2026-02-10 10:24:02,793 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,794 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,794 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,794 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,795 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,798 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:24:02,799 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:24:02,803 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,804 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,804 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,804 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,805 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,808 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:24:02,808 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-10 10:24:02,813 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,813 - src.evaluation.evaluator - ERROR - No comparison data available. Run create_comparison_table() first.
+2026-02-10 10:24:02,818 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,818 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,818 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,818 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,821 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,824 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:24:02,825 - src.evaluation.evaluator - ERROR - Metric 'nonexistent' not found in results
+2026-02-10 10:24:02,828 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,829 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,829 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,829 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,832 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,835 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:24:02,835 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:24:02,836 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-10 10:24:02,836 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-10 10:24:02,837 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-10 10:24:02,839 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-10 10:24:02,843 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,843 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,844 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,844 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,845 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,849 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:24:02,850 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:24:02,850 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-10 10:24:02,851 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-10 10:24:02,851 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-10 10:24:02,854 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-10 10:24:02,858 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,858 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,858 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,859 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,860 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,864 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:24:02,865 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:24:02,865 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-10 10:24:02,866 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-10 10:24:02,867 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-10 10:24:02,870 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-10 10:24:02,874 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,875 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,875 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,875 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,875 - src.evaluation.evaluator - INFO - 
+Comparison: Linear Regression vs Random Forest
+2026-02-10 10:24:02,876 - src.evaluation.evaluator - INFO -   r2_score: 0.7500 vs 0.8500 (diff: -0.1000, -11.76%)
+2026-02-10 10:24:02,876 - src.evaluation.evaluator - INFO -   rmse: 1500.0000 vs 1200.0000 (diff: 300.0000, 25.00%)
+2026-02-10 10:24:02,876 - src.evaluation.evaluator - INFO -   mae: 1200.0000 vs 950.0000 (diff: 250.0000, 26.32%)
+2026-02-10 10:24:02,876 - src.evaluation.evaluator - INFO -   mape: 12.5000 vs 10.2000 (diff: 2.3000, 22.55%)
+2026-02-10 10:24:02,880 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,881 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,881 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,881 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,881 - src.evaluation.evaluator - ERROR - One or both models not found in results
+2026-02-10 10:24:02,885 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,886 - src.evaluation.evaluator - INFO - Added results for Model1: R²=0.8
+2026-02-10 10:24:02,886 - src.evaluation.evaluator - INFO - Added results for Model2: R²=0.9
+2026-02-10 10:24:02,886 - src.evaluation.evaluator - INFO - 
+Comparison: Model1 vs Model2
+2026-02-10 10:24:02,886 - src.evaluation.evaluator - INFO -   r2_score: 0.8000 vs 0.9000 (diff: -0.1000, -11.11%)
+2026-02-10 10:24:02,886 - src.evaluation.evaluator - INFO -   rmse: 100.0000 vs 80.0000 (diff: 20.0000, 25.00%)
+2026-02-10 10:24:02,890 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,891 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-10 10:24:02,891 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-10 10:24:02,891 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-10 10:24:02,892 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,896 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-10 10:24:02,897 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:24:02,898 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-10 10:24:02,898 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-10 10:24:02,900 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-10 10:24:02,900 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-10 10:24:02,903 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-10 10:24:02,908 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,908 - src.evaluation.evaluator - INFO - Added results for OnlyModel: R²=0.75
+2026-02-10 10:24:02,910 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,912 - src.evaluation.evaluator - INFO - 
+           r2_score   rmse
+OnlyModel      0.75  100.0
+2026-02-10 10:24:02,918 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:02,919 - src.evaluation.evaluator - INFO - Added results for Model1: R²=0.8
+2026-02-10 10:24:02,919 - src.evaluation.evaluator - INFO - Added results for Model2: R²=0.8
+2026-02-10 10:24:02,920 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:02,922 - src.evaluation.evaluator - INFO - 
+        r2_score   rmse
+Model1       0.8  100.0
+Model2       0.8  100.0
+2026-02-10 10:24:02,923 - src.evaluation.evaluator - INFO - Best model by r2_score: Model1 (r2_score=0.8000)
+2026-02-10 10:24:02,927 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:02,932 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:02,938 - src.features.feature_engineer - INFO - Created temporal features from 'date': month, day, weekday, season, is_weekend
+2026-02-10 10:24:02,944 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:02,951 - src.features.feature_engineer - INFO - Created temporal features from 'date': month, day, weekday, season, is_weekend
+2026-02-10 10:24:02,955 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:02,956 - src.features.feature_engineer - WARNING - Column 'nonexistent' not found, skipping temporal features
+2026-02-10 10:24:02,961 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:02,965 - src.features.feature_engineer - INFO - OneHot encoded 'category' into 2 features
+2026-02-10 10:24:02,969 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:02,970 - src.features.feature_engineer - INFO - Label encoded 'category'
+2026-02-10 10:24:02,976 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:02,979 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 2 features
+2026-02-10 10:24:02,982 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 2 features
+2026-02-10 10:24:02,987 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:02,989 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 1 features
+2026-02-10 10:24:02,993 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 1 features
+2026-02-10 10:24:02,998 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,003 - src.features.feature_engineer - INFO - Scaled 'num1' using standard scaling
+2026-02-10 10:24:03,008 - src.features.feature_engineer - INFO - Scaled 'num2' using standard scaling
+2026-02-10 10:24:03,013 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,020 - src.features.feature_engineer - INFO - Scaled 'num1' using minmax scaling
+2026-02-10 10:24:03,027 - src.features.feature_engineer - INFO - Scaled 'num2' using minmax scaling
+2026-02-10 10:24:03,032 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,038 - src.features.feature_engineer - INFO - Scaled 'num1' using robust scaling
+2026-02-10 10:24:03,043 - src.features.feature_engineer - INFO - Scaled 'num2' using robust scaling
+2026-02-10 10:24:03,049 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,054 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-10 10:24:03,058 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-10 10:24:03,064 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,065 - src.features.feature_engineer - INFO - Created interaction feature: A_x_B
+2026-02-10 10:24:03,070 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,071 - src.features.feature_engineer - INFO - Created interaction feature: A_x_B
+2026-02-10 10:24:03,072 - src.features.feature_engineer - INFO - Created interaction feature: A_x_C
+2026-02-10 10:24:03,077 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,078 - src.features.feature_engineer - WARNING - Cannot create interaction between 'A' and 'B': columns not found
+2026-02-10 10:24:03,083 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,086 - src.features.feature_engineer - INFO - Dropped 2 features: ['B', 'C']
+2026-02-10 10:24:03,090 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,091 - src.features.feature_engineer - WARNING - None of the specified columns found: ['B', 'C']
+2026-02-10 10:24:03,096 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,096 - src.features.feature_engineer - INFO - Total features: 3
+2026-02-10 10:24:03,101 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,108 - src.features.feature_engineer - INFO - Created temporal features from 'date': month, day, weekday, season, is_weekend
+2026-02-10 10:24:03,109 - src.features.feature_engineer - INFO - Label encoded 'category'
+2026-02-10 10:24:03,115 - src.features.feature_engineer - INFO - Scaled 'value' using standard scaling
+2026-02-10 10:24:03,121 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,122 - src.features.feature_engineer - INFO - Label encoded 'cat'
+2026-02-10 10:24:03,128 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-10 10:24:03,129 - src.features.feature_engineer - INFO - Label encoded 'cat'
+2026-02-10 10:24:03,133 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-10 10:24:03,138 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,139 - src.features.feature_engineer - WARNING - Column 'date' not found, skipping temporal features
+2026-02-10 10:24:03,144 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,145 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 0 features
+2026-02-10 10:24:03,159 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:03,159 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:03,180 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:03,181 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:03,181 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:03,181 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:03,181 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:24:03,183 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:24:03,183 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:03,184 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:24:03,184 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:24:03,185 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:24:03,185 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:24:03,186 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:03,186 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:24:03,187 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:03,187 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:03,187 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:03,188 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:03,190 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:24:03,190 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:24:03,194 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-10 10:24:03,207 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:03,209 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:24:03,209 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-10 10:24:03,209 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,211 - src.data.preprocessor - INFO - Converted 'Date' to datetime type
+2026-02-10 10:24:03,212 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-10 10:24:03,218 - src.features.feature_engineer - INFO - Created temporal features from 'Date': month, day, weekday, season, is_weekend
+2026-02-10 10:24:03,221 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:24:03,223 - src.features.feature_engineer - INFO - Label encoded 'From'
+2026-02-10 10:24:03,224 - src.features.feature_engineer - INFO - Label encoded 'To'
+2026-02-10 10:24:03,225 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:24:03,226 - src.features.feature_engineer - INFO - Label encoded 'season'
+2026-02-10 10:24:03,233 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,241 - src.features.feature_engineer - INFO - Scaled 'feature_0' using standard scaling
+2026-02-10 10:24:03,248 - src.features.feature_engineer - INFO - Scaled 'feature_1' using standard scaling
+2026-02-10 10:24:03,254 - src.features.feature_engineer - INFO - Scaled 'feature_2' using standard scaling
+2026-02-10 10:24:03,261 - src.features.feature_engineer - INFO - Scaled 'feature_3' using standard scaling
+2026-02-10 10:24:03,266 - src.features.feature_engineer - INFO - Scaled 'feature_4' using standard scaling
+2026-02-10 10:24:03,269 - src.features.feature_engineer - INFO - Scaled 'feature_0' using standard scaling
+2026-02-10 10:24:03,272 - src.features.feature_engineer - INFO - Scaled 'feature_1' using standard scaling
+2026-02-10 10:24:03,276 - src.features.feature_engineer - INFO - Scaled 'feature_2' using standard scaling
+2026-02-10 10:24:03,280 - src.features.feature_engineer - INFO - Scaled 'feature_3' using standard scaling
+2026-02-10 10:24:03,283 - src.features.feature_engineer - INFO - Scaled 'feature_4' using standard scaling
+2026-02-10 10:24:03,283 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:03,284 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:24:03,284 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:24:03,292 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-10 10:24:03,292 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:24:03,301 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.19, MAE: 3221.20
+2026-02-10 10:24:03,302 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:24:03,310 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.62
+2026-02-10 10:24:03,310 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:24:03,323 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-10 10:24:03,323 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:24:03,623 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-10 10:24:03,624 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:24:03,624 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:03,624 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-10 10:24:03,629 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-10 10:24:03,629 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-10 10:24:03,630 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-10 10:24:03,630 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-10 10:24:03,630 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-10 10:24:03,630 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=-0.5274555792231657
+2026-02-10 10:24:03,630 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-10 10:24:03,635 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-10 10:24:03,635 - src.models.trainer - INFO -   R² Score: -0.5152
+2026-02-10 10:24:03,635 - src.models.trainer - INFO -   RMSE: 3837.86
+2026-02-10 10:24:03,636 - src.models.trainer - INFO -   MAE: 3116.43
+2026-02-10 10:24:03,636 - src.models.trainer - INFO -   MAPE: 40.82%
+2026-02-10 10:24:03,636 - src.evaluation.evaluator - INFO - Added results for Ridge (alpha=1.0): R²=-0.5151538566488965
+2026-02-10 10:24:03,638 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:03,641 - src.evaluation.evaluator - INFO - 
+                   r2_score       rmse        mae     mape
+Ridge (alpha=1.0)   -0.5152  3837.8633  3116.4295  40.8167
+Linear Regression   -0.5275  3853.4119  3128.9991  40.9553
+2026-02-10 10:24:03,652 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:03,653 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:03,675 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpm11ml_zq\test_flight_data.csv
+2026-02-10 10:24:03,675 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:03,675 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-10 10:24:03,676 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:03,676 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-10 10:24:03,678 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-10 10:24:03,678 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-10 10:24:03,679 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-10 10:24:03,680 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-10 10:24:03,680 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-10 10:24:03,681 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-10 10:24:03,681 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:03,682 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-10 10:24:03,683 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-10 10:24:03,683 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-10 10:24:03,683 - src.data.data_loader - INFO - ============================================================
+2026-02-10 10:24:03,684 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:03,686 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:24:03,686 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:24:03,691 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-10 10:24:03,691 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:03,695 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:24:03,695 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-10 10:24:03,695 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-10 10:24:03,696 - src.data.preprocessor - INFO -   Features: 7
+2026-02-10 10:24:03,696 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:03,697 - src.features.feature_engineer - INFO - Label encoded 'Date'
+2026-02-10 10:24:03,698 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:24:03,699 - src.features.feature_engineer - INFO - Label encoded 'From'
+2026-02-10 10:24:03,699 - src.features.feature_engineer - INFO - Label encoded 'To'
+2026-02-10 10:24:03,700 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:24:03,701 - src.features.feature_engineer - INFO - Label encoded 'Date'
+2026-02-10 10:24:03,705 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:24:03,709 - src.features.feature_engineer - INFO - Label encoded 'From'
+2026-02-10 10:24:03,713 - src.features.feature_engineer - INFO - Label encoded 'To'
+2026-02-10 10:24:03,717 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:24:03,723 - src.features.feature_engineer - INFO - Scaled 'Date' using standard scaling
+2026-02-10 10:24:03,729 - src.features.feature_engineer - INFO - Scaled 'Airline' using standard scaling
+2026-02-10 10:24:03,733 - src.features.feature_engineer - INFO - Scaled 'From' using standard scaling
+2026-02-10 10:24:03,738 - src.features.feature_engineer - INFO - Scaled 'To' using standard scaling
+2026-02-10 10:24:03,744 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-10 10:24:03,748 - src.features.feature_engineer - INFO - Scaled 'Duration' using standard scaling
+2026-02-10 10:24:03,754 - src.features.feature_engineer - INFO - Scaled 'Stops' using standard scaling
+2026-02-10 10:24:03,758 - src.features.feature_engineer - INFO - Scaled 'Date' using standard scaling
+2026-02-10 10:24:03,762 - src.features.feature_engineer - INFO - Scaled 'Airline' using standard scaling
+2026-02-10 10:24:03,766 - src.features.feature_engineer - INFO - Scaled 'From' using standard scaling
+2026-02-10 10:24:03,770 - src.features.feature_engineer - INFO - Scaled 'To' using standard scaling
+2026-02-10 10:24:03,773 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-10 10:24:03,777 - src.features.feature_engineer - INFO - Scaled 'Duration' using standard scaling
+2026-02-10 10:24:03,780 - src.features.feature_engineer - INFO - Scaled 'Stops' using standard scaling
+2026-02-10 10:24:03,781 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:03,781 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:24:03,781 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:24:03,790 - src.models.trainer - INFO - Linear Regression - Train R²: 0.1050, RMSE: 3625.40, MAE: 3070.10
+2026-02-10 10:24:03,790 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:24:03,799 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.1050, RMSE: 3625.45, MAE: 3070.07
+2026-02-10 10:24:03,799 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:24:03,809 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.1050, RMSE: 3625.40, MAE: 3070.16
+2026-02-10 10:24:03,809 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:24:03,820 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9913, RMSE: 358.07, MAE: 114.18
+2026-02-10 10:24:03,820 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:24:04,111 - src.models.trainer - INFO - Random Forest - Train R²: 0.8632, RMSE: 1417.15, MAE: 1182.85
+2026-02-10 10:24:04,111 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:24:04,111 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-10 10:24:04,112 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-10 10:24:04,117 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-10 10:24:04,118 - src.models.trainer - INFO -   R² Score: -0.6498
+2026-02-10 10:24:04,118 - src.models.trainer - INFO -   RMSE: 4121.72
+2026-02-10 10:24:04,118 - src.models.trainer - INFO -   MAE: 3181.59
+2026-02-10 10:24:04,119 - src.models.trainer - INFO -   MAPE: 74.99%
+2026-02-10 10:24:04,119 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=-0.6497722624211368
+2026-02-10 10:24:04,119 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-10 10:24:04,125 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-10 10:24:04,126 - src.models.trainer - INFO -   R² Score: -0.6363
+2026-02-10 10:24:04,126 - src.models.trainer - INFO -   RMSE: 4104.80
+2026-02-10 10:24:04,126 - src.models.trainer - INFO -   MAE: 3170.28
+2026-02-10 10:24:04,127 - src.models.trainer - INFO -   MAPE: 74.73%
+2026-02-10 10:24:04,127 - src.evaluation.evaluator - INFO - Added results for Ridge (alpha=1.0): R²=-0.636254970777524
+2026-02-10 10:24:04,128 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-10 10:24:04,131 - src.evaluation.evaluator - INFO - 
+                   r2_score       rmse        mae     mape
+Ridge (alpha=1.0)   -0.6363  4104.8037  3170.2831  74.7269
+Linear Regression   -0.6498  4121.7239  3181.5869  74.9892
+2026-02-10 10:24:04,131 - src.evaluation.evaluator - INFO - Best model by r2_score: Ridge (alpha=1.0) (r2_score=-0.6363)
+2026-02-10 10:24:04,141 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (53, 6)
+2026-02-10 10:24:04,143 - src.data.preprocessor - INFO - Removed 3 duplicate rows (5.66%)
+2026-02-10 10:24:04,144 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:24:04,146 - src.data.preprocessor - INFO - Filled 6 missing values in 'Fare' with median: 8008.32
+2026-02-10 10:24:04,147 - src.data.preprocessor - INFO - Filled 3 missing values in 'Airline' with mode: Novoair
+2026-02-10 10:24:04,150 - src.data.preprocessor - INFO - Removed 1 rows with Fare < 0
+2026-02-10 10:24:04,153 - src.data.preprocessor - INFO - Removed 1 extreme outliers from 'Fare'
+2026-02-10 10:24:04,154 - src.data.preprocessor - INFO - Data validation complete: 2 rows removed
+2026-02-10 10:24:04,154 - src.data.preprocessor - INFO - Returning processed data with shape: (48, 6)
+2026-02-10 10:24:04,161 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (5, 3)
+2026-02-10 10:24:04,163 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:24:04,163 - src.data.preprocessor - INFO -   Training set: 4 samples (80%)
+2026-02-10 10:24:04,163 - src.data.preprocessor - INFO -   Test set: 1 samples (20%)
+2026-02-10 10:24:04,163 - src.data.preprocessor - INFO -   Features: 2
+2026-02-10 10:24:04,164 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:04,164 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:24:04,164 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:24:04,171 - src.models.trainer - INFO - Linear Regression - Train R²: 0.9257, RMSE: 2.15, MAE: 1.86
+2026-02-10 10:24:04,172 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:24:04,179 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.9230, RMSE: 2.19, MAE: 1.89
+2026-02-10 10:24:04,180 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:24:04,187 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.9184, RMSE: 2.26, MAE: 1.91
+2026-02-10 10:24:04,188 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:24:04,195 - src.models.trainer - INFO - Decision Tree - Train R²: 1.0000, RMSE: 0.00, MAE: 0.00
+2026-02-10 10:24:04,195 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:24:04,463 - src.models.trainer - INFO - Random Forest - Train R²: 0.9262, RMSE: 2.15, MAE: 1.91
+2026-02-10 10:24:04,464 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:24:05,642 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:24:06,254 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:24:06,272 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:06,278 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:24:06,279 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-10 10:24:06,280 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-10 10:24:06,282 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-10 10:24:06,283 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-10 10:24:06,288 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-10 10:24:06,294 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-10 10:24:06,295 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-10 10:24:06,297 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-10 10:24:06,298 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:24:06,300 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-10 10:24:06,301 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-10 10:24:06,302 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:24:06,303 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-10 10:24:06,305 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-10 10:24:06,306 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-10 10:24:06,307 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-10 10:24:06,309 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-10 10:24:06,310 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-10 10:24:06,313 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-10 10:24:06,314 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-10 10:24:06,316 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:24:06,317 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-10 10:24:06,319 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-10 10:24:06,327 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-10 10:24:06,334 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-10 10:24:06,335 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-10 10:24:06,336 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-10 10:24:06,336 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-10 10:24:06,336 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-10 10:24:06,336 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-10 10:24:06,337 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-10 10:24:06,337 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-10 10:24:06,342 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-10 10:24:06,342 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-10 10:24:06,343 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-10 10:24:06,343 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-10 10:24:06,344 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-10 10:24:06,345 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-10 10:24:06,351 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-10 10:24:06,353 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-10 10:24:06,403 - src.app.model_service - INFO - Prediction made successfully: 198507.12
+2026-02-10 10:24:06,903 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:24:06,931 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-10 10:24:06,941 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:24:06,946 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-10 10:24:06,948 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-10 10:24:06,951 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-10 10:24:06,953 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-10 10:24:06,959 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-10 10:24:06,968 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-10 10:24:06,971 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-10 10:24:06,973 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-10 10:24:06,979 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:24:06,982 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-10 10:24:06,984 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-10 10:24:06,986 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-10 10:24:06,988 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-10 10:24:06,990 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-10 10:24:06,992 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-10 10:24:06,994 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-10 10:24:06,995 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-10 10:24:06,997 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-10 10:24:07,002 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-10 10:24:07,006 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-10 10:24:07,008 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-10 10:24:07,011 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-10 10:24:07,013 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-10 10:24:07,025 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-10 10:24:07,033 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-10 10:24:07,034 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-10 10:24:07,034 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-10 10:24:07,035 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-10 10:24:07,035 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-10 10:24:07,035 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-10 10:24:07,035 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-10 10:24:07,036 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-10 10:24:07,040 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-10 10:24:07,040 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-10 10:24:07,041 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-10 10:24:07,041 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-10 10:24:07,041 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-10 10:24:07,041 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-10 10:24:07,046 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-10 10:24:07,047 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-10 10:24:07,093 - src.app.model_service - INFO - Prediction made successfully: 66293.31
+2026-02-10 10:24:07,499 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-10 10:24:07,535 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:07,541 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:07,542 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:24:07,542 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:24:07,550 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-10 10:24:07,550 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:24:07,557 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-10 10:24:07,558 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:24:07,566 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-10 10:24:07,566 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:24:07,574 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-10 10:24:07,575 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:24:07,851 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-10 10:24:07,851 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:24:07,856 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:07,856 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:24:07,857 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:24:07,864 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-10 10:24:07,864 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:24:07,870 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-10 10:24:07,871 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:24:07,879 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-10 10:24:07,879 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:24:07,889 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-10 10:24:07,889 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:24:08,195 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-10 10:24:08,196 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:24:08,200 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:08,200 - src.models.trainer - INFO - Performing 3-fold cross-validation...
+2026-02-10 10:24:16,545 - src.models.trainer - INFO - CV Results - R²: -0.1392 (±0.1538)
+2026-02-10 10:24:16,545 - src.models.trainer - INFO - CV Results - RMSE: 3912.78 (±148.19)
+2026-02-10 10:24:16,555 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:16,556 - src.models.trainer - INFO - Performing 3-fold cross-validation...
+2026-02-10 10:24:16,614 - src.models.trainer - INFO - CV Results - R²: -0.1392 (±0.1538)
+2026-02-10 10:24:16,615 - src.models.trainer - INFO - CV Results - RMSE: 3912.78 (±148.19)
+2026-02-10 10:24:16,622 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:16,622 - src.models.trainer - INFO - Tuning hyperparameters for ridge using grid search...
+2026-02-10 10:24:16,682 - src.models.trainer - INFO - Best parameters: {'alpha': 10.0}
+2026-02-10 10:24:16,683 - src.models.trainer - INFO - Best CV RMSE: 3991.96
+2026-02-10 10:24:16,688 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:16,689 - src.models.trainer - INFO - Tuning hyperparameters for random_forest using grid search...
+2026-02-10 10:24:17,383 - src.models.trainer - INFO - Best parameters: {'max_depth': 5, 'n_estimators': 10}
+2026-02-10 10:24:17,384 - src.models.trainer - INFO - Best CV RMSE: 3677.80
+2026-02-10 10:24:17,391 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:17,392 - src.models.trainer - INFO - Tuning hyperparameters for ridge using grid search...
+2026-02-10 10:24:17,454 - src.models.trainer - INFO - Best parameters: {'alpha': 1.0}
+2026-02-10 10:24:17,454 - src.models.trainer - INFO - Best CV RMSE: 4040.51
+2026-02-10 10:24:17,468 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:17,468 - src.models.trainer - INFO - Evaluating Test Model on test set...
+2026-02-10 10:24:17,479 - src.models.trainer - INFO - Test Model Test Metrics:
+2026-02-10 10:24:17,479 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-10 10:24:17,479 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-10 10:24:17,479 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-10 10:24:17,480 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-10 10:24:17,494 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:17,494 - src.models.trainer - INFO - Evaluating Test on test set...
+2026-02-10 10:24:17,503 - src.models.trainer - INFO - Test Test Metrics:
+2026-02-10 10:24:17,504 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-10 10:24:17,504 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-10 10:24:17,505 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-10 10:24:17,505 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-10 10:24:17,576 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:17,583 - src.models.trainer - INFO - Extracted Feature Importance for 5 features
+2026-02-10 10:24:17,583 - src.models.trainer - INFO - Top 5 features: ['feature_3', 'feature_0', 'feature_4', 'feature_2', 'feature_1']
+2026-02-10 10:24:17,595 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:17,598 - src.models.trainer - INFO - Extracted Coefficient Magnitude for 5 features
+2026-02-10 10:24:17,598 - src.models.trainer - INFO - Top 5 features: ['feature_1', 'feature_0', 'feature_3', 'feature_2', 'feature_4']
+2026-02-10 10:24:17,661 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:17,665 - src.models.trainer - INFO - Extracted Feature Importance for 5 features
+2026-02-10 10:24:17,666 - src.models.trainer - INFO - Top 5 features: ['feature_3', 'feature_0', 'feature_4', 'feature_2', 'feature_1']
+2026-02-10 10:24:17,675 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:17,675 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:24:17,676 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:24:17,686 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-10 10:24:17,687 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:24:17,698 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-10 10:24:17,699 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:24:17,710 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-10 10:24:17,711 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:24:17,722 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-10 10:24:17,723 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:24:18,081 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-10 10:24:18,081 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:24:18,081 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-10 10:24:18,088 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-10 10:24:18,088 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-10 10:24:18,088 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-10 10:24:18,089 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-10 10:24:18,089 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-10 10:24:18,089 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-10 10:24:18,096 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-10 10:24:18,096 - src.models.trainer - INFO -   R² Score: -0.5127
+2026-02-10 10:24:18,096 - src.models.trainer - INFO -   RMSE: 3834.75
+2026-02-10 10:24:18,096 - src.models.trainer - INFO -   MAE: 3114.07
+2026-02-10 10:24:18,097 - src.models.trainer - INFO -   MAPE: 40.79%
+2026-02-10 10:24:18,097 - src.models.trainer - INFO - Evaluating Lasso (alpha=1.0) on test set...
+2026-02-10 10:24:18,103 - src.models.trainer - INFO - Lasso (alpha=1.0) Test Metrics:
+2026-02-10 10:24:18,104 - src.models.trainer - INFO -   R² Score: -0.5254
+2026-02-10 10:24:18,104 - src.models.trainer - INFO -   RMSE: 3850.85
+2026-02-10 10:24:18,105 - src.models.trainer - INFO -   MAE: 3126.99
+2026-02-10 10:24:18,105 - src.models.trainer - INFO -   MAPE: 40.93%
+2026-02-10 10:24:18,105 - src.models.trainer - INFO - Evaluating Decision Tree on test set...
+2026-02-10 10:24:18,112 - src.models.trainer - INFO - Decision Tree Test Metrics:
+2026-02-10 10:24:18,112 - src.models.trainer - INFO -   R² Score: -1.5132
+2026-02-10 10:24:18,112 - src.models.trainer - INFO -   RMSE: 4942.80
+2026-02-10 10:24:18,112 - src.models.trainer - INFO -   MAE: 4075.88
+2026-02-10 10:24:18,113 - src.models.trainer - INFO -   MAPE: 55.74%
+2026-02-10 10:24:18,113 - src.models.trainer - INFO - Evaluating Random Forest on test set...
+2026-02-10 10:24:18,150 - src.models.trainer - INFO - Random Forest Test Metrics:
+2026-02-10 10:24:18,151 - src.models.trainer - INFO -   R² Score: -0.5440
+2026-02-10 10:24:18,151 - src.models.trainer - INFO -   RMSE: 3874.26
+2026-02-10 10:24:18,151 - src.models.trainer - INFO -   MAE: 3250.06
+2026-02-10 10:24:18,152 - src.models.trainer - INFO -   MAPE: 45.06%
+2026-02-10 10:24:18,158 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:18,158 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:24:18,159 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:24:18,166 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-10 10:24:18,167 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:24:18,174 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-10 10:24:18,175 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:24:18,184 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-10 10:24:18,185 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:24:18,196 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-10 10:24:18,196 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:24:18,534 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-10 10:24:18,534 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:24:18,535 - src.models.trainer - INFO - Performing 3-fold cross-validation...
+2026-02-10 10:24:18,606 - src.models.trainer - INFO - CV Results - R²: -0.1392 (±0.1538)
+2026-02-10 10:24:18,607 - src.models.trainer - INFO - CV Results - RMSE: 3912.78 (±148.19)
+2026-02-10 10:24:18,607 - src.models.trainer - INFO - Tuning hyperparameters for ridge using grid search...
+2026-02-10 10:24:18,656 - src.models.trainer - INFO - Best parameters: {'alpha': 1.0}
+2026-02-10 10:24:18,657 - src.models.trainer - INFO - Best CV RMSE: 4040.51
+2026-02-10 10:24:18,657 - src.models.trainer - INFO - Evaluating Tuned Ridge on test set...
+2026-02-10 10:24:18,664 - src.models.trainer - INFO - Tuned Ridge Test Metrics:
+2026-02-10 10:24:18,665 - src.models.trainer - INFO -   R² Score: -0.5127
+2026-02-10 10:24:18,665 - src.models.trainer - INFO -   RMSE: 3834.75
+2026-02-10 10:24:18,666 - src.models.trainer - INFO -   MAE: 3114.07
+2026-02-10 10:24:18,666 - src.models.trainer - INFO -   MAPE: 40.79%
+2026-02-10 10:24:18,673 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:18,674 - src.models.trainer - INFO - Training baseline models...
+2026-02-10 10:24:18,674 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-10 10:24:18,687 - src.models.trainer - INFO - Linear Regression - Train R²: 1.0000, RMSE: 0.00, MAE: 0.00
+2026-02-10 10:24:18,687 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-10 10:24:18,708 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.9917, RMSE: 0.13, MAE: 0.11
+2026-02-10 10:24:18,712 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-10 10:24:18,730 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.7500, RMSE: 0.71, MAE: 0.60
+2026-02-10 10:24:18,730 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-10 10:24:18,741 - src.models.trainer - INFO - Decision Tree - Train R²: 1.0000, RMSE: 0.00, MAE: 0.00
+2026-02-10 10:24:18,741 - src.models.trainer - INFO - Training Random Forest...
+2026-02-10 10:24:19,063 - src.models.trainer - INFO - Random Forest - Train R²: 0.9547, RMSE: 0.30, MAE: 0.28
+2026-02-10 10:24:19,063 - src.models.trainer - INFO - Baseline model training completed
+2026-02-10 10:24:19,071 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:19,071 - src.models.trainer - INFO - Evaluating Single Feature on test set...
+2026-02-10 10:24:19,078 - src.models.trainer - INFO - Single Feature Test Metrics:
+2026-02-10 10:24:19,078 - src.models.trainer - INFO -   R² Score: 1.0000
+2026-02-10 10:24:19,078 - src.models.trainer - INFO -   RMSE: 0.00
+2026-02-10 10:24:19,078 - src.models.trainer - INFO -   MAE: 0.00
+2026-02-10 10:24:19,078 - src.models.trainer - INFO -   MAPE: 0.00%
+2026-02-10 10:24:19,087 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-10 10:24:19,087 - src.models.trainer - INFO - Evaluating Perfect on test set...
+2026-02-10 10:24:19,095 - src.models.trainer - INFO - Perfect Test Metrics:
+2026-02-10 10:24:19,095 - src.models.trainer - INFO -   R² Score: 1.0000
+2026-02-10 10:24:19,096 - src.models.trainer - INFO -   RMSE: 0.00
+2026-02-10 10:24:19,096 - src.models.trainer - INFO -   MAE: 0.00
+2026-02-10 10:24:19,096 - src.models.trainer - INFO -   MAPE: inf%
+2026-02-10 10:24:19,107 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:19,118 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:19,128 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-10 10:24:19,129 - src.data.preprocessor - INFO - Removed 1 duplicate rows (25.00%)
+2026-02-10 10:24:19,139 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:19,143 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:24:19,153 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:19,156 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:24:19,162 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-10 10:24:19,163 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:24:19,166 - src.data.preprocessor - INFO - Filled 1 missing values in 'num1' with median: 2.00
+2026-02-10 10:24:19,167 - src.data.preprocessor - INFO - Filled 1 missing values in 'num2' with median: 30.00
+2026-02-10 10:24:19,169 - src.data.preprocessor - INFO - Removed 1 duplicate rows after imputation
+2026-02-10 10:24:19,175 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-10 10:24:19,176 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:24:19,178 - src.data.preprocessor - INFO - Filled 1 missing values in 'cat1' with mode: a
+2026-02-10 10:24:19,180 - src.data.preprocessor - INFO - Filled 1 missing values in 'cat2' with mode: x
+2026-02-10 10:24:19,186 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-10 10:24:19,187 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:24:19,190 - src.data.preprocessor - INFO - Filled 1 missing values in 'num' with median: 1.50
+2026-02-10 10:24:19,192 - src.data.preprocessor - INFO - Filled 1 missing values in 'cat' with mode: a
+2026-02-10 10:24:19,199 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-10 10:24:19,205 - src.data.preprocessor - INFO - Converted 'date_str' to datetime type
+2026-02-10 10:24:19,211 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-10 10:24:19,214 - src.data.preprocessor - INFO - Converted 'date_str' to datetime type
+2026-02-10 10:24:19,216 - src.data.preprocessor - WARNING - Failed to parse 1 dates in 'date_str'
+2026-02-10 10:24:19,224 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 1)
+2026-02-10 10:24:19,225 - src.data.preprocessor - WARNING - Column 'nonexistent' not found in dataset, skipping
+2026-02-10 10:24:19,233 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (5, 2)
+2026-02-10 10:24:19,234 - src.data.preprocessor - INFO - Removed 2 rows with Fare < 0
+2026-02-10 10:24:19,238 - src.data.preprocessor - INFO - Data validation complete: 2 rows removed
+2026-02-10 10:24:19,245 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (5, 1)
+2026-02-10 10:24:19,250 - src.data.preprocessor - INFO - Removed 1 extreme outliers from 'Fare'
+2026-02-10 10:24:19,250 - src.data.preprocessor - INFO - Data validation complete: 1 rows removed
+2026-02-10 10:24:19,257 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 1)
+2026-02-10 10:24:19,259 - src.data.preprocessor - INFO - Standardized categorical values in 'City'
+2026-02-10 10:24:19,272 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:19,278 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:24:19,278 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-10 10:24:19,278 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-10 10:24:19,278 - src.data.preprocessor - INFO -   Features: 7
+2026-02-10 10:24:19,290 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:19,295 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:24:19,296 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-10 10:24:19,296 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-10 10:24:19,296 - src.data.preprocessor - INFO -   Features: 7
+2026-02-10 10:24:19,307 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:19,309 - src.data.preprocessor - ERROR - Target column 'NonExistentColumn' not found in dataset
+2026-02-10 10:24:19,317 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:19,321 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:24:19,321 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-10 10:24:19,321 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-10 10:24:19,321 - src.data.preprocessor - INFO -   Features: 7
+2026-02-10 10:24:19,322 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:19,326 - src.data.preprocessor - INFO - Data split completed:
+2026-02-10 10:24:19,326 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-10 10:24:19,326 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-10 10:24:19,326 - src.data.preprocessor - INFO -   Features: 7
+2026-02-10 10:24:19,338 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-10 10:24:19,341 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:24:19,342 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-10 10:24:19,349 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-10 10:24:19,351 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-10 10:24:19,352 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:24:19,355 - src.data.preprocessor - INFO - Filled 1 missing values in 'B' with median: 3.00
+2026-02-10 10:24:19,357 - src.data.preprocessor - INFO - Removed 1 duplicate rows after imputation
+2026-02-10 10:24:19,363 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (0, 0)
+2026-02-10 10:24:19,369 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-10 10:24:19,369 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-10 10:24:19,371 - src.data.preprocessor - INFO - Filled 3 missing values in 'A' with median: nan
+2026-02-10 10:24:19,381 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (1, 2)
+2026-02-10 10:24:19,384 - src.data.preprocessor - INFO - No duplicate rows found
