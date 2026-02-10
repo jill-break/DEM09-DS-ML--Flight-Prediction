@@ -233,9 +233,9 @@ class ModelTrainer:
         y_pred = model.predict(X_test)
         
         metrics = {
-            'r2_score': r2_score(y_test, y_pred),
-            'rmse': np.sqrt(mean_squared_error(y_test, y_pred)),
-            'mae': mean_absolute_error(y_test, y_pred),
+            'r2_score': r2_score(y_test, y_pred), # Coefficient of Determination
+            'rmse': np.sqrt(mean_squared_error(y_test, y_pred)), # Root Mean Squared Error
+            'mae': mean_absolute_error(y_test, y_pred), # Mean Absolute Error
             'mape': np.mean(np.abs((y_test - y_pred) / y_test)) * 100  # Mean Absolute Percentage Error
         }
         

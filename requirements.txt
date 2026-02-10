@@ -31,3 +31,7 @@ flake8==6.1.0
 isort==5.12.0
 bandit==1.7.5
 safety==3.0.0
+
+# Web Application
+streamlit==1.29.0
+plotly==5.18.0

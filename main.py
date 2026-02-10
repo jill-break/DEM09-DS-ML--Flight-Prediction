@@ -176,13 +176,24 @@ def main():
     feature_engineer = FeatureEngineer()
     
     # Prepare data for modeling
-    # Identify target column (adjust based on actual data)
-    if len(numerical_cols) > 0:
-        target_column = numerical_cols[0]  # Adjust as needed
-        
+    # Explicitly set target column to avoid data leakage
+    target_column = 'Total Fare (BDT)'
+    
+    # Drop leaky columns: Base Fare and Tax & Surcharge are components of Total Fare
+    # Keeping them would allow the model to simply learn addition (data leakage)
+    leaky_columns = ['Base Fare (BDT)', 'Tax & Surcharge (BDT)']
+    cleaned_data = cleaned_data.drop(
+        columns=[c for c in leaky_columns if c in cleaned_data.columns]
+    )
+    logger.info(f"Dropped leaky columns: {[c for c in leaky_columns if c in cleaned_data.columns or c in leaky_columns]}")
+    
+    if target_column in cleaned_data.columns:
         # Split data
         preprocessor_for_split = DataPreprocessor(cleaned_data)
         X_train, X_test, y_train, y_test = preprocessor_for_split.split_data(target_column)
+        
+        logger.info(f"Target column: {target_column}")
+        logger.info(f"Training set: {X_train.shape}, Test set: {X_test.shape}")
         
         # Encode categorical features if any remain
         if len(X_train.select_dtypes(include=['object']).columns) > 0:
@@ -251,7 +262,7 @@ def main():
         logger.info(f"\nBest Model: {best_model_name} with R² = {best_r2:.4f}")
         
         # =========================================================================
-        # STEP 7: HYPERPARAMETER TUNING (OPTIONAL)
+        # STEP 7: HYPERPARAMETER TUNING (OPTIMIZATION)
         # =========================================================================
         logger.info("\n" + "=" * 80)
         logger.info("STEP 7: HYPERPARAMETER TUNING")
