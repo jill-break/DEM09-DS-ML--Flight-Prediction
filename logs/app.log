@@ -11037,3 +11037,135 @@ Column Information:
 2026-02-11 13:28:50,478 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
 2026-02-11 13:28:54,643 - src.features.feature_engineer - INFO - Label encoded 'Destination'
 2026-02-11 13:28:57,885 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 13:32:23,814 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 13:34:07,314 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 13:34:10,777 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 13:34:14,399 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 13:34:17,730 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 13:34:21,537 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 13:34:24,415 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 13:34:24,481 - src.features.feature_engineer - INFO - Scaled 'Airline' using standard scaling
+2026-02-11 13:34:24,514 - src.features.feature_engineer - INFO - Scaled 'Source' using standard scaling
+2026-02-11 13:34:24,542 - src.features.feature_engineer - INFO - Scaled 'Source Name' using standard scaling
+2026-02-11 13:34:24,580 - src.features.feature_engineer - INFO - Scaled 'Destination' using standard scaling
+2026-02-11 13:34:24,621 - src.features.feature_engineer - INFO - Scaled 'Destination Name' using standard scaling
+2026-02-11 13:34:24,642 - src.features.feature_engineer - INFO - Scaled 'Departure Date & Time' using standard scaling
+2026-02-11 13:34:24,661 - src.features.feature_engineer - INFO - Scaled 'Arrival Date & Time' using standard scaling
+2026-02-11 13:34:24,697 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 13:34:24,717 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-11 13:34:24,745 - src.features.feature_engineer - INFO - Scaled 'Aircraft Type' using standard scaling
+2026-02-11 13:34:24,764 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-11 13:34:24,784 - src.features.feature_engineer - INFO - Scaled 'Booking Source' using standard scaling
+2026-02-11 13:34:24,827 - src.features.feature_engineer - INFO - Scaled 'Seasonality' using standard scaling
+2026-02-11 13:34:24,864 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 13:34:24,875 - src.features.feature_engineer - INFO - Scaled 'Airline' using standard scaling
+2026-02-11 13:34:24,896 - src.features.feature_engineer - INFO - Scaled 'Source' using standard scaling
+2026-02-11 13:34:24,914 - src.features.feature_engineer - INFO - Scaled 'Source Name' using standard scaling
+2026-02-11 13:34:24,927 - src.features.feature_engineer - INFO - Scaled 'Destination' using standard scaling
+2026-02-11 13:34:24,953 - src.features.feature_engineer - INFO - Scaled 'Destination Name' using standard scaling
+2026-02-11 13:34:24,962 - src.features.feature_engineer - INFO - Scaled 'Departure Date & Time' using standard scaling
+2026-02-11 13:34:24,986 - src.features.feature_engineer - INFO - Scaled 'Arrival Date & Time' using standard scaling
+2026-02-11 13:34:25,003 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 13:34:25,014 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-11 13:34:25,028 - src.features.feature_engineer - INFO - Scaled 'Aircraft Type' using standard scaling
+2026-02-11 13:34:25,038 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-11 13:34:25,077 - src.features.feature_engineer - INFO - Scaled 'Booking Source' using standard scaling
+2026-02-11 13:34:25,088 - src.features.feature_engineer - INFO - Scaled 'Seasonality' using standard scaling
+2026-02-11 13:34:25,095 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 13:34:25,098 - src.features.feature_engineer - INFO - Total features: 14
+2026-02-11 13:42:18,771 - notebook_orchestrator - INFO - STEP 5: BASELINE MODEL TRAINING
+2026-02-11 13:42:18,773 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 13:42:18,776 - src.models.trainer - INFO - Training baseline models...
+2026-02-11 13:42:18,778 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-11 13:42:18,878 - src.models.trainer - INFO - Linear Regression - Train R²: 0.3434, RMSE: 66281.75, MAE: 49467.98
+2026-02-11 13:42:18,880 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-11 13:42:19,101 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.3433, RMSE: 66289.48, MAE: 49467.99
+2026-02-11 13:42:19,105 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-11 13:42:19,329 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.3432, RMSE: 66290.55, MAE: 49468.23
+2026-02-11 13:42:19,331 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-11 13:42:20,106 - src.models.trainer - INFO - Decision Tree - Train R²: 0.7207, RMSE: 43228.21, MAE: 25878.54
+2026-02-11 13:42:20,144 - src.models.trainer - INFO - Training Random Forest...
+2026-02-11 13:42:41,729 - src.models.trainer - INFO - Random Forest - Train R²: 0.9533, RMSE: 17676.00, MAE: 10481.34
+2026-02-11 13:42:41,732 - src.models.trainer - INFO - Baseline model training completed
+2026-02-11 13:43:07,959 - notebook_orchestrator - INFO - STEP 6: MODEL EVALUATION
+2026-02-11 13:43:07,962 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 13:43:07,964 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-11 13:43:07,982 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-11 13:43:07,984 - src.models.trainer - INFO -   R² Score: -16.5006
+2026-02-11 13:43:07,986 - src.models.trainer - INFO -   RMSE: 341562.23
+2026-02-11 13:43:07,988 - src.models.trainer - INFO -   MAE: 127519.94
+2026-02-11 13:43:07,989 - src.models.trainer - INFO -   MAPE: 808.14%
+2026-02-11 13:43:07,990 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=-16.50058079074056
+2026-02-11 13:43:07,992 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-11 13:43:08,007 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-11 13:43:08,009 - src.models.trainer - INFO -   R² Score: 0.2730
+2026-02-11 13:43:08,012 - src.models.trainer - INFO -   RMSE: 69616.33
+2026-02-11 13:43:08,015 - src.models.trainer - INFO -   MAE: 51314.27
+2026-02-11 13:43:08,016 - src.models.trainer - INFO -   MAPE: 232.44%
+2026-02-11 13:43:08,019 - src.evaluation.evaluator - INFO - Added results for Ridge (alpha=1.0): R²=0.2729988919341687
+2026-02-11 13:43:08,021 - src.models.trainer - INFO - Evaluating Lasso (alpha=1.0) on test set...
+2026-02-11 13:43:08,036 - src.models.trainer - INFO - Lasso (alpha=1.0) Test Metrics:
+2026-02-11 13:43:08,038 - src.models.trainer - INFO -   R² Score: 0.3362
+2026-02-11 13:43:08,040 - src.models.trainer - INFO -   RMSE: 66523.02
+2026-02-11 13:43:08,043 - src.models.trainer - INFO -   MAE: 48510.22
+2026-02-11 13:43:08,045 - src.models.trainer - INFO -   MAPE: 198.86%
+2026-02-11 13:43:08,047 - src.evaluation.evaluator - INFO - Added results for Lasso (alpha=1.0): R²=0.33617029328706693
+2026-02-11 13:43:08,051 - src.models.trainer - INFO - Evaluating Decision Tree on test set...
+2026-02-11 13:43:08,081 - src.models.trainer - INFO - Decision Tree Test Metrics:
+2026-02-11 13:43:08,083 - src.models.trainer - INFO -   R² Score: 0.5297
+2026-02-11 13:43:08,085 - src.models.trainer - INFO -   RMSE: 55995.01
+2026-02-11 13:43:08,086 - src.models.trainer - INFO -   MAE: 32086.71
+2026-02-11 13:43:08,087 - src.models.trainer - INFO -   MAPE: 48.42%
+2026-02-11 13:43:08,089 - src.evaluation.evaluator - INFO - Added results for Decision Tree: R²=0.5296605536580252
+2026-02-11 13:43:08,091 - src.models.trainer - INFO - Evaluating Random Forest on test set...
+2026-02-11 13:43:08,464 - src.models.trainer - INFO - Random Forest Test Metrics:
+2026-02-11 13:43:08,470 - src.models.trainer - INFO -   R² Score: 0.6574
+2026-02-11 13:43:08,479 - src.models.trainer - INFO -   RMSE: 47790.35
+2026-02-11 13:43:08,483 - src.models.trainer - INFO -   MAE: 28470.73
+2026-02-11 13:43:08,487 - src.models.trainer - INFO -   MAPE: 46.05%
+2026-02-11 13:43:08,490 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.6573954619645855
+2026-02-11 13:43:08,506 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 13:43:08,517 - src.evaluation.evaluator - INFO - 
+                   r2_score         rmse          mae      mape
+Random Forest        0.6574   47790.3455   28470.7284   46.0520
+Decision Tree        0.5297   55995.0087   32086.7119   48.4239
+Lasso (alpha=1.0)    0.3362   66523.0199   48510.2185  198.8586
+Ridge (alpha=1.0)    0.2730   69616.3342   51314.2689  232.4416
+Linear Regression  -16.5006  341562.2341  127519.9364  808.1370
+2026-02-11 13:43:08,574 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.6574)
+2026-02-11 13:45:40,463 - notebook_orchestrator - INFO - STEP 7: HYPERPARAMETER TUNING
+2026-02-11 13:45:40,466 - src.models.trainer - INFO - Tuning hyperparameters for random_forest using grid search...
+2026-02-11 14:26:29,941 - src.models.trainer - INFO - Best parameters: {'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 200}
+2026-02-11 14:26:29,944 - src.models.trainer - INFO - Best CV RMSE: 46310.72
+2026-02-11 14:26:29,946 - src.models.trainer - INFO - Evaluating Random Forest (Tuned) on test set...
+2026-02-11 14:26:30,726 - src.models.trainer - INFO - Random Forest (Tuned) Test Metrics:
+2026-02-11 14:26:30,729 - src.models.trainer - INFO -   R² Score: 0.6701
+2026-02-11 14:26:30,731 - src.models.trainer - INFO -   RMSE: 46898.16
+2026-02-11 14:26:30,734 - src.models.trainer - INFO -   MAE: 28096.04
+2026-02-11 14:26:30,738 - src.models.trainer - INFO -   MAPE: 45.51%
+2026-02-11 14:26:30,741 - src.evaluation.evaluator - INFO - Added results for Random Forest (Tuned): R²=0.6700680349976238
+2026-02-11 14:26:30,750 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:26:30,764 - src.evaluation.evaluator - INFO - 
+                       r2_score         rmse          mae      mape
+Random Forest (Tuned)    0.6701   46898.1608   28096.0377   45.5122
+Random Forest            0.6574   47790.3455   28470.7284   46.0520
+Decision Tree            0.5297   55995.0087   32086.7119   48.4239
+Lasso (alpha=1.0)        0.3362   66523.0199   48510.2185  198.8586
+Ridge (alpha=1.0)        0.2730   69616.3342   51314.2689  232.4416
+Linear Regression      -16.5006  341562.2341  127519.9364  808.1370
+2026-02-11 14:27:19,186 - notebook_orchestrator - INFO - STEP 8: FEATURE IMPORTANCE
+2026-02-11 14:27:19,838 - src.models.trainer - INFO - Extracted Feature Importance for 14 features
+2026-02-11 14:27:19,847 - src.models.trainer - INFO - Top 5 features: ['Class', 'Duration (hrs)', 'Aircraft Type', 'Days Before Departure', 'Destination']
+2026-02-11 14:27:46,939 - notebook_orchestrator - INFO - STEP 9: SAVING RESULTS
+2026-02-11 14:27:48,523 - src.utils.helpers - INFO - Object successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-11 14:27:48,538 - src.models.trainer - INFO - Model saved successfully to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-11 14:27:48,558 - src.evaluation.evaluator - INFO - Saved comparison table to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\model_comparison.csv
+2026-02-11 14:27:48,564 - src.utils.helpers - INFO - JSON data successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_results.json
+2026-02-11 14:27:48,571 - src.evaluation.evaluator - INFO - Saved detailed results to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_results.json
+2026-02-11 14:27:48,579 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (Tuned) (r2_score=0.6701)
+2026-02-11 14:27:48,583 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (Tuned) (rmse=46898.1608)
+2026-02-11 14:27:48,589 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (Tuned) (mae=28096.0377)
+2026-02-11 14:27:48,593 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (Tuned) (mape=45.5122)
+2026-02-11 14:27:48,599 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-11 14:27:48,607 - src.utils.helpers - INFO - JSON data successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_summary.json
+2026-02-11 14:27:48,609 - src.evaluation.evaluator - INFO - Saved summary report to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_summary.json

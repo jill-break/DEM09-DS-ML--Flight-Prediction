@@ -128,7 +128,7 @@ def evaluate_new_model(**context):
     Returns task_id for next step based on comparison.
     """
     # Load performance metrics from training
-    metrics_path = PROJECT_ROOT / "models" / "training_metrics.json"
+    metrics_path = PROJECT_ROOT / "models" / "evaluation_summary.json"
     
     if not NEW_MODEL_PATH.exists():
         raise FileNotFoundError(f"New model not found at {NEW_MODEL_PATH}")
@@ -136,18 +136,13 @@ def evaluate_new_model(**context):
     # Load new model metrics
     if metrics_path.exists():
         with open(metrics_path, 'r') as f:
-            new_metrics = json.load(f)
-        new_r2 = new_metrics.get('r2_score', 0)
+            summary = json.load(f)
+        # Extract R2 score from summary structure: summary['best_model']['r2_score']['value']
+        new_r2 = summary.get('best_model', {}).get('r2_score', {}).get('value', 0)
     else:
-        # If no metrics file, get it from the model
-        with open(NEW_MODEL_PATH, 'rb') as f:
-            import sys
-            sys.path.insert(0, str(PROJECT_ROOT / "src"))
-            model = pickle.load(f)
-        
-        # Use test set to evaluate (simplified)
+        print(f"Metrics file not found at {metrics_path}")
         new_r2 = 0.67  # Fallback value
-    
+        
     print(f"New model R² score: {new_r2}")
     
     # Compare with old model if it exists
@@ -156,8 +151,11 @@ def evaluate_new_model(**context):
         old_metrics_path = BACKUP_DIR / "current_model_metrics.json"
         if old_metrics_path.exists():
             with open(old_metrics_path, 'r') as f:
-                old_metrics = json.load(f)
-            old_r2 = old_metrics.get('r2_score', 0)
+                old_summary = json.load(f)
+            # Try to get from nested structure first, then fallback to flat
+            old_r2 = old_summary.get('best_model', {}).get('r2_score', {}).get('value')
+            if old_r2 is None:
+                old_r2 = old_summary.get('r2_score', 0)
         else:
             old_r2 = 0.67  # Assume current performance
         
@@ -196,7 +194,7 @@ def deploy_new_model(**context):
     print(f"✓ New model deployed to: {MODEL_PATH}")
     
     # Save current metrics for next comparison
-    metrics_path = PROJECT_ROOT / "models" / "training_metrics.json"
+    metrics_path = PROJECT_ROOT / "models" / "evaluation_summary.json"
     if metrics_path.exists():
         backup_metrics_path = BACKUP_DIR / "current_model_metrics.json"
         shutil.copy2(metrics_path, backup_metrics_path)
