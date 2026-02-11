@@ -11169,3 +11169,1831 @@ Linear Regression      -16.5006  341562.2341  127519.9364  808.1370
 2026-02-11 14:27:48,599 - src.evaluation.evaluator - INFO - Summary report generated
 2026-02-11 14:27:48,607 - src.utils.helpers - INFO - JSON data successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_summary.json
 2026-02-11 14:27:48,609 - src.evaluation.evaluator - INFO - Saved summary report to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_summary.json
+2026-02-11 14:52:41,462 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,494 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,495 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,539 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,539 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,539 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:41,542 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,542 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-11 14:52:41,547 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-11 14:52:41,548 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:41,549 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,549 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,550 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,552 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,552 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:41,553 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,554 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:41,555 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:41,556 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,563 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\nonexistent.csv
+2026-02-11 14:52:41,563 - src.utils.helpers - WARNING - File not found: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\nonexistent.csv
+2026-02-11 14:52:41,563 - src.data.data_loader - ERROR - Data file not found: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\nonexistent.csv
+2026-02-11 14:52:41,577 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\invalid.csv
+2026-02-11 14:52:41,580 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\invalid.csv
+2026-02-11 14:52:41,639 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\invalid.csv
+2026-02-11 14:52:41,640 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,640 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:41,641 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,641 - src.data.data_loader - INFO - Shape: 1 rows × 3 columns
+2026-02-11 14:52:41,643 - src.data.data_loader - INFO - Memory usage: 0.00 MB
+2026-02-11 14:52:41,644 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:41,644 - src.data.data_loader - INFO -   - invalid: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,645 - src.data.data_loader - INFO -   - csv: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,646 - src.data.data_loader - INFO -   - data: float64 | Missing: 1 (100.00%)
+2026-02-11 14:52:41,647 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,698 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,698 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,737 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,737 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,737 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:41,738 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,738 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-11 14:52:41,741 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-11 14:52:41,741 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:41,742 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,743 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,744 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,744 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,745 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:41,746 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,746 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:41,747 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:41,748 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,775 - src.data.data_loader - INFO - Generated basic statistics for dataset
+2026-02-11 14:52:41,794 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,795 - src.data.data_loader - ERROR - No data loaded. Call load_data() first.
+2026-02-11 14:52:41,830 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,830 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,881 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:41,882 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,884 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:41,887 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,889 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-11 14:52:41,892 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-11 14:52:41,892 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:41,893 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,894 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,895 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,895 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,898 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:41,907 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-11 14:52:41,910 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:41,919 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:41,921 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:41,942 - src.data.data_loader - INFO - No missing values detected in dataset
+2026-02-11 14:52:41,981 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\missing_data.csv
+2026-02-11 14:52:41,983 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\missing_data.csv
+2026-02-11 14:52:42,025 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\missing_data.csv
+2026-02-11 14:52:42,025 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,026 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:42,026 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,027 - src.data.data_loader - INFO - Shape: 4 rows × 3 columns
+2026-02-11 14:52:42,030 - src.data.data_loader - INFO - Memory usage: 0.00 MB
+2026-02-11 14:52:42,030 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:42,032 - src.data.data_loader - INFO -   - A: float64 | Missing: 1 (25.00%)
+2026-02-11 14:52:42,033 - src.data.data_loader - INFO -   - B: object | Missing: 1 (25.00%)
+2026-02-11 14:52:42,034 - src.data.data_loader - INFO -   - C: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,036 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,044 - src.data.data_loader - INFO - Found missing values in 2 columns
+2026-02-11 14:52:42,062 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:42,062 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:42,123 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:42,123 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,123 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:42,124 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,124 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-11 14:52:42,129 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-11 14:52:42,130 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:42,138 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,139 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,140 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,141 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,141 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,143 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,143 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,144 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,144 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,166 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:42,166 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:42,220 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:42,221 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,221 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:42,221 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,221 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-11 14:52:42,226 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-11 14:52:42,226 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:42,226 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,228 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,228 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,229 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,230 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,230 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,231 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,232 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,232 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,267 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:42,268 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:42,335 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:42,335 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,336 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:42,336 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,337 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-11 14:52:42,341 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-11 14:52:42,341 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:42,343 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,344 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,345 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,347 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,348 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,349 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,350 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,351 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,352 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,369 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\empty.csv
+2026-02-11 14:52:42,371 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\empty.csv
+2026-02-11 14:52:42,374 - src.data.data_loader - WARNING - Empty CSV file detected: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\empty.csv
+2026-02-11 14:52:42,399 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\single_row.csv
+2026-02-11 14:52:42,401 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\single_row.csv
+2026-02-11 14:52:42,429 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\single_row.csv
+2026-02-11 14:52:42,430 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,430 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:42,430 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,430 - src.data.data_loader - INFO - Shape: 1 rows × 2 columns
+2026-02-11 14:52:42,433 - src.data.data_loader - INFO - Memory usage: 0.00 MB
+2026-02-11 14:52:42,433 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:42,434 - src.data.data_loader - INFO -   - A: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,435 - src.data.data_loader - INFO -   - B: object | Missing: 0 (0.00%)
+2026-02-11 14:52:42,436 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,465 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\large.csv
+2026-02-11 14:52:42,466 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\large.csv
+2026-02-11 14:52:42,498 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\large.csv
+2026-02-11 14:52:42,499 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,499 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:42,500 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,500 - src.data.data_loader - INFO - Shape: 10000 rows × 2 columns
+2026-02-11 14:52:42,501 - src.data.data_loader - INFO - Memory usage: 0.15 MB
+2026-02-11 14:52:42,501 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:42,502 - src.data.data_loader - INFO -   - col1: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,502 - src.data.data_loader - INFO -   - col2: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:42,502 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:42,506 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,517 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,523 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,523 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,523 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,527 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,528 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,528 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,529 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,530 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,538 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-11 14:52:42,542 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,542 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,543 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,543 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,545 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,549 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-11 14:52:42,555 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,556 - src.evaluation.evaluator - WARNING - No results to compare
+2026-02-11 14:52:42,560 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,561 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,561 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,561 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,564 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,571 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-11 14:52:42,572 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-11 14:52:42,581 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,581 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,581 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,582 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,584 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,592 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-11 14:52:42,592 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-11 14:52:42,612 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,618 - src.evaluation.evaluator - ERROR - No comparison data available. Run create_comparison_table() first.
+2026-02-11 14:52:42,626 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,628 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,630 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,634 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,641 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,653 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-11 14:52:42,654 - src.evaluation.evaluator - ERROR - Metric 'nonexistent' not found in results
+2026-02-11 14:52:42,658 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,659 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,659 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,659 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,661 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,665 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-11 14:52:42,666 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-11 14:52:42,667 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-11 14:52:42,668 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-11 14:52:42,669 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-11 14:52:42,672 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-11 14:52:42,677 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,677 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,678 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,678 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,679 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,685 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-11 14:52:42,685 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-11 14:52:42,686 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-11 14:52:42,687 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-11 14:52:42,687 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-11 14:52:42,690 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-11 14:52:42,695 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,695 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,696 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,696 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,698 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,702 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-11 14:52:42,703 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-11 14:52:42,704 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-11 14:52:42,704 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-11 14:52:42,705 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-11 14:52:42,709 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-11 14:52:42,721 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,721 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,723 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,723 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,723 - src.evaluation.evaluator - INFO - 
+Comparison: Linear Regression vs Random Forest
+2026-02-11 14:52:42,723 - src.evaluation.evaluator - INFO -   r2_score: 0.7500 vs 0.8500 (diff: -0.1000, -11.76%)
+2026-02-11 14:52:42,723 - src.evaluation.evaluator - INFO -   rmse: 1500.0000 vs 1200.0000 (diff: 300.0000, 25.00%)
+2026-02-11 14:52:42,723 - src.evaluation.evaluator - INFO -   mae: 1200.0000 vs 950.0000 (diff: 250.0000, 26.32%)
+2026-02-11 14:52:42,725 - src.evaluation.evaluator - INFO -   mape: 12.5000 vs 10.2000 (diff: 2.3000, 22.55%)
+2026-02-11 14:52:42,741 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,742 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,742 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,743 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,743 - src.evaluation.evaluator - ERROR - One or both models not found in results
+2026-02-11 14:52:42,751 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,753 - src.evaluation.evaluator - INFO - Added results for Model1: R²=0.8
+2026-02-11 14:52:42,754 - src.evaluation.evaluator - INFO - Added results for Model2: R²=0.9
+2026-02-11 14:52:42,756 - src.evaluation.evaluator - INFO - 
+Comparison: Model1 vs Model2
+2026-02-11 14:52:42,757 - src.evaluation.evaluator - INFO -   r2_score: 0.8000 vs 0.9000 (diff: -0.1000, -11.11%)
+2026-02-11 14:52:42,757 - src.evaluation.evaluator - INFO -   rmse: 100.0000 vs 80.0000 (diff: 20.0000, 25.00%)
+2026-02-11 14:52:42,766 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,767 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.75
+2026-02-11 14:52:42,767 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.85
+2026-02-11 14:52:42,767 - src.evaluation.evaluator - INFO - Added results for Ridge Regression: R²=0.76
+2026-02-11 14:52:42,770 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,775 - src.evaluation.evaluator - INFO - 
+                   r2_score    rmse     mae  mape
+Random Forest          0.85  1200.0   950.0  10.2
+Ridge Regression       0.76  1480.0  1180.0  12.3
+Linear Regression      0.75  1500.0  1200.0  12.5
+2026-02-11 14:52:42,776 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-11 14:52:42,777 - src.evaluation.evaluator - INFO - Best model by r2_score: Random Forest (r2_score=0.8500)
+2026-02-11 14:52:42,777 - src.evaluation.evaluator - INFO - Best model by rmse: Random Forest (rmse=1200.0000)
+2026-02-11 14:52:42,778 - src.evaluation.evaluator - INFO - Best model by mae: Random Forest (mae=950.0000)
+2026-02-11 14:52:42,779 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=10.2000)
+2026-02-11 14:52:42,782 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-11 14:52:42,792 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,792 - src.evaluation.evaluator - INFO - Added results for OnlyModel: R²=0.75
+2026-02-11 14:52:42,801 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,808 - src.evaluation.evaluator - INFO - 
+           r2_score   rmse
+OnlyModel      0.75  100.0
+2026-02-11 14:52:42,818 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:42,819 - src.evaluation.evaluator - INFO - Added results for Model1: R²=0.8
+2026-02-11 14:52:42,820 - src.evaluation.evaluator - INFO - Added results for Model2: R²=0.8
+2026-02-11 14:52:42,822 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:42,825 - src.evaluation.evaluator - INFO - 
+        r2_score   rmse
+Model1       0.8  100.0
+Model2       0.8  100.0
+2026-02-11 14:52:42,825 - src.evaluation.evaluator - INFO - Best model by r2_score: Model1 (r2_score=0.8000)
+2026-02-11 14:52:42,833 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:42,842 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:42,851 - src.features.feature_engineer - INFO - Created temporal features from 'date': month, day, weekday, season, is_weekend
+2026-02-11 14:52:42,856 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:42,865 - src.features.feature_engineer - INFO - Created temporal features from 'date': month, day, weekday, season, is_weekend
+2026-02-11 14:52:42,871 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:42,872 - src.features.feature_engineer - WARNING - Column 'nonexistent' not found, skipping temporal features
+2026-02-11 14:52:42,878 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:42,884 - src.features.feature_engineer - INFO - OneHot encoded 'category' into 2 features
+2026-02-11 14:52:42,889 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:42,890 - src.features.feature_engineer - INFO - Label encoded 'category'
+2026-02-11 14:52:42,896 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:42,900 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 2 features
+2026-02-11 14:52:42,903 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 2 features
+2026-02-11 14:52:42,908 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:42,912 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 1 features
+2026-02-11 14:52:42,917 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 1 features
+2026-02-11 14:52:42,923 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:42,992 - src.features.feature_engineer - INFO - Scaled 'num1' using standard scaling
+2026-02-11 14:52:43,000 - src.features.feature_engineer - INFO - Scaled 'num2' using standard scaling
+2026-02-11 14:52:43,049 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,065 - src.features.feature_engineer - INFO - Scaled 'num1' using minmax scaling
+2026-02-11 14:52:43,071 - src.features.feature_engineer - INFO - Scaled 'num2' using minmax scaling
+2026-02-11 14:52:43,087 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,096 - src.features.feature_engineer - INFO - Scaled 'num1' using robust scaling
+2026-02-11 14:52:43,104 - src.features.feature_engineer - INFO - Scaled 'num2' using robust scaling
+2026-02-11 14:52:43,109 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,114 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-11 14:52:43,116 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-11 14:52:43,120 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,122 - src.features.feature_engineer - INFO - Created interaction feature: A_x_B
+2026-02-11 14:52:43,128 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,131 - src.features.feature_engineer - INFO - Created interaction feature: A_x_B
+2026-02-11 14:52:43,133 - src.features.feature_engineer - INFO - Created interaction feature: A_x_C
+2026-02-11 14:52:43,137 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,137 - src.features.feature_engineer - WARNING - Cannot create interaction between 'A' and 'B': columns not found
+2026-02-11 14:52:43,142 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,145 - src.features.feature_engineer - INFO - Dropped 2 features: ['B', 'C']
+2026-02-11 14:52:43,150 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,151 - src.features.feature_engineer - WARNING - None of the specified columns found: ['B', 'C']
+2026-02-11 14:52:43,156 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,157 - src.features.feature_engineer - INFO - Total features: 3
+2026-02-11 14:52:43,171 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,180 - src.features.feature_engineer - INFO - Created temporal features from 'date': month, day, weekday, season, is_weekend
+2026-02-11 14:52:43,182 - src.features.feature_engineer - INFO - Label encoded 'category'
+2026-02-11 14:52:43,190 - src.features.feature_engineer - INFO - Scaled 'value' using standard scaling
+2026-02-11 14:52:43,194 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,195 - src.features.feature_engineer - INFO - Label encoded 'cat'
+2026-02-11 14:52:43,200 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-11 14:52:43,203 - src.features.feature_engineer - INFO - Label encoded 'cat'
+2026-02-11 14:52:43,207 - src.features.feature_engineer - INFO - Scaled 'num' using standard scaling
+2026-02-11 14:52:43,213 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,214 - src.features.feature_engineer - WARNING - Column 'date' not found, skipping temporal features
+2026-02-11 14:52:43,220 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,224 - src.features.feature_engineer - INFO - OneHot encoded 'cat' into 0 features
+2026-02-11 14:52:43,252 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:43,254 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:43,296 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:43,298 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:43,298 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:43,299 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:43,300 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-11 14:52:43,304 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-11 14:52:43,304 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:43,305 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-11 14:52:43,306 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-11 14:52:43,307 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-11 14:52:43,307 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-11 14:52:43,309 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:43,310 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-11 14:52:43,311 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:43,313 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:43,313 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:43,314 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:52:43,322 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-11 14:52:43,322 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-11 14:52:43,329 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-11 14:52:43,344 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:52:43,348 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-11 14:52:43,349 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-11 14:52:43,349 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,351 - src.data.preprocessor - INFO - Converted 'Date' to datetime type
+2026-02-11 14:52:43,351 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-11 14:52:43,362 - src.features.feature_engineer - INFO - Created temporal features from 'Date': month, day, weekday, season, is_weekend
+2026-02-11 14:52:43,365 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 14:52:43,367 - src.features.feature_engineer - INFO - Label encoded 'From'
+2026-02-11 14:52:43,368 - src.features.feature_engineer - INFO - Label encoded 'To'
+2026-02-11 14:52:43,372 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 14:52:43,375 - src.features.feature_engineer - INFO - Label encoded 'season'
+2026-02-11 14:52:43,392 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:43,405 - src.features.feature_engineer - INFO - Scaled 'feature_0' using standard scaling
+2026-02-11 14:52:43,411 - src.features.feature_engineer - INFO - Scaled 'feature_1' using standard scaling
+2026-02-11 14:52:43,420 - src.features.feature_engineer - INFO - Scaled 'feature_2' using standard scaling
+2026-02-11 14:52:43,429 - src.features.feature_engineer - INFO - Scaled 'feature_3' using standard scaling
+2026-02-11 14:52:43,437 - src.features.feature_engineer - INFO - Scaled 'feature_4' using standard scaling
+2026-02-11 14:52:43,441 - src.features.feature_engineer - INFO - Scaled 'feature_0' using standard scaling
+2026-02-11 14:52:43,444 - src.features.feature_engineer - INFO - Scaled 'feature_1' using standard scaling
+2026-02-11 14:52:43,448 - src.features.feature_engineer - INFO - Scaled 'feature_2' using standard scaling
+2026-02-11 14:52:43,452 - src.features.feature_engineer - INFO - Scaled 'feature_3' using standard scaling
+2026-02-11 14:52:43,455 - src.features.feature_engineer - INFO - Scaled 'feature_4' using standard scaling
+2026-02-11 14:52:43,456 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:52:43,456 - src.models.trainer - INFO - Training baseline models...
+2026-02-11 14:52:43,457 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-11 14:52:43,467 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-11 14:52:43,467 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-11 14:52:43,476 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.19, MAE: 3221.20
+2026-02-11 14:52:43,476 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-11 14:52:43,486 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.62
+2026-02-11 14:52:43,486 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-11 14:52:43,496 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-11 14:52:43,496 - src.models.trainer - INFO - Training Random Forest...
+2026-02-11 14:52:43,934 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-11 14:52:43,935 - src.models.trainer - INFO - Baseline model training completed
+2026-02-11 14:52:43,935 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:43,936 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-11 14:52:43,945 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-11 14:52:43,945 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-11 14:52:43,945 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-11 14:52:43,945 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-11 14:52:43,946 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-11 14:52:43,946 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=-0.5274555792231657
+2026-02-11 14:52:43,946 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-11 14:52:43,953 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-11 14:52:43,954 - src.models.trainer - INFO -   R² Score: -0.5152
+2026-02-11 14:52:43,954 - src.models.trainer - INFO -   RMSE: 3837.86
+2026-02-11 14:52:43,955 - src.models.trainer - INFO -   MAE: 3116.43
+2026-02-11 14:52:43,955 - src.models.trainer - INFO -   MAPE: 40.82%
+2026-02-11 14:52:43,955 - src.evaluation.evaluator - INFO - Added results for Ridge (alpha=1.0): R²=-0.5151538566488965
+2026-02-11 14:52:43,957 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:43,961 - src.evaluation.evaluator - INFO - 
+                   r2_score       rmse        mae     mape
+Ridge (alpha=1.0)   -0.5152  3837.8633  3116.4295  40.8167
+Linear Regression   -0.5275  3853.4119  3128.9991  40.9553
+2026-02-11 14:52:43,992 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:43,993 - src.utils.helpers - INFO - File validated: C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:44,059 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\COURAG~1\AppData\Local\Temp\tmpakwrygcn\test_flight_data.csv
+2026-02-11 14:52:44,060 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:44,060 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-11 14:52:44,061 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:44,061 - src.data.data_loader - INFO - Shape: 100 rows × 8 columns
+2026-02-11 14:52:44,064 - src.data.data_loader - INFO - Memory usage: 0.03 MB
+2026-02-11 14:52:44,065 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-11 14:52:44,066 - src.data.data_loader - INFO -   - Date: object | Missing: 0 (0.00%)
+2026-02-11 14:52:44,068 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-11 14:52:44,071 - src.data.data_loader - INFO -   - From: object | Missing: 0 (0.00%)
+2026-02-11 14:52:44,072 - src.data.data_loader - INFO -   - To: object | Missing: 0 (0.00%)
+2026-02-11 14:52:44,073 - src.data.data_loader - INFO -   - Fare: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:44,075 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-11 14:52:44,077 - src.data.data_loader - INFO -   - Duration: float64 | Missing: 0 (0.00%)
+2026-02-11 14:52:44,080 - src.data.data_loader - INFO -   - Stops: int64 | Missing: 0 (0.00%)
+2026-02-11 14:52:44,081 - src.data.data_loader - INFO - ============================================================
+2026-02-11 14:52:44,081 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:52:44,088 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-11 14:52:44,089 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-11 14:52:44,105 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-11 14:52:44,105 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:52:44,110 - src.data.preprocessor - INFO - Data split completed:
+2026-02-11 14:52:44,111 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-11 14:52:44,111 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-11 14:52:44,111 - src.data.preprocessor - INFO -   Features: 7
+2026-02-11 14:52:44,113 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:44,119 - src.features.feature_engineer - INFO - Label encoded 'Date'
+2026-02-11 14:52:44,123 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 14:52:44,125 - src.features.feature_engineer - INFO - Label encoded 'From'
+2026-02-11 14:52:44,126 - src.features.feature_engineer - INFO - Label encoded 'To'
+2026-02-11 14:52:44,127 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 14:52:44,130 - src.features.feature_engineer - INFO - Label encoded 'Date'
+2026-02-11 14:52:44,136 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 14:52:44,144 - src.features.feature_engineer - INFO - Label encoded 'From'
+2026-02-11 14:52:44,162 - src.features.feature_engineer - INFO - Label encoded 'To'
+2026-02-11 14:52:44,180 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 14:52:44,189 - src.features.feature_engineer - INFO - Scaled 'Date' using standard scaling
+2026-02-11 14:52:44,212 - src.features.feature_engineer - INFO - Scaled 'Airline' using standard scaling
+2026-02-11 14:52:44,226 - src.features.feature_engineer - INFO - Scaled 'From' using standard scaling
+2026-02-11 14:52:44,234 - src.features.feature_engineer - INFO - Scaled 'To' using standard scaling
+2026-02-11 14:52:44,240 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-11 14:52:44,246 - src.features.feature_engineer - INFO - Scaled 'Duration' using standard scaling
+2026-02-11 14:52:44,254 - src.features.feature_engineer - INFO - Scaled 'Stops' using standard scaling
+2026-02-11 14:52:44,259 - src.features.feature_engineer - INFO - Scaled 'Date' using standard scaling
+2026-02-11 14:52:44,262 - src.features.feature_engineer - INFO - Scaled 'Airline' using standard scaling
+2026-02-11 14:52:44,268 - src.features.feature_engineer - INFO - Scaled 'From' using standard scaling
+2026-02-11 14:52:44,272 - src.features.feature_engineer - INFO - Scaled 'To' using standard scaling
+2026-02-11 14:52:44,276 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-11 14:52:44,279 - src.features.feature_engineer - INFO - Scaled 'Duration' using standard scaling
+2026-02-11 14:52:44,284 - src.features.feature_engineer - INFO - Scaled 'Stops' using standard scaling
+2026-02-11 14:52:44,285 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:52:44,285 - src.models.trainer - INFO - Training baseline models...
+2026-02-11 14:52:44,287 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-11 14:52:44,302 - src.models.trainer - INFO - Linear Regression - Train R²: 0.1050, RMSE: 3625.40, MAE: 3070.10
+2026-02-11 14:52:44,302 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-11 14:52:44,315 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.1050, RMSE: 3625.45, MAE: 3070.07
+2026-02-11 14:52:44,315 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-11 14:52:44,326 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.1050, RMSE: 3625.40, MAE: 3070.16
+2026-02-11 14:52:44,326 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-11 14:52:44,335 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9913, RMSE: 358.07, MAE: 114.18
+2026-02-11 14:52:44,336 - src.models.trainer - INFO - Training Random Forest...
+2026-02-11 14:52:44,647 - src.models.trainer - INFO - Random Forest - Train R²: 0.8632, RMSE: 1417.15, MAE: 1182.85
+2026-02-11 14:52:44,648 - src.models.trainer - INFO - Baseline model training completed
+2026-02-11 14:52:44,648 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-11 14:52:44,649 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-11 14:52:44,657 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-11 14:52:44,658 - src.models.trainer - INFO -   R² Score: -0.6498
+2026-02-11 14:52:44,659 - src.models.trainer - INFO -   RMSE: 4121.72
+2026-02-11 14:52:44,659 - src.models.trainer - INFO -   MAE: 3181.59
+2026-02-11 14:52:44,659 - src.models.trainer - INFO -   MAPE: 74.99%
+2026-02-11 14:52:44,660 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=-0.6497722624211368
+2026-02-11 14:52:44,660 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-11 14:52:44,670 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-11 14:52:44,670 - src.models.trainer - INFO -   R² Score: -0.6363
+2026-02-11 14:52:44,670 - src.models.trainer - INFO -   RMSE: 4104.80
+2026-02-11 14:52:44,671 - src.models.trainer - INFO -   MAE: 3170.28
+2026-02-11 14:52:44,671 - src.models.trainer - INFO -   MAPE: 74.73%
+2026-02-11 14:52:44,671 - src.evaluation.evaluator - INFO - Added results for Ridge (alpha=1.0): R²=-0.636254970777524
+2026-02-11 14:52:44,673 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-11 14:52:44,677 - src.evaluation.evaluator - INFO - 
+                   r2_score       rmse        mae     mape
+Ridge (alpha=1.0)   -0.6363  4104.8037  3170.2831  74.7269
+Linear Regression   -0.6498  4121.7239  3181.5869  74.9892
+2026-02-11 14:52:44,678 - src.evaluation.evaluator - INFO - Best model by r2_score: Ridge (alpha=1.0) (r2_score=-0.6363)
+2026-02-11 14:52:44,714 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (53, 6)
+2026-02-11 14:52:44,721 - src.data.preprocessor - INFO - Removed 3 duplicate rows (5.66%)
+2026-02-11 14:52:44,722 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-11 14:52:44,725 - src.data.preprocessor - INFO - Filled 6 missing values in 'Fare' with median: 8008.32
+2026-02-11 14:52:44,752 - src.data.preprocessor - INFO - Filled 3 missing values in 'Airline' with mode: Novoair
+2026-02-11 14:52:44,757 - src.data.preprocessor - INFO - Removed 1 rows with Fare < 0
+2026-02-11 14:52:44,761 - src.data.preprocessor - INFO - Removed 1 extreme outliers from 'Fare'
+2026-02-11 14:52:44,762 - src.data.preprocessor - INFO - Data validation complete: 2 rows removed
+2026-02-11 14:52:44,762 - src.data.preprocessor - INFO - Returning processed data with shape: (48, 6)
+2026-02-11 14:52:44,789 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (5, 3)
+2026-02-11 14:52:44,794 - src.data.preprocessor - INFO - Data split completed:
+2026-02-11 14:52:44,794 - src.data.preprocessor - INFO -   Training set: 4 samples (80%)
+2026-02-11 14:52:44,795 - src.data.preprocessor - INFO -   Test set: 1 samples (20%)
+2026-02-11 14:52:44,795 - src.data.preprocessor - INFO -   Features: 2
+2026-02-11 14:52:44,795 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:52:44,795 - src.models.trainer - INFO - Training baseline models...
+2026-02-11 14:52:44,796 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-11 14:52:44,845 - src.models.trainer - INFO - Linear Regression - Train R²: 0.9257, RMSE: 2.15, MAE: 1.86
+2026-02-11 14:52:44,846 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-11 14:52:44,867 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.9230, RMSE: 2.19, MAE: 1.89
+2026-02-11 14:52:44,867 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-11 14:52:44,892 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.9184, RMSE: 2.26, MAE: 1.91
+2026-02-11 14:52:44,892 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-11 14:52:44,929 - src.models.trainer - INFO - Decision Tree - Train R²: 1.0000, RMSE: 0.00, MAE: 0.00
+2026-02-11 14:52:44,929 - src.models.trainer - INFO - Training Random Forest...
+2026-02-11 14:52:45,368 - src.models.trainer - INFO - Random Forest - Train R²: 0.9262, RMSE: 2.15, MAE: 1.91
+2026-02-11 14:52:45,369 - src.models.trainer - INFO - Baseline model training completed
+2026-02-11 14:52:50,184 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-11 14:52:50,934 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-11 14:52:50,945 - src.app.model_service - WARNING - Could not load training data sample: [Errno 2] No such file or directory: 'data/raw/Flight_Price_Dataset_of_Bangladesh.csv'
+2026-02-11 14:52:50,945 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:50,951 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 14:52:50,955 - src.app.model_service - ERROR - Prediction failed: could not convert string to float: 'Emirates'
+2026-02-11 14:52:52,577 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-11 14:52:52,592 - src.app.model_service - WARNING - Could not load training data sample: [Errno 2] No such file or directory: 'data/raw/Flight_Price_Dataset_of_Bangladesh.csv'
+2026-02-11 14:52:52,592 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 14:52:52,597 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 14:52:52,600 - src.app.model_service - ERROR - Prediction failed: could not convert string to float: 'Emirates'
+2026-02-11 14:52:53,686 - src.app.model_service - INFO - Model loaded successfully from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-11 14:52:53,804 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:52:53,822 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:52:53,823 - src.models.trainer - INFO - Training baseline models...
+2026-02-11 14:52:53,824 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-11 14:52:53,854 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-11 14:52:53,855 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-11 14:52:53,871 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-11 14:52:53,871 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-11 14:52:53,884 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-11 14:52:53,885 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-11 14:52:53,903 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-11 14:52:53,903 - src.models.trainer - INFO - Training Random Forest...
+2026-02-11 14:52:54,423 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-11 14:52:54,424 - src.models.trainer - INFO - Baseline model training completed
+2026-02-11 14:52:54,432 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:52:54,432 - src.models.trainer - INFO - Training baseline models...
+2026-02-11 14:52:54,433 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-11 14:52:54,441 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-11 14:52:54,442 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-11 14:52:54,461 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-11 14:52:54,462 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-11 14:52:54,473 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-11 14:52:54,474 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-11 14:52:54,493 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-11 14:52:54,493 - src.models.trainer - INFO - Training Random Forest...
+2026-02-11 14:52:55,287 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-11 14:52:55,288 - src.models.trainer - INFO - Baseline model training completed
+2026-02-11 14:52:55,313 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:52:55,314 - src.models.trainer - INFO - Performing 3-fold cross-validation...
+2026-02-11 14:53:21,541 - src.models.trainer - INFO - CV Results - R²: -0.1392 (±0.1538)
+2026-02-11 14:53:21,542 - src.models.trainer - INFO - CV Results - RMSE: 3912.78 (±148.19)
+2026-02-11 14:53:21,548 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:21,549 - src.models.trainer - INFO - Performing 3-fold cross-validation...
+2026-02-11 14:53:21,642 - src.models.trainer - INFO - CV Results - R²: -0.1392 (±0.1538)
+2026-02-11 14:53:21,643 - src.models.trainer - INFO - CV Results - RMSE: 3912.78 (±148.19)
+2026-02-11 14:53:21,650 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:21,651 - src.models.trainer - INFO - Tuning hyperparameters for ridge using grid search...
+2026-02-11 14:53:21,784 - src.models.trainer - INFO - Best parameters: {'alpha': 10.0}
+2026-02-11 14:53:21,785 - src.models.trainer - INFO - Best CV RMSE: 3991.96
+2026-02-11 14:53:21,833 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:21,833 - src.models.trainer - INFO - Tuning hyperparameters for random_forest using grid search...
+2026-02-11 14:53:25,931 - src.models.trainer - INFO - Best parameters: {'max_depth': 5, 'n_estimators': 10}
+2026-02-11 14:53:25,932 - src.models.trainer - INFO - Best CV RMSE: 3677.80
+2026-02-11 14:53:25,944 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:25,944 - src.models.trainer - INFO - Tuning hyperparameters for ridge using grid search...
+2026-02-11 14:53:26,157 - src.models.trainer - INFO - Best parameters: {'alpha': 1.0}
+2026-02-11 14:53:26,157 - src.models.trainer - INFO - Best CV RMSE: 4040.51
+2026-02-11 14:53:26,191 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:26,191 - src.models.trainer - INFO - Evaluating Test Model on test set...
+2026-02-11 14:53:26,234 - src.models.trainer - INFO - Test Model Test Metrics:
+2026-02-11 14:53:26,235 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-11 14:53:26,235 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-11 14:53:26,236 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-11 14:53:26,238 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-11 14:53:26,319 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:26,319 - src.models.trainer - INFO - Evaluating Test on test set...
+2026-02-11 14:53:26,359 - src.models.trainer - INFO - Test Test Metrics:
+2026-02-11 14:53:26,360 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-11 14:53:26,360 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-11 14:53:26,360 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-11 14:53:26,360 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-11 14:53:26,499 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:26,507 - src.models.trainer - INFO - Extracted Feature Importance for 5 features
+2026-02-11 14:53:26,508 - src.models.trainer - INFO - Top 5 features: ['feature_3', 'feature_0', 'feature_4', 'feature_2', 'feature_1']
+2026-02-11 14:53:26,534 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:26,541 - src.models.trainer - INFO - Extracted Coefficient Magnitude for 5 features
+2026-02-11 14:53:26,542 - src.models.trainer - INFO - Top 5 features: ['feature_1', 'feature_0', 'feature_3', 'feature_2', 'feature_4']
+2026-02-11 14:53:26,651 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:26,668 - src.models.trainer - INFO - Extracted Feature Importance for 5 features
+2026-02-11 14:53:26,670 - src.models.trainer - INFO - Top 5 features: ['feature_3', 'feature_0', 'feature_4', 'feature_2', 'feature_1']
+2026-02-11 14:53:26,703 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:26,704 - src.models.trainer - INFO - Training baseline models...
+2026-02-11 14:53:26,705 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-11 14:53:26,742 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-11 14:53:26,743 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-11 14:53:26,766 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-11 14:53:26,767 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-11 14:53:26,781 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-11 14:53:26,781 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-11 14:53:26,791 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-11 14:53:26,791 - src.models.trainer - INFO - Training Random Forest...
+2026-02-11 14:53:27,513 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-11 14:53:27,513 - src.models.trainer - INFO - Baseline model training completed
+2026-02-11 14:53:27,514 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-11 14:53:27,522 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-11 14:53:27,522 - src.models.trainer - INFO -   R² Score: -0.5275
+2026-02-11 14:53:27,523 - src.models.trainer - INFO -   RMSE: 3853.41
+2026-02-11 14:53:27,523 - src.models.trainer - INFO -   MAE: 3129.00
+2026-02-11 14:53:27,523 - src.models.trainer - INFO -   MAPE: 40.96%
+2026-02-11 14:53:27,523 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-11 14:53:27,533 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-11 14:53:27,533 - src.models.trainer - INFO -   R² Score: -0.5127
+2026-02-11 14:53:27,534 - src.models.trainer - INFO -   RMSE: 3834.75
+2026-02-11 14:53:27,534 - src.models.trainer - INFO -   MAE: 3114.07
+2026-02-11 14:53:27,534 - src.models.trainer - INFO -   MAPE: 40.79%
+2026-02-11 14:53:27,534 - src.models.trainer - INFO - Evaluating Lasso (alpha=1.0) on test set...
+2026-02-11 14:53:27,545 - src.models.trainer - INFO - Lasso (alpha=1.0) Test Metrics:
+2026-02-11 14:53:27,545 - src.models.trainer - INFO -   R² Score: -0.5254
+2026-02-11 14:53:27,545 - src.models.trainer - INFO -   RMSE: 3850.85
+2026-02-11 14:53:27,546 - src.models.trainer - INFO -   MAE: 3126.99
+2026-02-11 14:53:27,547 - src.models.trainer - INFO -   MAPE: 40.93%
+2026-02-11 14:53:27,547 - src.models.trainer - INFO - Evaluating Decision Tree on test set...
+2026-02-11 14:53:27,556 - src.models.trainer - INFO - Decision Tree Test Metrics:
+2026-02-11 14:53:27,557 - src.models.trainer - INFO -   R² Score: -1.5132
+2026-02-11 14:53:27,557 - src.models.trainer - INFO -   RMSE: 4942.80
+2026-02-11 14:53:27,558 - src.models.trainer - INFO -   MAE: 4075.88
+2026-02-11 14:53:27,558 - src.models.trainer - INFO -   MAPE: 55.74%
+2026-02-11 14:53:27,558 - src.models.trainer - INFO - Evaluating Random Forest on test set...
+2026-02-11 14:53:27,634 - src.models.trainer - INFO - Random Forest Test Metrics:
+2026-02-11 14:53:27,634 - src.models.trainer - INFO -   R² Score: -0.5440
+2026-02-11 14:53:27,635 - src.models.trainer - INFO -   RMSE: 3874.26
+2026-02-11 14:53:27,635 - src.models.trainer - INFO -   MAE: 3250.06
+2026-02-11 14:53:27,635 - src.models.trainer - INFO -   MAPE: 45.06%
+2026-02-11 14:53:27,641 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:27,641 - src.models.trainer - INFO - Training baseline models...
+2026-02-11 14:53:27,642 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-11 14:53:27,656 - src.models.trainer - INFO - Linear Regression - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.59
+2026-02-11 14:53:27,656 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-11 14:53:27,674 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.0610, RMSE: 3645.20, MAE: 3221.31
+2026-02-11 14:53:27,675 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-11 14:53:27,687 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.0611, RMSE: 3645.15, MAE: 3220.63
+2026-02-11 14:53:27,688 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-11 14:53:27,703 - src.models.trainer - INFO - Decision Tree - Train R²: 0.9267, RMSE: 1018.43, MAE: 428.45
+2026-02-11 14:53:27,705 - src.models.trainer - INFO - Training Random Forest...
+2026-02-11 14:53:28,320 - src.models.trainer - INFO - Random Forest - Train R²: 0.8538, RMSE: 1438.38, MAE: 1240.40
+2026-02-11 14:53:28,320 - src.models.trainer - INFO - Baseline model training completed
+2026-02-11 14:53:28,321 - src.models.trainer - INFO - Performing 3-fold cross-validation...
+2026-02-11 14:53:28,410 - src.models.trainer - INFO - CV Results - R²: -0.1392 (±0.1538)
+2026-02-11 14:53:28,411 - src.models.trainer - INFO - CV Results - RMSE: 3912.78 (±148.19)
+2026-02-11 14:53:28,411 - src.models.trainer - INFO - Tuning hyperparameters for ridge using grid search...
+2026-02-11 14:53:28,484 - src.models.trainer - INFO - Best parameters: {'alpha': 1.0}
+2026-02-11 14:53:28,484 - src.models.trainer - INFO - Best CV RMSE: 4040.51
+2026-02-11 14:53:28,484 - src.models.trainer - INFO - Evaluating Tuned Ridge on test set...
+2026-02-11 14:53:28,497 - src.models.trainer - INFO - Tuned Ridge Test Metrics:
+2026-02-11 14:53:28,497 - src.models.trainer - INFO -   R² Score: -0.5127
+2026-02-11 14:53:28,498 - src.models.trainer - INFO -   RMSE: 3834.75
+2026-02-11 14:53:28,498 - src.models.trainer - INFO -   MAE: 3114.07
+2026-02-11 14:53:28,498 - src.models.trainer - INFO -   MAPE: 40.79%
+2026-02-11 14:53:28,554 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:28,554 - src.models.trainer - INFO - Training baseline models...
+2026-02-11 14:53:28,554 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-11 14:53:28,572 - src.models.trainer - INFO - Linear Regression - Train R²: 1.0000, RMSE: 0.00, MAE: 0.00
+2026-02-11 14:53:28,572 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-11 14:53:28,587 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.9917, RMSE: 0.13, MAE: 0.11
+2026-02-11 14:53:28,587 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-11 14:53:28,622 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.7500, RMSE: 0.71, MAE: 0.60
+2026-02-11 14:53:28,623 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-11 14:53:28,633 - src.models.trainer - INFO - Decision Tree - Train R²: 1.0000, RMSE: 0.00, MAE: 0.00
+2026-02-11 14:53:28,634 - src.models.trainer - INFO - Training Random Forest...
+2026-02-11 14:53:29,438 - src.models.trainer - INFO - Random Forest - Train R²: 0.9547, RMSE: 0.30, MAE: 0.28
+2026-02-11 14:53:29,439 - src.models.trainer - INFO - Baseline model training completed
+2026-02-11 14:53:29,454 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:29,454 - src.models.trainer - INFO - Evaluating Single Feature on test set...
+2026-02-11 14:53:29,462 - src.models.trainer - INFO - Single Feature Test Metrics:
+2026-02-11 14:53:29,462 - src.models.trainer - INFO -   R² Score: 1.0000
+2026-02-11 14:53:29,463 - src.models.trainer - INFO -   RMSE: 0.00
+2026-02-11 14:53:29,463 - src.models.trainer - INFO -   MAE: 0.00
+2026-02-11 14:53:29,463 - src.models.trainer - INFO -   MAPE: 0.00%
+2026-02-11 14:53:29,480 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-11 14:53:29,480 - src.models.trainer - INFO - Evaluating Perfect on test set...
+2026-02-11 14:53:29,487 - src.models.trainer - INFO - Perfect Test Metrics:
+2026-02-11 14:53:29,488 - src.models.trainer - INFO -   R² Score: 1.0000
+2026-02-11 14:53:29,488 - src.models.trainer - INFO -   RMSE: 0.00
+2026-02-11 14:53:29,488 - src.models.trainer - INFO -   MAE: 0.00
+2026-02-11 14:53:29,488 - src.models.trainer - INFO -   MAPE: inf%
+2026-02-11 14:53:29,525 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:53:29,550 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:53:29,580 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-11 14:53:29,581 - src.data.preprocessor - INFO - Removed 1 duplicate rows (25.00%)
+2026-02-11 14:53:29,605 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:53:29,614 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-11 14:53:29,653 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:53:29,659 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-11 14:53:29,666 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-11 14:53:29,666 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-11 14:53:29,669 - src.data.preprocessor - INFO - Filled 1 missing values in 'num1' with median: 2.00
+2026-02-11 14:53:29,674 - src.data.preprocessor - INFO - Filled 1 missing values in 'num2' with median: 30.00
+2026-02-11 14:53:29,678 - src.data.preprocessor - INFO - Removed 1 duplicate rows after imputation
+2026-02-11 14:53:29,692 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-11 14:53:29,692 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-11 14:53:29,695 - src.data.preprocessor - INFO - Filled 1 missing values in 'cat1' with mode: a
+2026-02-11 14:53:29,698 - src.data.preprocessor - INFO - Filled 1 missing values in 'cat2' with mode: x
+2026-02-11 14:53:29,711 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-11 14:53:29,712 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-11 14:53:29,714 - src.data.preprocessor - INFO - Filled 1 missing values in 'num' with median: 1.50
+2026-02-11 14:53:29,722 - src.data.preprocessor - INFO - Filled 1 missing values in 'cat' with mode: a
+2026-02-11 14:53:29,734 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-11 14:53:29,745 - src.data.preprocessor - INFO - Converted 'date_str' to datetime type
+2026-02-11 14:53:29,751 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-11 14:53:29,754 - src.data.preprocessor - INFO - Converted 'date_str' to datetime type
+2026-02-11 14:53:29,755 - src.data.preprocessor - WARNING - Failed to parse 1 dates in 'date_str'
+2026-02-11 14:53:29,765 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 1)
+2026-02-11 14:53:29,766 - src.data.preprocessor - WARNING - Column 'nonexistent' not found in dataset, skipping
+2026-02-11 14:53:29,773 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (5, 2)
+2026-02-11 14:53:29,775 - src.data.preprocessor - INFO - Removed 2 rows with Fare < 0
+2026-02-11 14:53:29,779 - src.data.preprocessor - INFO - Data validation complete: 2 rows removed
+2026-02-11 14:53:29,787 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (5, 1)
+2026-02-11 14:53:29,795 - src.data.preprocessor - INFO - Removed 1 extreme outliers from 'Fare'
+2026-02-11 14:53:29,795 - src.data.preprocessor - INFO - Data validation complete: 1 rows removed
+2026-02-11 14:53:29,808 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 1)
+2026-02-11 14:53:29,813 - src.data.preprocessor - INFO - Standardized categorical values in 'City'
+2026-02-11 14:53:29,842 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:53:29,847 - src.data.preprocessor - INFO - Data split completed:
+2026-02-11 14:53:29,848 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-11 14:53:29,848 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-11 14:53:29,849 - src.data.preprocessor - INFO -   Features: 7
+2026-02-11 14:53:29,876 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:53:29,882 - src.data.preprocessor - INFO - Data split completed:
+2026-02-11 14:53:29,883 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-11 14:53:29,887 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-11 14:53:29,887 - src.data.preprocessor - INFO -   Features: 7
+2026-02-11 14:53:29,897 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:53:29,898 - src.data.preprocessor - ERROR - Target column 'NonExistentColumn' not found in dataset
+2026-02-11 14:53:29,916 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:53:29,923 - src.data.preprocessor - INFO - Data split completed:
+2026-02-11 14:53:29,924 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-11 14:53:29,924 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-11 14:53:29,924 - src.data.preprocessor - INFO -   Features: 7
+2026-02-11 14:53:29,925 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:53:29,932 - src.data.preprocessor - INFO - Data split completed:
+2026-02-11 14:53:29,933 - src.data.preprocessor - INFO -   Training set: 80 samples (80%)
+2026-02-11 14:53:29,933 - src.data.preprocessor - INFO -   Test set: 20 samples (20%)
+2026-02-11 14:53:29,934 - src.data.preprocessor - INFO -   Features: 7
+2026-02-11 14:53:29,950 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (100, 8)
+2026-02-11 14:53:29,955 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-11 14:53:29,955 - src.data.preprocessor - INFO - Returning processed data with shape: (100, 8)
+2026-02-11 14:53:29,962 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (4, 2)
+2026-02-11 14:53:29,964 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-11 14:53:29,964 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-11 14:53:29,969 - src.data.preprocessor - INFO - Filled 1 missing values in 'B' with median: 3.00
+2026-02-11 14:53:29,972 - src.data.preprocessor - INFO - Removed 1 duplicate rows after imputation
+2026-02-11 14:53:29,978 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (0, 0)
+2026-02-11 14:53:30,006 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (3, 2)
+2026-02-11 14:53:30,006 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-11 14:53:30,010 - src.data.preprocessor - INFO - Filled 3 missing values in 'A' with median: nan
+2026-02-11 14:53:30,097 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (1, 2)
+2026-02-11 14:53:30,100 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-11 17:29:08,658 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:29:08,684 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:29:08,686 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:29:08,689 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:29:08,691 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:29:08,739 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:29:08,746 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:29:08,752 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:29:08,754 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:29:08,755 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:29:08,759 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:29:08,762 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:29:08,764 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:29:08,770 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:29:08,773 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:29:08,778 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:29:08,781 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:29:08,801 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:29:08,802 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:29:08,803 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:29:08,805 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:29:08,806 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:29:08,808 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:29:08,810 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:29:08,811 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:29:08,823 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:29:08,829 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:29:08,830 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:29:08,830 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:29:08,831 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:29:08,831 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:29:08,832 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:29:08,832 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:29:08,833 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:29:08,847 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:29:08,850 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:29:08,855 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:29:08,856 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:29:08,856 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:29:08,857 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:29:08,865 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:29:08,867 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:29:09,353 - src.app.model_service - INFO - Prediction made successfully: 184734.15
+2026-02-11 17:31:56,733 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:31:56,760 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:31:56,771 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:31:56,782 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:31:56,785 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:31:56,787 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:31:56,798 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:31:56,803 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:31:56,805 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:31:56,808 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:31:56,816 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:31:56,817 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:31:56,819 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:31:56,821 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:31:56,825 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:31:56,831 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:31:56,833 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:31:56,835 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:31:56,836 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:31:56,838 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:31:56,842 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:31:56,845 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:31:56,848 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:31:56,851 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:31:56,852 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:31:56,862 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:31:56,870 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:31:56,872 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:31:56,872 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:31:56,873 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:31:56,874 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:31:56,874 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:31:56,876 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:31:56,877 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:31:56,882 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:31:56,882 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:31:56,882 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:31:56,883 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:31:56,883 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:31:56,884 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:31:56,889 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:31:56,889 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:31:56,942 - src.app.model_service - INFO - Prediction made successfully: 184734.15
+2026-02-11 17:32:10,911 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:32:10,920 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:32:10,925 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:32:10,929 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:32:10,934 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:32:10,937 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:32:10,944 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:32:10,951 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:32:10,960 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:32:10,965 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:32:10,974 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:32:10,979 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:32:10,981 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:32:10,985 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:32:10,987 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:32:10,995 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:32:10,999 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:32:11,003 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:32:11,005 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:32:11,011 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:32:11,013 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:32:11,015 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:32:11,018 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:32:11,020 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:32:11,025 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:32:11,037 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:32:11,051 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:32:11,053 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:32:11,054 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:32:11,055 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:32:11,059 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:32:11,060 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:32:11,061 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:32:11,062 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:32:11,067 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:32:11,069 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:32:11,070 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:32:11,071 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:32:11,073 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:32:11,075 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:32:11,079 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:32:11,079 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:32:11,939 - src.app.model_service - INFO - Prediction made successfully: 37887.37
+2026-02-11 17:32:55,793 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:32:55,815 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:32:55,828 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:32:55,851 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:32:55,874 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:32:55,880 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:32:55,890 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:32:55,900 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:32:55,905 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:32:55,913 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:32:55,947 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:32:55,963 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:32:55,980 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:32:55,984 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:32:55,990 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:32:55,998 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:32:56,010 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:32:56,040 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:32:56,046 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:32:56,051 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:32:56,062 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:32:56,069 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:32:56,075 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:32:56,082 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:32:56,095 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:32:56,116 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:32:56,174 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:32:56,185 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:32:56,189 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:32:56,192 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:32:56,194 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:32:56,198 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:32:56,207 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:32:56,214 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:32:56,220 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:32:56,221 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:32:56,225 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:32:56,227 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:32:56,228 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:32:56,231 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:32:56,242 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:32:56,265 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:32:56,678 - src.app.model_service - INFO - Prediction made successfully: 184734.15
+2026-02-11 17:33:04,140 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:33:04,147 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:33:04,154 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:33:04,157 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:33:04,162 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:33:04,167 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:33:04,193 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:33:04,224 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:33:04,239 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:33:04,250 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:33:04,263 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:33:04,277 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:33:04,279 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:33:04,294 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:33:04,303 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:33:04,321 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:33:04,330 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:33:04,339 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:33:04,352 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:33:04,369 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:33:04,373 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:33:04,388 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:33:04,409 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:33:04,429 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:33:04,441 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:33:04,464 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:33:04,479 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:33:04,489 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:33:04,491 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:33:04,495 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:33:04,500 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:33:04,504 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:33:04,506 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:33:04,507 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:33:04,513 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:33:04,514 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:33:04,518 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:33:04,522 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:33:04,522 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:33:04,523 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:33:04,534 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:33:04,540 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:33:04,671 - src.app.model_service - INFO - Prediction made successfully: 184734.15
+2026-02-11 17:33:08,701 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:33:08,721 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:33:08,723 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:33:08,728 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:33:08,731 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:33:08,735 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:33:08,743 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:33:08,753 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:33:08,757 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:33:08,759 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:33:08,762 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:33:08,764 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:33:08,766 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:33:08,770 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:33:08,773 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:33:08,776 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:33:08,778 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:33:08,781 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:33:08,790 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:33:08,793 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:33:08,795 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:33:08,801 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:33:08,803 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:33:08,806 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:33:08,807 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:33:08,820 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:33:08,828 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:33:08,832 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:33:08,840 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:33:08,842 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:33:08,843 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:33:08,844 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:33:08,844 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:33:08,847 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:33:08,853 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:33:08,855 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:33:08,855 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:33:08,856 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:33:08,856 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:33:08,857 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:33:08,861 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:33:08,867 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:33:08,990 - src.app.model_service - INFO - Prediction made successfully: 184734.15
+2026-02-11 17:33:12,275 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:33:12,284 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:33:12,286 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:33:12,288 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:33:12,290 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:33:12,291 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:33:12,297 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:33:12,302 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:33:12,305 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:33:12,307 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:33:12,309 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:33:12,312 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:33:12,314 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:33:12,316 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:33:12,319 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:33:12,322 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:33:12,325 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:33:12,328 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:33:12,330 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:33:12,331 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:33:12,334 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:33:12,337 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:33:12,339 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:33:12,341 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:33:12,342 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:33:12,353 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:33:12,360 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:33:12,362 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:33:12,362 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:33:12,363 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:33:12,363 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:33:12,364 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:33:12,364 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:33:12,364 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:33:12,371 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:33:12,371 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:33:12,371 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:33:12,372 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:33:12,373 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:33:12,373 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:33:12,378 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:33:12,379 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:33:12,512 - src.app.model_service - INFO - Prediction made successfully: 37887.37
+2026-02-11 17:35:28,541 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:35:28,550 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:35:28,554 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:35:28,559 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:35:28,561 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:35:28,563 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:35:28,571 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:35:28,579 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:35:28,583 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:35:28,588 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:35:28,592 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:35:28,617 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:35:28,621 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:35:28,625 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:35:28,628 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:35:28,635 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:35:28,641 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:35:28,643 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:35:28,647 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:35:28,649 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:35:28,654 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:35:28,657 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:35:28,660 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:35:28,664 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:35:28,666 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:35:28,678 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:35:28,685 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:35:28,693 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:35:28,695 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:35:28,695 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:35:28,696 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:35:28,696 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:35:28,697 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:35:28,697 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:35:28,703 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:35:28,704 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:35:28,707 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:35:28,708 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:35:28,708 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:35:28,709 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:35:28,713 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:35:28,714 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:35:28,804 - src.app.model_service - INFO - Prediction made successfully: 37887.37
+2026-02-11 17:35:32,540 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:35:32,547 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:35:32,553 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:35:32,571 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:35:32,584 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:35:32,600 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:35:32,641 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:35:32,650 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:35:32,666 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:35:32,700 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:35:32,724 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:35:32,739 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:35:32,746 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:35:32,752 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:35:32,758 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:35:32,766 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:35:32,775 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:35:32,779 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:35:32,782 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:35:32,784 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:35:32,804 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:35:32,846 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:35:32,900 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:35:32,931 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:35:32,980 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:35:33,042 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:35:33,068 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:35:33,073 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:35:33,078 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:35:33,087 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:35:33,088 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:35:33,089 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:35:33,095 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:35:33,097 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:35:33,128 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:35:33,140 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:35:33,182 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:35:33,227 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:35:33,254 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:35:33,283 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:35:33,320 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:35:33,331 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:35:33,445 - src.app.model_service - INFO - Prediction made successfully: 37887.37
+2026-02-11 17:39:43,455 - src.app.model_service - INFO - Model loaded successfully from models\best_model.pkl
+2026-02-11 17:40:11,749 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:40:11,781 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:40:11,789 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:40:11,795 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:40:11,803 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:40:11,810 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:40:11,826 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:40:11,843 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:40:11,862 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:40:11,865 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:40:11,867 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:40:11,871 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:40:11,884 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:40:11,896 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:40:11,898 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:40:11,901 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:40:11,938 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:40:11,956 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:40:11,990 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:40:12,030 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:40:12,058 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:40:12,072 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:40:12,080 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:40:12,086 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:40:12,093 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:40:12,127 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:40:12,134 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:40:12,139 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:40:12,142 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:40:12,145 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:40:12,150 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:40:12,159 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:40:12,163 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:40:12,173 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:40:12,187 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:40:12,193 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:40:12,198 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:40:12,200 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:40:12,208 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:40:12,211 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:40:12,224 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:40:12,244 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:40:12,365 - src.app.model_service - INFO - Prediction made successfully: 185629.17
+2026-02-11 17:40:29,987 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:40:29,994 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:40:29,999 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:40:30,004 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:40:30,011 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:40:30,013 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:40:30,020 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:40:30,041 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:40:30,055 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:40:30,062 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:40:30,066 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:40:30,068 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:40:30,070 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:40:30,076 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:40:30,078 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:40:30,083 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:40:30,085 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:40:30,088 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:40:30,093 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:40:30,097 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:40:30,099 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:40:30,101 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:40:30,104 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:40:30,114 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:40:30,115 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:40:30,126 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:40:30,137 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:40:30,142 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:40:30,144 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:40:30,146 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:40:30,147 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:40:30,148 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:40:30,149 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:40:30,149 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:40:30,153 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:40:30,155 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:40:30,155 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:40:30,157 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:40:30,157 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:40:30,158 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:40:30,161 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:40:30,161 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:40:30,207 - src.app.model_service - INFO - Prediction made successfully: 37830.71
+2026-02-11 17:40:35,342 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:40:35,348 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:40:35,350 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:40:35,358 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:40:35,364 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:40:35,366 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:40:35,377 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:40:35,384 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:40:35,386 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:40:35,388 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:40:35,390 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:40:35,394 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:40:35,397 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:40:35,399 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:40:35,401 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:40:35,403 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:40:35,405 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:40:35,407 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:40:35,410 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:40:35,413 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:40:35,414 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:40:35,416 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:40:35,419 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:40:35,422 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:40:35,425 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:40:35,438 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:40:35,447 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:40:35,448 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:40:35,448 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:40:35,449 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:40:35,449 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:40:35,450 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:40:35,450 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:40:35,450 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:40:35,454 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:40:35,454 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:40:35,454 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:40:35,454 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:40:35,455 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:40:35,456 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:40:35,461 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:40:35,461 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:40:35,513 - src.app.model_service - INFO - Prediction made successfully: 185629.17
+2026-02-11 17:41:12,441 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:41:12,449 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:41:12,454 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:41:12,457 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:41:12,466 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:41:12,469 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:41:12,476 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:41:12,485 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:41:12,487 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:41:12,490 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:41:12,493 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:41:12,495 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:41:12,498 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:41:12,500 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:41:12,502 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:41:12,504 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:41:12,506 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:41:12,507 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:41:12,509 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:41:12,510 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:41:12,512 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:41:12,514 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:41:12,516 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:41:12,517 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:41:12,519 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:41:12,526 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:41:12,532 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:41:12,533 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:41:12,534 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:41:12,534 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:41:12,534 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:41:12,534 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:41:12,535 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:41:12,535 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:41:12,537 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:41:12,538 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:41:12,538 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:41:12,539 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:41:12,539 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:41:12,539 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:41:12,542 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:41:12,543 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:41:12,605 - src.app.model_service - INFO - Prediction made successfully: 178973.95
+2026-02-11 17:41:37,240 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:41:37,260 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:41:37,282 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:41:37,311 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:41:37,315 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:41:37,349 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:41:37,374 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:41:37,418 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:41:37,444 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:41:37,453 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:41:37,456 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:41:37,461 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:41:37,462 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:41:37,467 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:41:37,469 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:41:37,473 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:41:37,476 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:41:37,487 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:41:37,491 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:41:37,495 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:41:37,502 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:41:37,506 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:41:37,514 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:41:37,519 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:41:37,535 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:41:37,555 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:41:37,568 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:41:37,571 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:41:37,581 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:41:37,589 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:41:37,590 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:41:37,590 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:41:37,591 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:41:37,591 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:41:37,596 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:41:37,598 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:41:37,606 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:41:37,608 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:41:37,608 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:41:37,610 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:41:37,617 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:41:37,627 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:41:37,736 - src.app.model_service - INFO - Prediction made successfully: 185629.17
+2026-02-11 17:42:38,382 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:42:38,417 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:42:38,457 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:42:38,489 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:42:38,522 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:42:38,528 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:42:38,570 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:42:38,603 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:42:38,609 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:42:38,617 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:42:38,623 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:42:38,641 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:42:38,656 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:42:38,658 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:42:38,695 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:42:38,704 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:42:38,705 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:42:38,712 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:42:38,736 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:42:38,787 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:42:38,819 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:42:38,843 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:42:38,848 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:42:38,859 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:42:38,861 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:42:38,880 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:42:38,902 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:42:38,905 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:42:38,906 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:42:38,907 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:42:38,908 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:42:38,910 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:42:38,910 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:42:38,910 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:42:38,916 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:42:38,918 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:42:38,920 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:42:38,922 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:42:38,922 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:42:38,922 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:42:38,928 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:42:38,931 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:42:39,023 - src.app.model_service - INFO - Prediction made successfully: 183211.33
+2026-02-11 17:42:43,396 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:42:43,426 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:42:43,433 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:42:43,465 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:42:43,493 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:42:43,512 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:42:43,544 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:42:43,555 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:42:43,566 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:42:43,582 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:42:43,604 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:42:43,616 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:42:43,627 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:42:43,670 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:42:43,681 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:42:43,693 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:42:43,709 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:42:43,714 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:42:43,719 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:42:43,728 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:42:43,731 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:42:43,733 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:42:43,738 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:42:43,746 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:42:43,751 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:42:43,770 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:42:43,786 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:42:43,793 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:42:43,802 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:42:43,812 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:42:43,816 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:42:43,820 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:42:43,827 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:42:43,830 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:42:43,836 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:42:43,837 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:42:43,839 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:42:43,845 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:42:43,852 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:42:43,859 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:42:43,873 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:42:43,882 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:42:44,015 - src.app.model_service - INFO - Prediction made successfully: 183211.33
+2026-02-11 17:42:49,401 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:42:49,407 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:42:49,416 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:42:49,424 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:42:49,427 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:42:49,432 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:42:49,448 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:42:49,466 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:42:49,471 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:42:49,478 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:42:49,485 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:42:49,489 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:42:49,490 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:42:49,498 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:42:49,501 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:42:49,502 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:42:49,505 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:42:49,507 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:42:49,511 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:42:49,522 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:42:49,529 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:42:49,544 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:42:49,550 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:42:49,552 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:42:49,555 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:42:49,575 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:42:49,615 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:42:49,621 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:42:49,621 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:42:49,622 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:42:49,622 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:42:49,623 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:42:49,624 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:42:49,631 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:42:49,637 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:42:49,638 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:42:49,640 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:42:49,641 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:42:49,641 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:42:49,645 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:42:49,654 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:42:49,655 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:42:49,754 - src.app.model_service - INFO - Prediction made successfully: 183211.33
+2026-02-11 17:42:55,045 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:42:55,055 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:42:55,058 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:42:55,062 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:42:55,072 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:42:55,075 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:42:55,082 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:42:55,090 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:42:55,092 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:42:55,095 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:42:55,097 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:42:55,102 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:42:55,105 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:42:55,107 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:42:55,109 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:42:55,111 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:42:55,113 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:42:55,116 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:42:55,119 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:42:55,122 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:42:55,125 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:42:55,128 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:42:55,136 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:42:55,146 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:42:55,149 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:42:55,167 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:42:55,189 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:42:55,193 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:42:55,193 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:42:55,194 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:42:55,194 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:42:55,194 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:42:55,195 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:42:55,195 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:42:55,216 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:42:55,225 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:42:55,237 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:42:55,242 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:42:55,256 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:42:55,267 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:42:55,278 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:42:55,293 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:42:55,437 - src.app.model_service - INFO - Prediction made successfully: 183211.33
+2026-02-11 17:43:00,479 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:43:00,484 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:43:00,487 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:43:00,489 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:43:00,493 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:43:00,496 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:43:00,502 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:43:00,508 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:43:00,510 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:43:00,512 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:43:00,515 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:43:00,518 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:43:00,521 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:43:00,527 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:43:00,528 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:43:00,531 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:43:00,543 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:43:00,551 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:43:00,557 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:43:00,560 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:43:00,564 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:43:00,576 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:43:00,588 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:43:00,593 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:43:00,598 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:43:00,616 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:43:00,641 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:43:00,643 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:43:00,645 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:43:00,646 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:43:00,647 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:43:00,647 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:43:00,647 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:43:00,648 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:43:00,657 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:43:00,661 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:43:00,661 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:43:00,662 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:43:00,663 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:43:00,663 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:43:00,667 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:43:00,669 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:43:00,741 - src.app.model_service - INFO - Prediction made successfully: 183211.33
+2026-02-11 17:46:19,603 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 17:46:19,612 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:46:19,614 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:46:19,621 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:46:19,630 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:46:19,641 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:46:19,657 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:46:19,664 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:46:19,666 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:46:19,669 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:46:19,676 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:46:19,680 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:46:19,691 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:46:19,700 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 17:46:19,704 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 17:46:19,706 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 17:46:19,711 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 17:46:19,712 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 17:46:19,714 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 17:46:19,716 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 17:46:19,722 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 17:46:19,726 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 17:46:19,728 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 17:46:19,730 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 17:46:19,732 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 17:46:19,761 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:46:19,793 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:46:19,798 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 17:46:19,810 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 17:46:19,812 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 17:46:19,813 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 17:46:19,816 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 17:46:19,825 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 17:46:19,827 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 17:46:19,832 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 17:46:19,833 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 17:46:19,834 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 17:46:19,837 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 17:46:19,838 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 17:46:19,838 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 17:46:19,843 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 17:46:19,844 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 17:46:19,918 - src.app.model_service - INFO - Prediction made successfully: 118771.07
+2026-02-11 18:06:11,910 - src.app.model_service - INFO - Model loaded successfully from models\best_model.pkl
+2026-02-11 18:06:36,689 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 18:06:36,720 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 18:06:36,740 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 18:06:36,768 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 18:06:36,786 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 18:06:36,808 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 18:06:37,320 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 18:06:37,990 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 18:06:38,026 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 18:06:38,060 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 18:06:38,101 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 18:06:38,135 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 18:06:38,197 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 18:06:38,201 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 18:06:38,214 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 18:06:38,239 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 18:06:38,263 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 18:06:38,270 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 18:06:38,281 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 18:06:38,305 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 18:06:38,311 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 18:06:38,314 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 18:06:38,318 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 18:06:38,321 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 18:06:38,330 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 18:06:38,394 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 18:06:38,445 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 18:06:38,449 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 18:06:38,453 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 18:06:38,453 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 18:06:38,454 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 18:06:38,454 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 18:06:38,455 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 18:06:38,456 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 18:06:38,470 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 18:06:38,471 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 18:06:38,473 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 18:06:38,473 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 18:06:38,473 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 18:06:38,474 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 18:06:38,488 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 18:06:38,524 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 18:06:38,619 - src.app.model_service - INFO - Prediction made successfully: 187468.31
+2026-02-11 18:06:43,459 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 18:06:43,491 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 18:06:43,518 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 18:06:43,540 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 18:06:43,559 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 18:06:43,579 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 18:06:43,884 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 18:06:44,249 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 18:06:44,286 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 18:06:44,315 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 18:06:44,342 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 18:06:44,382 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 18:06:44,428 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 18:06:44,446 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 18:06:44,453 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 18:06:44,468 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 18:06:44,472 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 18:06:44,479 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 18:06:44,498 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 18:06:44,518 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 18:06:44,525 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 18:06:44,530 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 18:06:44,533 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 18:06:44,538 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 18:06:44,542 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 18:06:44,563 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 18:06:44,591 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 18:06:44,595 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 18:06:44,601 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 18:06:44,613 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 18:06:44,633 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 18:06:44,641 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 18:06:44,644 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 18:06:44,647 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 18:06:44,657 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 18:06:44,662 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 18:06:44,665 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 18:06:44,681 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 18:06:44,684 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 18:06:44,698 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 18:06:44,713 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 18:06:44,734 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 18:06:44,880 - src.app.model_service - INFO - Prediction made successfully: 43931.37
+2026-02-11 18:06:50,119 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-11 18:06:50,226 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 18:06:50,285 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 18:06:50,340 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 18:06:50,400 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 18:06:50,491 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 18:06:50,950 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 18:06:51,368 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 18:06:51,395 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 18:06:51,430 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 18:06:51,477 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 18:06:51,504 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 18:06:51,540 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 18:06:51,557 - src.features.feature_engineer - INFO - Label encoded 'Airline'
+2026-02-11 18:06:51,564 - src.features.feature_engineer - INFO - Label encoded 'Source'
+2026-02-11 18:06:51,568 - src.features.feature_engineer - INFO - Label encoded 'Source Name'
+2026-02-11 18:06:51,571 - src.features.feature_engineer - INFO - Label encoded 'Destination'
+2026-02-11 18:06:51,579 - src.features.feature_engineer - INFO - Label encoded 'Destination Name'
+2026-02-11 18:06:51,600 - src.features.feature_engineer - INFO - Label encoded 'Departure Date & Time'
+2026-02-11 18:06:51,620 - src.features.feature_engineer - INFO - Label encoded 'Arrival Date & Time'
+2026-02-11 18:06:51,635 - src.features.feature_engineer - INFO - Label encoded 'Stopovers'
+2026-02-11 18:06:51,645 - src.features.feature_engineer - INFO - Label encoded 'Aircraft Type'
+2026-02-11 18:06:51,651 - src.features.feature_engineer - INFO - Label encoded 'Class'
+2026-02-11 18:06:51,652 - src.features.feature_engineer - INFO - Label encoded 'Booking Source'
+2026-02-11 18:06:51,655 - src.features.feature_engineer - INFO - Label encoded 'Seasonality'
+2026-02-11 18:06:51,678 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 18:06:51,691 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 18:06:51,694 - src.features.feature_engineer - WARNING - No fitted scaler for 'Airline', skipping
+2026-02-11 18:06:51,696 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source', skipping
+2026-02-11 18:06:51,697 - src.features.feature_engineer - WARNING - No fitted scaler for 'Source Name', skipping
+2026-02-11 18:06:51,698 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination', skipping
+2026-02-11 18:06:51,698 - src.features.feature_engineer - WARNING - No fitted scaler for 'Destination Name', skipping
+2026-02-11 18:06:51,699 - src.features.feature_engineer - WARNING - No fitted scaler for 'Departure Date & Time', skipping
+2026-02-11 18:06:51,700 - src.features.feature_engineer - WARNING - No fitted scaler for 'Arrival Date & Time', skipping
+2026-02-11 18:06:51,710 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-11 18:06:51,719 - src.features.feature_engineer - WARNING - No fitted scaler for 'Stopovers', skipping
+2026-02-11 18:06:51,725 - src.features.feature_engineer - WARNING - No fitted scaler for 'Aircraft Type', skipping
+2026-02-11 18:06:51,727 - src.features.feature_engineer - WARNING - No fitted scaler for 'Class', skipping
+2026-02-11 18:06:51,728 - src.features.feature_engineer - WARNING - No fitted scaler for 'Booking Source', skipping
+2026-02-11 18:06:51,729 - src.features.feature_engineer - WARNING - No fitted scaler for 'Seasonality', skipping
+2026-02-11 18:06:51,736 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-11 18:06:51,750 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-11 18:06:51,833 - src.app.model_service - INFO - Prediction made successfully: 187468.31

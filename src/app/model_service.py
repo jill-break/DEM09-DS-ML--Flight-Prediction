@@ -164,7 +164,10 @@ class ModelService:
         # Load a sample of training data to fit the encoders/scalers
         # This ensures consistent encoding
         try:
-            training_sample = pd.read_csv('data/raw/Flight_Price_Dataset_of_Bangladesh.csv', nrows=1000)
+            # Load full training data to ensure all categories are seen by encoder
+            # This fixes the issue where rare categories (like Business class) might be missing
+            # from a small sample, leading to incorrect encoding
+            training_sample = pd.read_csv('data/raw/Flight_Price_Dataset_of_Bangladesh.csv')
             
             # Remove target column AND leaky columns (same as training)
             leaky_columns = ['Base Fare (BDT)', 'Tax & Surcharge (BDT)', 'Total Fare (BDT)']

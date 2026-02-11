@@ -144,7 +144,7 @@ with col1:
     with departure_col2:
         departure_time = st.time_input(
             "Time",
-            value=datetime.now().replace(hour=10, minute=0).time(),
+            value=datetime.strptime("10:00", "%H:%M").time(),
             label_visibility="collapsed"
         )
     
@@ -161,7 +161,7 @@ with col1:
     with arrival_col2:
         arrival_time = st.time_input(
             "Time",
-            value=(datetime.combine(departure_date, departure_time) + timedelta(hours=2)).time(),
+            value=datetime.strptime("12:00", "%H:%M").time(),
             label_visibility="collapsed"
         )
 
@@ -226,7 +226,7 @@ predict_col1, predict_col2, predict_col3 = st.columns([1, 1, 1])
 
 with predict_col2:
     predict_button = st.button(
-        "🔮 Predict Fare",
+        "Predict Fare",
         type="primary",
         use_container_width=True,
         disabled=len(validation_errors) > 0

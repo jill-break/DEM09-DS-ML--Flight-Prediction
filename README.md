@@ -51,7 +51,13 @@ flight_fare_prediction/
 ├── models/                           # Saved models
 ├── reports/figures/                  # Visualizations
 ├── logs/                             # Application logs
+├── notebooks/                        # Jupyter notebooks
+│   └── pipeline_orchestration.ipynb  # Interactive pipeline
+├── airflow/                          # Airflow orchestration
+│   ├── dags/                         # DAG definitions
+│   └── config/                       # Airflow config
 ├── main.py                           # Pipeline orchestrator
+├── app.py                            # Streamlit web app
 ├── requirements.txt                  # Dependencies
 └── README.md                         # This file
 ```
@@ -68,7 +74,7 @@ flight_fare_prediction/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/jill-break/DEM09-DS-ML--Flight-Prediction.git
 cd flight_fare_prediction
 ```
 
@@ -104,30 +110,28 @@ The pipeline will:
 7. Generate visualizations
 8. Save the best model
 
-### Running the Web Application
+**Airflow Features:**
+- **Automated Workflow:** Validates data, backs up models, trains new models, and evaluates performance.
+- **Smart Deployment:** Only deploys new models if R² score improves by ≥2%.
+- **Isolated Training:** Uses `PythonVirtualenvOperator` to run training in a separate environment, avoiding dependency conflicts.
+- **Email Alerts:** Sends success/failure notifications.
 
-Launch the interactive web app for live predictions:
+### Interactive Notebook
 
-```bash
-# Activate virtual environment (if using)
-.\.venv\Scripts\activate  # Windows
-source venv/bin/activate   # Linux/Mac
+For experimentation and step-by-step execution:
 
-# Install dependencies (first time only)
-pip install -r requirements.txt
-
-# Launch Streamlit app
-streamlit run app.py
-```
+1. Open `notebooks/pipeline_orchestration.ipynb` in Jupyter/VS Code.
+2. Run cells to specific pipeline stages (EDA, Training, Tuning) interactively.
+3. View embedded visualizations and detailed analysis.
 
 The app will automatically open in your browser at `http://localhost:8501`.
 
 **Features:**
-- ✈️ Interactive form for flight details
-- 🔮 Instant fare predictions
-- 📊 Model performance metrics
-- ✅ Input validation and error handling
-- 📱 Responsive design
+- Interactive form for flight details
+- Instant fare predictions
+- Model performance metrics
+- Input validation and error handling
+- Responsive design
 
 ## Pipeline Stages
 
@@ -196,11 +200,11 @@ Based on typical flight fare datasets, expected performance:
 
 | Model | R² Score (Coefficient of Determination) | RMSE (Root Mean Square Error) | MAE ( Mean Absolute Error) | MAPE (Mean Absolute Percentage Error) |
 |-------|----------|------|-----|--------------------|
-| Linear Regression | -5157.2344 | 290.5866 | 75.756 | 4974.066 |
-| Ridge Regression | -32.3598 | 23.3688 | 7.3372 | 443.4184 |
-| Lasso Regression | 0.4393 | 3.0296 | 2.1857 | 116.9316 |
-| Decision Tree | 0.9909 | 0.3861 | 0.2204 | 5.2959 |
-| Random Forest | 0.9931 | 0.3361 | 0.201 | 4.8537 |
+| Linear Regression | -16.5006 | 341562.2341 | 127519.9364 | 808.137 |
+| Ridge Regression | 0.273 | 69616.3342 | 51314.2689 | 232.4416 |
+| Lasso Regression | 0.3362 | 66523.0199 | 48510.2185 | 198.8586 |
+| Decision Tree | 0.5297 | 55995.0087 | 32086.7119 | 48.4239 |
+| Random Forest | 0.6574 | 47790.3455 | 28470.7284 | 46.052 |
 
 
 ### Key Insights Expected
@@ -265,27 +269,6 @@ Top factors influencing flight fares (typical findings):
 4. **Season**: Peak season fares are 25-35% higher
 5. **Day of week**: Weekend flights are 10-15% more expensive
 
-## Future Enhancements
-
-### Potential Improvements
-1. **Advanced Models**: XGBoost, LightGBM, Neural Networks
-2. **Feature Engineering**: 
-   - Flight duration features
-   - Days until departure
-   - Competitor fare features
-3. **Deployment**: 
-   - REST API (Flask/FastAPI)
-   - Web app (Streamlit)
-   - Batch prediction pipeline
-4. **MLOps**:
-   - Model versioning
-   - A/B testing framework
-   - Automated retraining (Airflow)
-   - Model monitoring
-5. **Advanced Analytics**:
-   - Fare trend forecasting
-   - Route profitability analysis
-   - Customer segmentation
 
 ## Logging
 
@@ -309,6 +292,45 @@ To extend this project:
 4. Update configuration in `src/config/config.py`
 5. Follow existing code style and documentation standards
 
+### Running the Web Application
+
+Launch the interactive web app for live predictions:
+
+```bash
+# Activate virtual environment (if using)
+.\.venv\Scripts\activate  # Windows
+source venv/bin/activate   # Linux/Mac
+
+# Install dependencies (first time only)
+pip install -r requirements.txt
+
+# Launch Streamlit app
+streamlit run app.py
+```
+
+The app will automatically open in your browser at `http://localhost:8501`.
+
+**Features:**
+- Interactive form for flight details
+- Instant fare predictions
+- Model performance metrics
+- Input validation and error handling
+- Responsive design
+
+### Automated Retraining (Airflow)
+
+The project includes an Apache Airflow DAG for weekly model retraining.
+
+**Prerequisites:** Docker and Docker Compose.
+
+1. Start Airflow services:
+```bash
+docker-compose up -d
+```
+
+2. Access the Airflow UI at `http://localhost:8080` (credentials: `admin`/`admin`).
+
+3. Enable the `model_retraining` DAG. It runs every Sunday at 2:00 AM.
 
 ## Acknowledgments
 
