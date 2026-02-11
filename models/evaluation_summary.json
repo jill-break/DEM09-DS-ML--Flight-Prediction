@@ -1,5 +1,5 @@
 {
-    "total_models_evaluated": 5,
+    "total_models_evaluated": 6,
     "metrics_compared": [
         "r2_score",
         "rmse",
@@ -8,45 +8,45 @@
     ],
     "best_model": {
         "r2_score": {
-            "model_name": "Random Forest",
-            "value": 0.6574
+            "model_name": "Random Forest (Tuned)",
+            "value": 0.6701
         },
         "rmse": {
-            "model_name": "Random Forest",
-            "value": 47790.3455
+            "model_name": "Random Forest (Tuned)",
+            "value": 46898.1608
         },
         "mae": {
-            "model_name": "Random Forest",
-            "value": 28470.7284
+            "model_name": "Random Forest (Tuned)",
+            "value": 28096.0377
         },
         "mape": {
-            "model_name": "Random Forest",
-            "value": 46.052
+            "model_name": "Random Forest (Tuned)",
+            "value": 45.5122
         }
     },
     "metric_statistics": {
         "r2_score": {
-            "mean": -2.94086,
-            "std": 7.581669159096827,
+            "mean": -2.339033333333333,
+            "std": 6.9396352793692735,
             "min": -16.5006,
-            "max": 0.6574
+            "max": 0.6701
         },
         "rmse": {
-            "mean": 116297.38848000001,
-            "std": 126224.45406242339,
-            "min": 47790.3455,
+            "mean": 104730.85053333333,
+            "std": 116399.30860239484,
+            "min": 46898.1608,
             "max": 341562.2341
         },
         "mae": {
-            "mean": 57580.372820000004,
-            "std": 40343.43954364975,
-            "min": 28470.7284,
+            "mean": 52666.316966666665,
+            "std": 38038.95583408903,
+            "min": 28096.0377,
             "max": 127519.9364
         },
         "mape": {
-            "mean": 266.78262,
-            "std": 314.3485645340249,
-            "min": 46.052,
+            "mean": 229.90421666666666,
+            "std": 295.3169751541175,
+            "min": 45.5122,
             "max": 808.137
         }
     }
