@@ -18,6 +18,30 @@ AIRLINES = [
     'Qatar Airways', 'Vistara', 'Turkish Airlines', 'Lufthansa', 'Air Arabia'
 ]
 
+# Airport coordinates (Lat, Lon) for distance calculation
+AIRPORT_COORDINATES = {
+    'CXB': (21.4523, 91.9636),   # Cox's Bazar
+    'CCU': (22.6547, 88.4467),   # Kolkata
+    'BZL': (22.8010, 90.3015),   # Barisal
+    'CGP': (22.2500, 91.8133),   # Chittagong
+    'ZYL': (24.9632, 91.8665),   # Sylhet
+    'KUL': (2.7456, 101.7072),   # Kuala Lumpur
+    'SPD': (25.7592, 88.9080),   # Saidpur
+    'YYZ': (43.6777, -79.6248),  # Toronto
+    'RJH': (24.4441, 88.6186),   # Rajshahi
+    'DAC': (23.8433, 90.4055),   # Dhaka
+    'JSR': (23.1837, 89.1610),   # Jessore
+    'LHR': (51.4700, -0.4543),   # London
+    'DEL': (28.5562, 77.1000),   # Delhi
+    'IST': (41.2753, 28.7519),   # Istanbul
+    'DXB': (25.2532, 55.3657),   # Dubai
+    'SIN': (1.3644, 103.9915),   # Singapore
+    'BKK': (13.6900, 100.7501),  # Bangkok
+    'DOH': (25.2730, 51.6080),   # Doha
+    'JFK': (40.6413, -73.7781),  # New York
+    'JED': (21.6796, 39.1565)    # Jeddah
+}
+
 AIRPORTS = {
     'CXB': "Cox's Bazar Airport",
     'CCU': "Netaji Subhas Chandra Bose International Airport, Kolkata",

@@ -102,6 +102,7 @@ class ModelService:
                 user_input['departure_datetime']
             )
             
+            # Determine seasonality
             seasonality = determine_seasonality(user_input['departure_datetime'])
             
             # Create feature dictionary matching EXACT CSV columns
@@ -113,16 +114,13 @@ class ModelService:
                 'Source Name': user_input.get('source_name', ''),
                 'Destination': user_input['destination'],
                 'Destination Name': user_input.get('destination_name', ''),
-                'Departure Date & Time': user_input['departure_datetime'],  # Keep as datetime!
-                'Arrival Date & Time': user_input['arrival_datetime'],      # Keep as datetime!
+                'Departure Date & Time': user_input['departure_datetime'],  # Will be decomposed
+                'Arrival Date & Time': user_input['arrival_datetime'],      # Will be decomposed
                 'Duration (hrs)': duration_hrs,
                 'Stopovers': user_input['stopovers'],
                 'Aircraft Type': user_input['aircraft_type'],
                 'Class': user_input['travel_class'],
                 'Booking Source': user_input['booking_source'],
-                # 'Base Fare (BDT)' - REMOVED to avoid data leakage
-                # 'Tax & Surcharge (BDT)' - REMOVED to avoid data leakage
-                # 'Total Fare (BDT)' - this is the TARGET, should NOT be included
                 'Seasonality': seasonality,
                 'Days Before Departure': days_before
             }
@@ -182,35 +180,76 @@ class ModelService:
         # Initialize feature engineer 
         engineer = FeatureEngineer()
         
-        # CRITICAL: Convert datetime columns to strings FIRST
-        # The model was trained with datetime columns converted to strings then label-encoded
-        datetime_cols = df_processed.select_dtypes(include=['datetime', 'datetime64']).columns.tolist()
-        for col in datetime_cols:
-            df_processed[col] = df_processed[col].astype(str)
+        # --- FEATURE ENGINEERING MIRRORING MAIN.PY ---
         
-        # Now encode categorical features (including the stringified datetime columns)
+        # --- FEATURE ENGINEERING MIRRORING MAIN.PY ---
+        
+        # 1. TEMPORAL FEATURES (Departure)
+        df_processed = engineer.create_temporal_features(df_processed, 'Departure Date & Time')
+        df_processed = df_processed.rename(columns={
+            'month': 'Dep_Month', 'day': 'Dep_Day', 'weekday': 'Dep_Weekday', 
+            'day_of_year': 'Dep_DayOfYear', 'season': 'Dep_Season', 
+            'is_weekend': 'Dep_IsWeekend', 'hour': 'Dep_Hour'
+        })
+        
+        # 2. TEMPORAL FEATURES (Arrival)
+        df_processed = engineer.create_temporal_features(df_processed, 'Arrival Date & Time')
+        df_processed = df_processed.rename(columns={
+            'month': 'Arr_Month', 'day': 'Arr_Day', 'weekday': 'Arr_Weekday', 
+            'day_of_year': 'Arr_DayOfYear', 'season': 'Arr_Season', 
+            'is_weekend': 'Arr_IsWeekend', 'hour': 'Arr_Hour'
+        })
+
+        # 3. ROUTE FEATURES (New)
+        df_processed = engineer.create_route_features(df_processed)
+        
+        # 4. DROP RAW DATETIME COLUMNS
+        cols_to_drop = ['Departure Date & Time', 'Arrival Date & Time']
+        df_processed = engineer.drop_features(df_processed, cols_to_drop)
+        
+        # Apply the feature engineering to the training sample too so columns match
+        if training_sample is not None:
+            # Departure Features
+            training_sample = engineer.create_temporal_features(training_sample, 'Departure Date & Time')
+            training_sample = training_sample.rename(columns={
+                'month': 'Dep_Month', 'day': 'Dep_Day', 'weekday': 'Dep_Weekday', 
+                'day_of_year': 'Dep_DayOfYear', 'season': 'Dep_Season', 
+                'is_weekend': 'Dep_IsWeekend', 'hour': 'Dep_Hour'
+            })
+            
+            # Arrival Features
+            training_sample = engineer.create_temporal_features(training_sample, 'Arrival Date & Time')
+            training_sample = training_sample.rename(columns={
+                'month': 'Arr_Month', 'day': 'Arr_Day', 'weekday': 'Arr_Weekday', 
+                'day_of_year': 'Arr_DayOfYear', 'season': 'Arr_Season', 
+                'is_weekend': 'Arr_IsWeekend', 'hour': 'Arr_Hour'
+            })
+
+            # Route Features
+            training_sample = engineer.create_route_features(training_sample)
+            
+            # Drop columns
+            training_sample = engineer.drop_features(training_sample, cols_to_drop)
+        
+        # Now encode categorical features
         categorical_cols = df_processed.select_dtypes(include=['object']).columns.tolist()
         
         if len(categorical_cols) > 0 and training_sample is not None:
-            # Also convert datetime columns in training sample to strings
-            training_datetime_cols = training_sample.select_dtypes(include=['datetime', 'datetime64']).columns.tolist()
-            for col in training_datetime_cols:
-                training_sample[col] = training_sample[col].astype(str)
-            
             # Fit on training sample
             training_cat_cols = [col for col in categorical_cols if col in training_sample.columns]
             if len(training_cat_cols) > 0:
+                # Use ONE-HOT Encoding (Changed from Label)
                 _ = engineer.encode_categorical_features(
                     training_sample,
                     training_cat_cols, 
-                    method='label', 
+                    method='onehot', 
                     fit=True
                 )
                 # Transform our input
                 df_processed = engineer.encode_categorical_features(
                     df_processed, 
                     categorical_cols, 
-                    method='label', 
+                    method='onehot', 
                     fit=False
                 )
         
@@ -236,6 +275,22 @@ class ModelService:
                     method='standard', 
                     fit=False
                 )
+
+        # SANITIZE COLUMN NAMES (Required for XGBoost)
+        import re
+        def sanitize_colnames(df):
+            new_cols = []
+            for col in df.columns:
+                # Replace special chars with underscore, keep alphanumeric
+                new_col = re.sub(r'[^a-zA-Z0-9_]', '_', col)
+                # Remove repeated underscores
+                new_col = re.sub(r'_+', '_', new_col)
+                # Remove leading/trailing underscores
+                new_col = new_col.strip('_')
+                new_cols.append(new_col)
+            return new_cols
+            
+        df_processed.columns = sanitize_colnames(df_processed)
         
         return df_processed
     

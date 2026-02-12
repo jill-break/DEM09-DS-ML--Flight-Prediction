@@ -69,6 +69,7 @@ class FeatureEngineer:
         df['day'] = df[date_column].dt.day
         df['weekday'] = df[date_column].dt.dayofweek  # 0=Monday, 6=Sunday
         df['day_of_year'] = df[date_column].dt.dayofyear
+        df['hour'] = df[date_column].dt.hour
         
         # Season mapping (Northern Hemisphere - adjust if needed)
         df['season'] = df['month'].map({
@@ -81,8 +82,74 @@ class FeatureEngineer:
         # Is weekend flag
         df['is_weekend'] = (df['weekday'] >= 5).astype(int)
         
-        logger.info(f"Created temporal features from '{date_column}': month, day, weekday, season, is_weekend")
+        logger.info(f"Created temporal features from '{date_column}': month, day, weekday, day_of_year, hour, season, is_weekend")
         
+        logger.info(f"Created temporal features from '{date_column}': month, day, weekday, day_of_year, hour, season, is_weekend")
+        
+        return df
+
+    def create_route_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        """
+        Create route-based features including distance and type.
+        
+        Args:
+            df: Input DataFrame with 'Source' and 'Destination' columns
+            
+        Returns:
+            DataFrame with 'route_distance' and 'route_type' features
+        """
+        df = df.copy()
+        
+        # Import coordinates here to avoid circular imports if any
+        from src.app.utils import AIRPORT_COORDINATES
+        from geopy.distance import geodesic
+        
+        def calculate_distance(row):
+            source_code = row.get('Source')
+            dest_code = row.get('Destination')
+            
+            if source_code in AIRPORT_COORDINATES and dest_code in AIRPORT_COORDINATES:
+                return geodesic(AIRPORT_COORDINATES[source_code], AIRPORT_COORDINATES[dest_code]).km
+            return np.nan
+
+        # Calculate Distance
+        if 'Source' in df.columns and 'Destination' in df.columns:
+            # Check if geopy is available, otherwise use simple euclidian approximation or lookup table
+            # Since geopy might not be installed, let's use a haversine implementation to be safe and dependency-free
+            
+            def haversine_distance(lat1, lon1, lat2, lon2):
+                R = 6371  # Earth radius in km
+                phi1, phi2 = np.radians(lat1), np.radians(lat2)
+                dphi = np.radians(lat2 - lat1)
+                dlambda = np.radians(lon2 - lon1)
+                
+                a = np.sin(dphi/2)**2 + np.cos(phi1)*np.cos(phi2) * np.sin(dlambda/2)**2
+                c = 2 * np.arctan2(np.sqrt(a), np.sqrt(1-a))
+                return R * c
+
+            def get_dist(row):
+                src = AIRPORT_COORDINATES.get(row['Source'])
+                dst = AIRPORT_COORDINATES.get(row['Destination'])
+                if src and dst:
+                    return haversine_distance(src[0], src[1], dst[0], dst[1])
+                return 0 # Default to 0 if unknown
+
+            df['route_distance'] = df.apply(get_dist, axis=1)
+            logger.info("Created 'route_distance' feature")
+            
+            # Route Type (International if Source or Dest is not in Bangladesh)
+            # BD Airports: DAC, CGP, ZYL, CXB, JSR, BZL, RJH, SPD
+            bd_airports = ['DAC', 'CGP', 'ZYL', 'CXB', 'JSR', 'BZL', 'RJH', 'SPD']
+            
+            df['route_type'] = df.apply(
+                lambda x: 'Domestic' if (x['Source'] in bd_airports and x['Destination'] in bd_airports) else 'International', 
+                axis=1
+            )
+            logger.info("Created 'route_type' feature")
+            
+        else:
+            logger.warning("Source or Destination columns missing, skipping route features")
+            
         return df
     
     def encode_categorical_features(self, df: pd.DataFrame, columns: List[str], 
@@ -116,17 +183,22 @@ class FeatureEngineer:
                     self.encoders[col] = list(dummies.columns)
                     df = pd.concat([df, dummies], axis=1)
                 else:
-                    # Use existing encoder
-                    dummies = pd.get_dummies(df[col], prefix=col, drop_first=True)
-                    # Ensure same columns as training
-                    for encoded_col in self.encoders[col]:
-                        if encoded_col not in dummies.columns:
-                            dummies[encoded_col] = 0
-                    dummies = dummies[self.encoders[col]]
+                    # Robust inference encoding
+                    # Create empty DataFrame with expected columns learned from training
+                    dummies = pd.DataFrame(0, index=df.index, columns=self.encoders[col], dtype=int)
+                    
+                    # Fill 1s where the category matches a column
+                    for idx, value in df[col].items():
+                        # Construct the column name that would have been created
+                        target_col = f"{col}_{value}"
+                        
+                        if target_col in dummies.columns:
+                            dummies.at[idx, target_col] = 1
+                            
                     df = pd.concat([df, dummies], axis=1)
                 
                 df = df.drop(columns=[col])
-                logger.info(f"OneHot encoded '{col}' into {len(self.encoders[col])} features")
+                logger.info(f"OneHot encoded '{col}' using fitted encoder")
             
             elif method == 'label':
                 if fit:

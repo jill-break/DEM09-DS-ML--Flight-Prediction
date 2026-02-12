@@ -71,10 +71,26 @@ DECISION_TREE_PARAMS = {
 }
 
 RANDOM_FOREST_PARAMS = {
-    'n_estimators': [50, 100, 200],
-    'max_depth': [10, 15, 20, None],
+    'n_estimators': [100, 200],
+    'max_depth': [10, 20, None],
     'min_samples_split': [2, 5],
     'min_samples_leaf': [1, 2]
+}
+
+XGBOOST_PARAMS = {
+    'n_estimators': [100, 200],
+    'learning_rate': [0.01, 0.1],
+    'max_depth': [3, 6, 10],
+    'subsample': [0.8, 1.0],
+    'colsample_bytree': [0.8, 1.0]
+}
+
+LIGHTGBM_PARAMS = {
+    'n_estimators': [100, 200],
+    'learning_rate': [0.01, 0.1],
+    'num_leaves': [31, 63],
+    'feature_fraction': [0.8, 1.0],
+    'bagging_fraction': [0.8, 1.0]
 }
 
 # Visualization parameters
