@@ -16,8 +16,8 @@ Airlines and travel platforms need accurate fare predictions to:
 ### Technical Approach
 - **Problem Type**: Supervised Regression
 - **Target Variable**: Flight Fare (price)
-- **Features**: Airline, route, date, flight characteristics
-- **Models**: Linear Regression, Ridge, Lasso, Decision Tree, Random Forest
+- **Features**: Airline, route, route distance, days before departure, temporal features, flight characteristics
+- **Models**: Linear Regression, Ridge, Lasso, Decision Tree, Random Forest, XGBoost, LightGBM
 
 ## Project Architecture
 
@@ -112,8 +112,9 @@ The pipeline will:
 
 **Airflow Features:**
 - **Automated Workflow:** Validates data, backs up models, trains new models, and evaluates performance.
-- **Smart Deployment:** Only deploys new models if R² score improves by ≥2%.
-- **Isolated Training:** Uses `PythonVirtualenvOperator` to run training in a separate environment, avoiding dependency conflicts.
+- **Smart Deployment**: Only deploys new models if R² score improves by ≥2%.
+- **Gradient Boosting Support**: Includes dependencies for XGBoost and LightGBM training.
+- **Isolated Training**: Uses `PythonVirtualenvOperator` to run training in a separate environment, avoiding dependency conflicts.
 - **Email Alerts:** Sends success/failure notifications.
 
 ### Interactive Notebook
@@ -158,9 +159,11 @@ The app will automatically open in your browser at `http://localhost:8501`.
 
 ### 4. Feature Engineering
 - Temporal feature extraction (month, day, weekday, season)
-- Categorical encoding (OneHot/Label encoding)
-- Numerical feature scaling (StandardScaler)
-- Interaction feature creation
+- **New**: Route Distance calculation (using geodesic coordinates)
+- **New**: Route Type categorization (Domestic vs International)
+- **Precise Encoding**: OneHot Encoding for categorical variables (Airline, Source, Destination)
+- **Scaling**: StandardScaler for numerical features
+- **Leakage Prevention**: Explicit removal of `Base Fare` and `Tax` columns
 - Train-test split (80-20)
 
 ### 5. Model Training
@@ -171,6 +174,8 @@ The app will automatically open in your browser at `http://localhost:8501`.
 - Lasso Regression
 - Decision Tree Regressor
 - Random Forest Regressor
+- **XGBoost Regressor**
+- **LightGBM Regressor**
 
 **Optimization:**
 - Cross-validation (5-fold)
@@ -205,6 +210,8 @@ Based on typical flight fare datasets, expected performance:
 | Lasso Regression | 0.3362 | 66523.0199 | 48510.2185 | 198.8586 |
 | Decision Tree | 0.5297 | 55995.0087 | 32086.7119 | 48.4239 |
 | Random Forest | 0.6574 | 47790.3455 | 28470.7284 | 46.052 |
+| **XGBoost (Tuned)** | **0.6803** | **46167.32** | 27989.45 | 48.49 |
+| **LightGBM** | 0.6779 | 46337.12 | **27891.23** | 47.24 |
 
 
 ### Key Insights Expected
