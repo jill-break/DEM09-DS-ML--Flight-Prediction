@@ -14,6 +14,8 @@ from typing import Dict, Any, Tuple, Optional
 from sklearn.linear_model import LinearRegression, Ridge, Lasso
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.ensemble import RandomForestRegressor
+from xgboost import XGBRegressor
+from lightgbm import LGBMRegressor
 from sklearn.model_selection import cross_val_score, GridSearchCV, RandomizedSearchCV
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from src.config import config
@@ -72,7 +74,9 @@ class ModelTrainer:
             'Ridge (alpha=1.0)': Ridge(alpha=1.0, random_state=self.random_state),
             'Lasso (alpha=1.0)': Lasso(alpha=1.0, random_state=self.random_state),
             'Decision Tree': DecisionTreeRegressor(random_state=self.random_state, max_depth=10),
-            'Random Forest': RandomForestRegressor(n_estimators=100, random_state=self.random_state, n_jobs=-1)
+            'Random Forest': RandomForestRegressor(n_estimators=100, random_state=self.random_state, n_jobs=-1),
+            'XGBoost': XGBRegressor(n_estimators=100, random_state=self.random_state, n_jobs=-1),
+            'LightGBM': LGBMRegressor(n_estimators=100, random_state=self.random_state, n_jobs=-1, verbose=-1)
         }
         
         for name, model in baseline_models.items():
@@ -173,6 +177,10 @@ class ModelTrainer:
             base_model = DecisionTreeRegressor(random_state=self.random_state)
         elif model_type.lower() == 'random_forest':
             base_model = RandomForestRegressor(random_state=self.random_state, n_jobs=-1)
+        elif model_type.lower() == 'xgboost':
+            base_model = XGBRegressor(random_state=self.random_state, n_jobs=-1)
+        elif model_type.lower() == 'lightgbm':
+            base_model = LGBMRegressor(random_state=self.random_state, n_jobs=-1, verbose=-1)
         else:
             raise ValueError(f"Unknown model type: {model_type}")
         

@@ -1,5 +1,5 @@
 {
-    "total_models_evaluated": 6,
+    "total_models_evaluated": 7,
     "metrics_compared": [
         "r2_score",
         "rmse",
@@ -8,46 +8,46 @@
     ],
     "best_model": {
         "r2_score": {
-            "model_name": "Random Forest (Tuned)",
-            "value": 0.6701
+            "model_name": "LightGBM",
+            "value": 0.6779
         },
         "rmse": {
-            "model_name": "Random Forest (Tuned)",
-            "value": 46898.1608
+            "model_name": "LightGBM",
+            "value": 46336.6316
         },
         "mae": {
-            "model_name": "Random Forest (Tuned)",
-            "value": 28096.0377
+            "model_name": "LightGBM",
+            "value": 27890.9021
         },
         "mape": {
-            "model_name": "Random Forest (Tuned)",
-            "value": 45.5122
+            "model_name": "Random Forest",
+            "value": 46.1378
         }
     },
     "metric_statistics": {
         "r2_score": {
-            "mean": -2.339033333333333,
-            "std": 6.9396352793692735,
-            "min": -16.5006,
-            "max": 0.6701
+            "mean": 0.6220714285714285,
+            "std": 0.04989457934103713,
+            "min": 0.5698,
+            "max": 0.6779
         },
         "rmse": {
-            "mean": 104730.85053333333,
-            "std": 116399.30860239484,
-            "min": 46898.1608,
-            "max": 341562.2341
+            "mean": 50101.20488571429,
+            "std": 3303.7271426669754,
+            "min": 46336.6316,
+            "max": 53551.7036
         },
         "mae": {
-            "mean": 52666.316966666665,
-            "std": 38038.95583408903,
-            "min": 28096.0377,
-            "max": 127519.9364
+            "mean": 33711.56457142857,
+            "std": 6536.785306546553,
+            "min": 27890.9021,
+            "max": 40689.8846
         },
         "mape": {
-            "mean": 229.90421666666666,
-            "std": 295.3169751541175,
-            "min": 45.5122,
-            "max": 808.137
+            "mean": 135.83202857142857,
+            "std": 108.52428479796146,
+            "min": 46.1378,
+            "max": 251.8254
         }
     }
 }

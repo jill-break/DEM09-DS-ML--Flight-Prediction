@@ -80,22 +80,24 @@ st.markdown('<div class="sub-header">Get instant fare predictions powered by Mac
 
 # Sidebar for model info
 with st.sidebar:
-    st.header("ℹ About")
-    st.write("""
-    This application uses a trained **Random Forest** model to predict flight fares 
-    for flights in Bangladesh and international routes.
-    """)
-    
     # Load model and display info
     try:
         model = model_service.load_model()
+        model_info = model_service.get_model_info()
+        model_type = model_info.get('model_type', 'Gradient Boosting')
+        
+        st.write(f"""
+        This application uses a trained **{model_type}** model to predict flight fares 
+        for flights in Bangladesh and international routes.
+        """)
+        
         st.success(" Model loaded successfully!")
         
         model_info = model_service.get_model_info()
         st.markdown("### Model Performance")
-        st.metric("R² Score", "0.67")
-        st.metric("RMSE", "46,898 BDT")
-        st.metric("MAE", "28,096 BDT")
+        st.metric("R² Score", "0.68")
+        st.metric("RMSE", "46,167 BDT")
+        st.metric("MAE", "27,989 BDT")
         
     except Exception as e:
         st.error(f" Error loading model: {str(e)}")
@@ -304,7 +306,7 @@ if predict_button:
 st.markdown("---")
 st.markdown("""
 <div style="text-align: center; color: #666; padding: 20px;">
-    <p>Built with ❤️ using Streamlit | Model: Random Forest (R² = 0.67)</p>
+    <p>Built with ❤️ using Streamlit | Model: {model_service.get_model_info().get('model_type', 'Gradient Boosting')} (R² = 0.68)</p>
     <p style="font-size: 0.8rem;">Data Engineering Project - Flight Fare Prediction</p>
 </div>
 """, unsafe_allow_html=True)

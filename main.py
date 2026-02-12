@@ -179,8 +179,35 @@ def main():
     # Explicitly set target column to avoid data leakage
     target_column = 'Total Fare (BDT)'
     
+    # --- TEMPORAL FEATURE ENGINEERING (FIX FOR DATE MEMORIZATION) ---
+    logger.info("Extracting temporal features...")
+    # Extract features from Departure
+    cleaned_data = feature_engineer.create_temporal_features(cleaned_data, 'Departure Date & Time')
+    # Rename generic temporal columns to be specific to Departure
+    cleaned_data = cleaned_data.rename(columns={
+        'month': 'Dep_Month', 'day': 'Dep_Day', 'weekday': 'Dep_Weekday', 
+        'day_of_year': 'Dep_DayOfYear', 'season': 'Dep_Season', 
+        'is_weekend': 'Dep_IsWeekend', 'hour': 'Dep_Hour'
+    })
+    
+    # Extract features from Arrival (Optional but can be useful)
+    # We mainly care about duration which is already calculated, but arrival time of day matters
+    cleaned_data = feature_engineer.create_temporal_features(cleaned_data, 'Arrival Date & Time')
+    cleaned_data = cleaned_data.rename(columns={
+        'month': 'Arr_Month', 'day': 'Arr_Day', 'weekday': 'Arr_Weekday', 
+        'day_of_year': 'Arr_DayOfYear', 'season': 'Arr_Season', 
+        'is_weekend': 'Arr_IsWeekend', 'hour': 'Arr_Hour'
+    })
+    
+    # --- ROUTE FEATURE ENGINEERING ---
+    logger.info("Extracting route features...")
+    cleaned_data = feature_engineer.create_route_features(cleaned_data)
+
+    # CRITICAL: Drop raw datetime columns and other non-feature columns
+    cols_to_drop = ['Departure Date & Time', 'Arrival Date & Time']
+    cleaned_data = feature_engineer.drop_features(cleaned_data, cols_to_drop)
+    
     # Drop leaky columns: Base Fare and Tax & Surcharge are components of Total Fare
-    # Keeping them would allow the model to simply learn addition (data leakage)
     leaky_columns = ['Base Fare (BDT)', 'Tax & Surcharge (BDT)']
     cleaned_data = cleaned_data.drop(
         columns=[c for c in leaky_columns if c in cleaned_data.columns]
@@ -195,17 +222,38 @@ def main():
         logger.info(f"Target column: {target_column}")
         logger.info(f"Training set: {X_train.shape}, Test set: {X_test.shape}")
         
-        # Encode categorical features if any remain
-        if len(X_train.select_dtypes(include=['object']).columns) > 0:
-            cat_cols = X_train.select_dtypes(include=['object']).columns.tolist()
-            X_train = feature_engineer.encode_categorical_features(X_train, cat_cols, method='label', fit=True)
-            X_test = feature_engineer.encode_categorical_features(X_test, cat_cols, method='label', fit=False)
+        # Encode categorical features
+        cat_cols = X_train.select_dtypes(include=['object']).columns.tolist()
+        if len(cat_cols) > 0:
+            logger.info(f"Encoding categorical columns: {cat_cols} using ONE-HOT Encoding")
+            # FORCE ONE-HOT ENCODING as per requirements
+            X_train = feature_engineer.encode_categorical_features(X_train, cat_cols, method='onehot', fit=True)
+            X_test = feature_engineer.encode_categorical_features(X_test, cat_cols, method='onehot', fit=False)
         
         # Scale numerical features
         num_cols = X_train.select_dtypes(include=['number']).columns.tolist()
         if len(num_cols) > 0:
+            logger.info(f"Scaling numerical columns: {len(num_cols)} columns")
             X_train = feature_engineer.scale_numerical_features(X_train, num_cols, method='standard', fit=True)
             X_test = feature_engineer.scale_numerical_features(X_test, num_cols, method='standard', fit=False)
+            
+        # SANITIZE COLUMN NAMES (Required for LightGBM/XGBoost)
+        import re
+        def sanitize_colnames(df):
+            new_cols = []
+            for col in df.columns:
+                # Replace special chars with underscore, keep alphanumeric
+                new_col = re.sub(r'[^a-zA-Z0-9_]', '_', col)
+                # Remove repeated underscores
+                new_col = re.sub(r'_+', '_', new_col)
+                # Remove leading/trailing underscores
+                new_col = new_col.strip('_')
+                new_cols.append(new_col)
+            return new_cols
+            
+        X_train.columns = sanitize_colnames(X_train)
+        X_test.columns = sanitize_colnames(X_test)
+        logger.info("Sanitized column names for model compatibility")
         
         feature_names = feature_engineer.get_feature_names(X_train)
         
@@ -268,19 +316,19 @@ def main():
         logger.info("STEP 7: HYPERPARAMETER TUNING")
         logger.info("=" * 80)
         
-        # Tune Random Forest (typically best performer)
-        logger.info("Tuning Random Forest hyperparameters...")
-        best_rf, best_rf_params = trainer.tune_hyperparameters(
-            'random_forest',
+        # Tune XGBoost (Advanced Gradient Boosting)
+        logger.info("Tuning XGBoost hyperparameters...")
+        best_xgb, best_xgb_params = trainer.tune_hyperparameters(
+            'xgboost',
             X_train,
             y_train,
-            config.RANDOM_FOREST_PARAMS,
+            config.XGBOOST_PARAMS,
             search_type='grid'
         )
         
         # Evaluate tuned model
-        rf_metrics = trainer.evaluate_model(best_rf, X_test, y_test, 'Random Forest (Tuned)')
-        evaluator.add_model_results('Random Forest (Tuned)', rf_metrics)
+        xgb_metrics = trainer.evaluate_model(best_xgb, X_test, y_test, 'XGBoost (Tuned)')
+        evaluator.add_model_results('XGBoost (Tuned)', xgb_metrics)
         
         # =========================================================================
         # STEP 8: FEATURE IMPORTANCE ANALYSIS
@@ -290,7 +338,7 @@ def main():
         logger.info("=" * 80)
         
         # Get best performing model
-        best_model = baseline_models.get(best_model_name) or best_rf
+        best_model = baseline_models.get(best_model_name) or best_xgb
         
         importance_df = trainer.get_feature_importance(best_model, feature_names)
         

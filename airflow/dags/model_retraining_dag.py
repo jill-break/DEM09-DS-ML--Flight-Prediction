@@ -26,9 +26,7 @@ from airflow.operators.email import EmailOperator
 from airflow.utils.trigger_rule import TriggerRule
 
 
-# ============================================================================
 # Configuration
-# ============================================================================
 
 PROJECT_ROOT = Path("/opt/airflow")
 DATA_PATH = PROJECT_ROOT / "data" / "raw" / "Flight_Price_Dataset_of_Bangladesh.csv"
@@ -44,9 +42,7 @@ PERFORMANCE_IMPROVEMENT_THRESHOLD = 0.02  # 2% improvement required
 NOTIFICATION_EMAIL = os.getenv("AIRFLOW_NOTIFICATION_EMAIL", "admin@flight.com")
 
 
-# ============================================================================
 # DAG Default Arguments
-# ============================================================================
 
 default_args = {
     'owner': 'airflow',
@@ -60,9 +56,7 @@ default_args = {
 }
 
 
-# ============================================================================
 # Task Functions
-# ============================================================================
 
 def check_data_availability(**context):
     """
@@ -157,7 +151,7 @@ def evaluate_new_model(**context):
             if old_r2 is None:
                 old_r2 = old_summary.get('r2_score', 0)
         else:
-            old_r2 = 0.67  # Assume current performance
+            old_r2 = 0.67  # current performance
         
         improvement = new_r2 - old_r2
         print(f"Old model R² score: {old_r2}")
@@ -215,9 +209,7 @@ def skip_deployment(**context):
     return False
 
 
-# ============================================================================
 # DAG Definition
-# ============================================================================
 
 dag = DAG(
     'model_retraining',
@@ -285,14 +277,17 @@ train_model = PythonVirtualenvOperator(
     task_id='run_model_training',
     python_callable=run_training_in_venv,
     requirements=[
-        'pandas==2.1.4',
-        'numpy==1.26.3',
-        'scikit-learn==1.4.0',
-        'matplotlib==3.8.2',
-        'seaborn==0.13.1',
+        'pandas==2.0.3',
+        'numpy==1.24.3',
+        'scikit-learn==1.3.0',
+        'matplotlib==3.7.2',
+        'seaborn==0.12.2',
         'joblib==1.3.2',
         'imbalanced-learn==0.12.0',
         'statsmodels==0.14.1',
+        'xgboost==2.0.3',
+        'lightgbm==4.3.0',
+        'geopy==2.4.1',
     ],
     system_site_packages=False,  # Isolate from Airflow env
     dag=dag,
@@ -353,9 +348,7 @@ send_skip_notification = EmailOperator(
 )
 
 
-# ============================================================================
 # Task Dependencies
-# ============================================================================
 
 check_data >> backup_model >> train_model >> evaluate_and_decide
 evaluate_and_decide >> deploy_model >> send_success_notification

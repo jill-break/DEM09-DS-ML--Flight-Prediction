@@ -5,6 +5,15 @@ test_datetime_fix.py
 test_prediction.py
 inspect_model.py
 verify_model_features.py
+check_class_impact.py
+debug_encoding.py
+debug_features.py
+diagnose_integration.py
+debug_out.txt
+verify_impact.py
+verification_results.txt
+verify_output.txt
+verify_streamlit_logic.py
 
 # Airflow
 airflow/logs/
