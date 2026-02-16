@@ -27,3 +27,5 @@ models/training_metrics.json
 .coverage
 htmlcov/
 .pytest_cache/
+
+models/real/*
