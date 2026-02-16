@@ -25,7 +25,6 @@ from src.app.utils import (
 # ─── PAGE CONFIG ─────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="Flight Fare Predictor",
-    page_icon="✈️",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -225,7 +224,7 @@ model_service = get_model_service()
 # ─── HERO HEADER ─────────────────────────────────────────────────────────────
 st.markdown("""
 <div class="hero">
-    <div class="hero-icon">✈️</div>
+    <div class="hero-icon"></div>
     <h1>Flight Fare Predictor</h1>
     <p>Instant fare estimates powered by Machine Learning</p>
 </div>
@@ -234,7 +233,7 @@ st.markdown("""
 
 # ─── SIDEBAR ─────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("### 🧠 Model Info")
+    st.markdown("###  Model Info")
 
     try:
         model_info = model_service.get_model_info()
@@ -270,10 +269,10 @@ with st.sidebar:
             st.metric("MAE", "28,007 BDT")
 
     except Exception as e:
-        st.error(f"⚠️ {str(e)}")
+        st.error(f" {str(e)}")
 
     st.markdown("<hr class='divider'>", unsafe_allow_html=True)
-    st.markdown("### 💡 Tips")
+    st.markdown("###  Tips")
     st.markdown("""
     - Book **early** — fares rise as departure nears
     - **Direct** flights cost more than stopovers
@@ -284,7 +283,7 @@ with st.sidebar:
 col1, col2 = st.columns(2, gap="large")
 
 with col1:
-    st.markdown('<div class="glass-card"><h3>🛫 Flight Details</h3>', unsafe_allow_html=True)
+    st.markdown('<div class="glass-card"><h3>Flight Details</h3>', unsafe_allow_html=True)
 
     airline = st.selectbox("Airline", options=AIRLINES, help="Select the airline")
 
@@ -336,7 +335,7 @@ with col1:
     st.markdown('</div>', unsafe_allow_html=True)
 
 with col2:
-    st.markdown('<div class="glass-card"><h3>🎫 Booking Details</h3>', unsafe_allow_html=True)
+    st.markdown('<div class="glass-card"><h3> Booking Details</h3>', unsafe_allow_html=True)
 
     travel_class = st.radio("Travel Class", options=CLASSES, horizontal=True)
 
@@ -354,11 +353,11 @@ arrival_datetime = datetime.combine(arrival_date, arrival_time)
 
 validation_errors = []
 if source_code == destination_code:
-    validation_errors.append("🚫 Source and destination cannot be the same")
+    validation_errors.append("Source and destination cannot be the same")
 if arrival_datetime <= departure_datetime:
-    validation_errors.append("🚫 Arrival must be after departure")
+    validation_errors.append("Arrival must be after departure")
 if not validate_date(departure_datetime):
-    validation_errors.append("🚫 Departure must be in the future")
+    validation_errors.append("Departure must be in the future")
 
 for err in validation_errors:
     st.error(err)
@@ -369,7 +368,7 @@ st.markdown("<hr class='divider'>", unsafe_allow_html=True)
 _, btn_col, _ = st.columns([1, 1, 1])
 with btn_col:
     predict_button = st.button(
-        "✈️  Predict Fare",
+        " Predict Fare",
         type="primary",
         use_container_width=True,
         disabled=len(validation_errors) > 0,
@@ -436,7 +435,7 @@ if predict_button:
         """, unsafe_allow_html=True)
 
         # ── Expandable Details ──
-        with st.expander("📊 Prediction Details"):
+        with st.expander(" Prediction Details"):
             det1, det2, det3 = st.columns(3)
             det1.metric("Model", metadata['model_type'])
             det2.metric("Features", metadata['features_used'])
@@ -448,7 +447,7 @@ if predict_button:
             )
 
     except Exception as e:
-        st.error(f"⚠️ Prediction Failed: {str(e)}")
+        st.error(f" Prediction Failed: {str(e)}")
         with st.expander("Debug Info"):
             st.code(str(e))
 
@@ -457,7 +456,7 @@ st.markdown("<hr class='divider'>", unsafe_allow_html=True)
 footer_model = model_service.get_model_info().get('model_type', 'ML Model')
 st.markdown(f"""
 <div class="footer">
-    Built with ❤️ using Streamlit &nbsp;·&nbsp; Model: {footer_model}
+    Built using Streamlit &nbsp;·&nbsp; Model: {footer_model}
     <br>Data Engineering Project — Flight Fare Prediction
 </div>
 """, unsafe_allow_html=True)
