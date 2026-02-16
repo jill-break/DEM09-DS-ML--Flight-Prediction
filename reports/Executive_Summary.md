@@ -68,7 +68,7 @@ Based on these findings, we recommend the following actions:
 
 ## 5. Operationalizing Insights
 
-To ensure these strategic recommendations are driven by the most up-to-date data, we have deployed the following capabilities:
+To ensure these strategic recommendations are driven by the most up-to-date data, I have deployed the following capabilities:
 *   **Automated Retraining:** An Airflow DAG runs weekly, ensuring the model adapts to new market trends without manual intervention.
 *   **Real-time Dashboard:** Stakeholders can now access dynamic predictions via the new Streamlit App, allowing interactive "what-if" scenario testing.
 *   **Consistent Data Pipeline:** Advanced feature engineering (Class Encoding, Temporal Binning) is now standardized across both training and inference, guaranteeing reliable predictions.
