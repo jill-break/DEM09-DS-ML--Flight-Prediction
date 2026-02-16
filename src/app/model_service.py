@@ -159,120 +159,73 @@ class ModelService:
         
         df_processed = df.copy()
         
-        # Load a sample of training data to fit the encoders/scalers
-        # This ensures consistent encoding
+        # Load the fitted FeatureEngineer saved during training
+        # This has the EXACT encoder columns and scaler parameters from training
+        fitted_engineer = None
         try:
-            # Load full training data to ensure all categories are seen by encoder
-            # This fixes the issue where rare categories (like Business class) might be missing
-            # from a small sample, leading to incorrect encoding
-            training_sample = pd.read_csv('data/raw/Flight_Price_Dataset_of_Bangladesh.csv')
-            
-            # Remove target column AND leaky columns (same as training)
-            leaky_columns = ['Base Fare (BDT)', 'Tax & Surcharge (BDT)', 'Total Fare (BDT)']
-            cols_to_drop = [c for c in leaky_columns if c in training_sample.columns]
-            if cols_to_drop:
-                training_sample = training_sample.drop(columns=cols_to_drop)
-            
+            import joblib
+            fitted_engineer = joblib.load('models/feature_engineer.pkl')
+            logger.info("Loaded fitted FeatureEngineer from models/feature_engineer.pkl")
         except Exception as e:
-            logger.warning(f"Could not load training data sample: {str(e)}")
-            training_sample = None
+            logger.warning(f"Could not load fitted FeatureEngineer: {str(e)}")
+            logger.warning("Falling back to fresh FeatureEngineer (predictions may be inaccurate)")
         
-        # Initialize feature engineer 
-        engineer = FeatureEngineer()
-        
-        # --- FEATURE ENGINEERING MIRRORING MAIN.PY ---
+        # Use fitted engineer if available, otherwise create fresh one
+        engineer = fitted_engineer if fitted_engineer is not None else FeatureEngineer()
         
         # --- FEATURE ENGINEERING MIRRORING MAIN.PY ---
-        
+
         # 1. TEMPORAL FEATURES (Departure)
         df_processed = engineer.create_temporal_features(df_processed, 'Departure Date & Time')
         df_processed = df_processed.rename(columns={
-            'month': 'Dep_Month', 'day': 'Dep_Day', 'weekday': 'Dep_Weekday', 
-            'day_of_year': 'Dep_DayOfYear', 'season': 'Dep_Season', 
+            'month': 'Dep_Month', 'day': 'Dep_Day', 'weekday': 'Dep_Weekday',
+            'day_of_year': 'Dep_DayOfYear', 'season': 'Dep_Season',
             'is_weekend': 'Dep_IsWeekend', 'hour': 'Dep_Hour'
         })
-        
+
         # 2. TEMPORAL FEATURES (Arrival)
         df_processed = engineer.create_temporal_features(df_processed, 'Arrival Date & Time')
         df_processed = df_processed.rename(columns={
-            'month': 'Arr_Month', 'day': 'Arr_Day', 'weekday': 'Arr_Weekday', 
-            'day_of_year': 'Arr_DayOfYear', 'season': 'Arr_Season', 
+            'month': 'Arr_Month', 'day': 'Arr_Day', 'weekday': 'Arr_Weekday',
+            'day_of_year': 'Arr_DayOfYear', 'season': 'Arr_Season',
             'is_weekend': 'Arr_IsWeekend', 'hour': 'Arr_Hour'
         })
 
-        # 3. ROUTE FEATURES (New)
+        # 3. ROUTE FEATURES
         df_processed = engineer.create_route_features(df_processed)
         
-        # 4. DROP RAW DATETIME COLUMNS
+        # 4. ORDINAL & BINARY ENCODING
+        df_processed = engineer.encode_ordinal_class(df_processed, 'Class')
+        df_processed = engineer.encode_binary_stopovers(df_processed, 'Stopovers')
+        
+        # 5. DEPARTURE HOUR BINNING
+        df_processed = engineer.bin_departure_hour(df_processed, 'Dep_Hour')
+        
+        # 6. DROP RAW DATETIME COLUMNS
         cols_to_drop = ['Departure Date & Time', 'Arrival Date & Time']
         df_processed = engineer.drop_features(df_processed, cols_to_drop)
         
-        # Apply the feature engineering to the training sample too so columns match
-        if training_sample is not None:
-            # Departure Features
-            training_sample = engineer.create_temporal_features(training_sample, 'Departure Date & Time')
-            training_sample = training_sample.rename(columns={
-                'month': 'Dep_Month', 'day': 'Dep_Day', 'weekday': 'Dep_Weekday', 
-                'day_of_year': 'Dep_DayOfYear', 'season': 'Dep_Season', 
-                'is_weekend': 'Dep_IsWeekend', 'hour': 'Dep_Hour'
-            })
-            
-            # Arrival Features
-            training_sample = engineer.create_temporal_features(training_sample, 'Arrival Date & Time')
-            training_sample = training_sample.rename(columns={
-                'month': 'Arr_Month', 'day': 'Arr_Day', 'weekday': 'Arr_Weekday', 
-                'day_of_year': 'Arr_DayOfYear', 'season': 'Arr_Season', 
-                'is_weekend': 'Arr_IsWeekend', 'hour': 'Arr_Hour'
-            })
-
-            # Route Features
-            training_sample = engineer.create_route_features(training_sample)
-            
-            # Drop columns
-            training_sample = engineer.drop_features(training_sample, cols_to_drop)
-        
-        # Now encode categorical features
+        # 7. ENCODE CATEGORICAL FEATURES (using fitted encoder from training)
         categorical_cols = df_processed.select_dtypes(include=['object']).columns.tolist()
+        if len(categorical_cols) > 0 and fitted_engineer is not None:
+            # Use fit=False — the encoder was already fitted during training
+            df_processed = engineer.encode_categorical_features(
+                df_processed,
+                categorical_cols,
+                method='onehot',
+                fit=False
+            )
         
-        if len(categorical_cols) > 0 and training_sample is not None:
-            # Fit on training sample
-            training_cat_cols = [col for col in categorical_cols if col in training_sample.columns]
-            if len(training_cat_cols) > 0:
-                # Use ONE-HOT Encoding (Changed from Label)
-                _ = engineer.encode_categorical_features(
-                    training_sample,
-                    training_cat_cols, 
-                    method='onehot', 
-                    fit=True
-                )
-                # Transform our input
-                df_processed = engineer.encode_categorical_features(
-                    df_processed, 
-                    categorical_cols, 
-                    method='onehot', 
-                    fit=False
-                )
-        
-        # Scale numerical features  
-        numerical_cols = df_processed.select_dtypes(include=['number']).columns.tolist()
-        
-        if len(numerical_cols) > 0 and training_sample is not None:
-            # Fit on training sample
-            training_numerical = training_sample.select_dtypes(include=['number']).columns.tolist()
-            common_num_cols = [col for col in numerical_cols if col in training_numerical]
-            
-            if len(common_num_cols) > 0:
-                _ = engineer.scale_numerical_features(
-                    training_sample,
-                    common_num_cols, 
-                    method='standard', 
-                    fit=True
-                )
-                # Transform our input
+        # 8. SCALE NUMERICAL FEATURES (using fitted scaler from training)
+        # Only scale columns the scaler was trained on (excludes OneHot bool columns)
+        if fitted_engineer is not None and hasattr(engineer, 'scalers') and engineer.scalers:
+            # Only scale columns that have a fitted scaler
+            scalable_cols = [c for c in df_processed.columns if c in engineer.scalers]
+            if len(scalable_cols) > 0:
                 df_processed = engineer.scale_numerical_features(
-                    df_processed, 
-                    numerical_cols, 
-                    method='standard', 
+                    df_processed,
+                    scalable_cols,
+                    method='standard',
                     fit=False
                 )
 
@@ -281,11 +234,8 @@ class ModelService:
         def sanitize_colnames(df):
             new_cols = []
             for col in df.columns:
-                # Replace special chars with underscore, keep alphanumeric
                 new_col = re.sub(r'[^a-zA-Z0-9_]', '_', col)
-                # Remove repeated underscores
                 new_col = re.sub(r'_+', '_', new_col)
-                # Remove leading/trailing underscores
                 new_col = new_col.strip('_')
                 new_cols.append(new_col)
             return new_cols

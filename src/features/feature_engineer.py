@@ -292,6 +292,124 @@ class FeatureEngineer:
         
         return df
     
+    def encode_ordinal_class(self, df: pd.DataFrame, column: str = 'Class') -> pd.DataFrame:
+        """
+        Encode travel class as ordinal feature.
+        
+        Maps Economy=0, Business=1, First Class=2 to capture the ranked
+        fare jump between classes. This preserves the natural ordering
+        that OneHot encoding would lose.
+        
+        Args:
+            df: Input DataFrame
+            column: Name of the class column
+        
+        Returns:
+            DataFrame with ordinal-encoded class column
+        
+        Design Decision: Ordinal encoding for Class captures the massive,
+        non-linear price jump from Economy → Business → First Class.
+        Linear models benefit from this ordered representation.
+        """
+        df = df.copy()
+        
+        if column not in df.columns:
+            logger.warning(f"Column '{column}' not found, skipping ordinal encoding")
+            return df
+        
+        ordinal_map = {
+            'Economy': 0,
+            'Business': 1,
+            'First Class': 2
+        }
+        
+        df[column] = df[column].map(ordinal_map)
+        
+        # Handle unmapped values with median (1 = Business)
+        if df[column].isnull().any():
+            unmapped_count = df[column].isnull().sum()
+            df[column] = df[column].fillna(0)  # Default to Economy
+            logger.warning(f"Found {unmapped_count} unmapped class values, defaulting to Economy (0)")
+        
+        df[column] = df[column].astype(int)
+        logger.info(f"Ordinal encoded '{column}': Economy=0, Business=1, First Class=2")
+        
+        return df
+    
+    def encode_binary_stopovers(self, df: pd.DataFrame, column: str = 'Stopovers') -> pd.DataFrame:
+        """
+        Encode stopovers as binary feature (Direct vs. any stop).
+        
+        Maps Direct=0, any stop (1 Stop, 2 Stops, etc.)=1.
+        Flights with stops often have lower fares to remain competitive
+        against direct routes, despite longer travel times.
+        
+        Args:
+            df: Input DataFrame
+            column: Name of the stopovers column
+        
+        Returns:
+            DataFrame with binary-encoded stopovers column
+        
+        Design Decision: Binary encoding simplifies the stopover feature
+        into a single flag, capturing the primary pricing distinction
+        between direct and connecting flights.
+        """
+        df = df.copy()
+        
+        if column not in df.columns:
+            logger.warning(f"Column '{column}' not found, skipping binary encoding")
+            return df
+        
+        # Direct = 0, anything else = 1
+        df[column] = df[column].apply(
+            lambda x: 0 if str(x).strip().lower() == 'direct' else 1
+        )
+        
+        df[column] = df[column].astype(int)
+        logger.info(f"Binary encoded '{column}': Direct=0, Any Stop=1")
+        
+        return df
+    
+    def bin_departure_hour(self, df: pd.DataFrame, hour_column: str = 'Dep_Hour') -> pd.DataFrame:
+        """
+        Bin departure hour into time-of-day categories.
+        
+        Creates 'Dep_TimeBin' feature:
+        - Early Morning (0-5)
+        - Morning (6-11) 
+        - Afternoon (12-17)
+        - Evening (18-23)
+        
+        Args:
+            df: Input DataFrame
+            hour_column: Name of the hour column (integer 0-23)
+        
+        Returns:
+            DataFrame with added 'Dep_TimeBin' column (integer encoded)
+        
+        Design Decision: Hour binning captures "business hours" pricing
+        patterns. Prices often peak during morning/evening and drop for
+        early morning and mid-day flights.
+        """
+        df = df.copy()
+        
+        if hour_column not in df.columns:
+            logger.warning(f"Column '{hour_column}' not found, skipping hour binning")
+            return df
+        
+        # Bin into 4 time periods (ordinal: 0-3)
+        bins = [-1, 5, 11, 17, 23]
+        labels = [0, 1, 2, 3]  # Early Morning=0, Morning=1, Afternoon=2, Evening=3
+        
+        df['Dep_TimeBin'] = pd.cut(
+            df[hour_column], bins=bins, labels=labels, include_lowest=True
+        ).astype(int)
+        
+        logger.info(f"Created 'Dep_TimeBin' from '{hour_column}': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3")
+        
+        return df
+    
     def drop_features(self, df: pd.DataFrame, columns: List[str]) -> pd.DataFrame:
         """
         Drop specified columns from DataFrame.

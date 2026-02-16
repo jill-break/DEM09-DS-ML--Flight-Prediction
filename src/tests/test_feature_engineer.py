@@ -250,6 +250,116 @@ class TestFeatureEngineer:
         
         assert feature_names == ['A', 'B', 'C']
         assert engineer.feature_names == ['A', 'B', 'C']
+    
+    @pytest.mark.unit
+    def test_encode_ordinal_class(self):
+        """Test ordinal encoding of travel class."""
+        df = pd.DataFrame({
+            'Class': ['Economy', 'Business', 'First Class', 'Economy'],
+            'value': [1, 2, 3, 4]
+        })
+        
+        engineer = FeatureEngineer()
+        result = engineer.encode_ordinal_class(df, 'Class')
+        
+        assert result['Class'].iloc[0] == 0  # Economy
+        assert result['Class'].iloc[1] == 1  # Business
+        assert result['Class'].iloc[2] == 2  # First Class
+        assert result['Class'].iloc[3] == 0  # Economy
+        assert pd.api.types.is_integer_dtype(result['Class'])
+    
+    @pytest.mark.unit
+    def test_encode_ordinal_class_unknown(self):
+        """Test ordinal encoding with unknown class value."""
+        df = pd.DataFrame({'Class': ['Economy', 'Premium']})
+        
+        engineer = FeatureEngineer()
+        result = engineer.encode_ordinal_class(df, 'Class')
+        
+        assert result['Class'].iloc[0] == 0  # Economy mapped
+        assert result['Class'].iloc[1] == 0  # Unknown defaults to Economy
+    
+    @pytest.mark.unit
+    def test_encode_ordinal_class_missing_column(self):
+        """Test ordinal encoding when column is missing."""
+        df = pd.DataFrame({'Other': [1, 2]})
+        
+        engineer = FeatureEngineer()
+        result = engineer.encode_ordinal_class(df, 'Class')
+        
+        assert result.equals(df)
+    
+    @pytest.mark.unit
+    def test_encode_binary_stopovers(self):
+        """Test binary encoding of stopovers."""
+        df = pd.DataFrame({
+            'Stopovers': ['Direct', '1 Stop', '2 Stops', 'Direct'],
+            'value': [1, 2, 3, 4]
+        })
+        
+        engineer = FeatureEngineer()
+        result = engineer.encode_binary_stopovers(df, 'Stopovers')
+        
+        assert result['Stopovers'].iloc[0] == 0  # Direct
+        assert result['Stopovers'].iloc[1] == 1  # 1 Stop
+        assert result['Stopovers'].iloc[2] == 1  # 2 Stops
+        assert result['Stopovers'].iloc[3] == 0  # Direct
+        assert pd.api.types.is_integer_dtype(result['Stopovers'])
+    
+    @pytest.mark.unit
+    def test_encode_binary_stopovers_missing_column(self):
+        """Test binary encoding when column is missing."""
+        df = pd.DataFrame({'Other': [1, 2]})
+        
+        engineer = FeatureEngineer()
+        result = engineer.encode_binary_stopovers(df, 'Stopovers')
+        
+        assert result.equals(df)
+    
+    @pytest.mark.unit
+    def test_bin_departure_hour(self):
+        """Test departure hour binning."""
+        df = pd.DataFrame({
+            'Dep_Hour': [2, 8, 14, 20]
+        })
+        
+        engineer = FeatureEngineer()
+        result = engineer.bin_departure_hour(df, 'Dep_Hour')
+        
+        assert 'Dep_TimeBin' in result.columns
+        assert result['Dep_TimeBin'].iloc[0] == 0  # Early Morning (2am)
+        assert result['Dep_TimeBin'].iloc[1] == 1  # Morning (8am)
+        assert result['Dep_TimeBin'].iloc[2] == 2  # Afternoon (2pm)
+        assert result['Dep_TimeBin'].iloc[3] == 3  # Evening (8pm)
+    
+    @pytest.mark.unit
+    def test_bin_departure_hour_boundaries(self):
+        """Test departure hour binning at boundaries."""
+        df = pd.DataFrame({
+            'Dep_Hour': [0, 5, 6, 11, 12, 17, 18, 23]
+        })
+        
+        engineer = FeatureEngineer()
+        result = engineer.bin_departure_hour(df, 'Dep_Hour')
+        
+        assert result['Dep_TimeBin'].iloc[0] == 0  # 0am -> Early Morning
+        assert result['Dep_TimeBin'].iloc[1] == 0  # 5am -> Early Morning
+        assert result['Dep_TimeBin'].iloc[2] == 1  # 6am -> Morning
+        assert result['Dep_TimeBin'].iloc[3] == 1  # 11am -> Morning
+        assert result['Dep_TimeBin'].iloc[4] == 2  # 12pm -> Afternoon
+        assert result['Dep_TimeBin'].iloc[5] == 2  # 5pm -> Afternoon
+        assert result['Dep_TimeBin'].iloc[6] == 3  # 6pm -> Evening
+        assert result['Dep_TimeBin'].iloc[7] == 3  # 11pm -> Evening
+    
+    @pytest.mark.unit
+    def test_bin_departure_hour_missing_column(self):
+        """Test hour binning when column is missing."""
+        df = pd.DataFrame({'Other': [1, 2]})
+        
+        engineer = FeatureEngineer()
+        result = engineer.bin_departure_hour(df, 'Dep_Hour')
+        
+        assert 'Dep_TimeBin' not in result.columns
 
 
 class TestFeatureEngineerIntegration:

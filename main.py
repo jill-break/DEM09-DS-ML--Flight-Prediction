@@ -203,6 +203,19 @@ def main():
     logger.info("Extracting route features...")
     cleaned_data = feature_engineer.create_route_features(cleaned_data)
 
+    # --- ORDINAL & BINARY FEATURE ENCODING ---
+    # Encode Class as ordinal (Economy=0, Business=1, First Class=2)
+    # This captures the ranked fare jump that OneHot encoding would lose
+    logger.info("Encoding ordinal and binary features...")
+    cleaned_data = feature_engineer.encode_ordinal_class(cleaned_data, 'Class')
+    
+    # Encode Stopovers as binary flag (Direct=0, Any Stop=1)
+    cleaned_data = feature_engineer.encode_binary_stopovers(cleaned_data, 'Stopovers')
+    
+    # --- DEPARTURE HOUR BINNING ---
+    # Bin departure hour into time-of-day categories for "business hours" pricing patterns
+    cleaned_data = feature_engineer.bin_departure_hour(cleaned_data, 'Dep_Hour')
+    
     # CRITICAL: Drop raw datetime columns and other non-feature columns
     cols_to_drop = ['Departure Date & Time', 'Arrival Date & Time']
     cleaned_data = feature_engineer.drop_features(cleaned_data, cols_to_drop)
@@ -364,6 +377,12 @@ def main():
         
         # Save best model
         trainer.save_model(best_model, config.BEST_MODEL_FILE)
+        
+        # Save fitted feature engineer (encoders + scalers)
+        # This ensures the prediction service uses the EXACT same transformations
+        from src.utils.helpers import save_pickle
+        save_pickle(feature_engineer, config.FEATURE_ENGINEER_FILE)
+        logger.info(f"Saved fitted FeatureEngineer to {config.FEATURE_ENGINEER_FILE}")
         
         # Save evaluation results
         evaluator.save_results()

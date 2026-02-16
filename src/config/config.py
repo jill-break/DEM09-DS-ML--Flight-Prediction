@@ -31,6 +31,7 @@ TEST_DATA_FILE = PROCESSED_DATA_DIR / "test.csv"
 
 # Model files
 BEST_MODEL_FILE = MODELS_DIR / "best_model.pkl"
+FEATURE_ENGINEER_FILE = MODELS_DIR / "feature_engineer.pkl"
 MODEL_METRICS_FILE = MODELS_DIR / "model_metrics.json"
 
 # Logging configuration
@@ -50,6 +51,16 @@ MISSING_VALUE_STRATEGY = {
 DATE_FEATURES = ['month', 'day', 'weekday', 'season']
 CATEGORICAL_ENCODING = 'onehot'  # Options: 'onehot', 'label'
 NUMERICAL_SCALING = 'standard'    # Options: 'standard', 'minmax', 'robust'
+
+# Feature categorization for model-optimized encoding
+# Numerical (Continuous): Duration, Days Before - scaled for Linear/Ridge/Lasso
+# Ordinal (Ranked): Class - Economy=0, Business=1, First Class=2
+# Categorical (Nominal): Airline, Source, Destination, Seasonality - OneHot encoded
+# Binary (Flag): Stopovers - Direct=0, Any Stop=1
+# Derived (Temporal): Dep_Hour, Dep_Weekday, Dep_TimeBin - extracted from datetime
+ORDINAL_CLASS_MAP = {'Economy': 0, 'Business': 1, 'First Class': 2}
+HOUR_BINS = [-1, 5, 11, 17, 23]  # Early Morning, Morning, Afternoon, Evening
+HOUR_BIN_LABELS = [0, 1, 2, 3]
 
 # Model training parameters
 CV_FOLDS = 5
