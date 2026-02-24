@@ -36363,3 +36363,424 @@ Output Files:
 2026-02-24 10:50:09,790 - __main__ - INFO -   - Visualizations: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures
 2026-02-24 10:50:09,790 - __main__ - INFO -   - Evaluation Results: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models
 2026-02-24 10:50:09,791 - __main__ - INFO -   - Logs: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\logs\app.log
+2026-02-24 10:57:19,975 - src.app.model_service - INFO - Model loaded successfully from models\best_model.joblib
+2026-02-24 10:59:23,621 - src.app.model_service - INFO - Loaded fitted FeatureEngineer from models/feature_engineer.joblib
+2026-02-24 10:59:23,625 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:23,625 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:23,633 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:23,633 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:23,726 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 10:59:23,727 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 10:59:23,729 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 10:59:23,730 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 10:59:23,732 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 10:59:23,735 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 10:59:23,736 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 10:59:23,738 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 10:59:23,740 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 10:59:23,743 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 10:59:23,744 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 10:59:23,745 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 10:59:23,746 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 10:59:23,748 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 10:59:23,750 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 10:59:23,751 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 10:59:23,752 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 10:59:23,755 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 10:59:23,757 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 10:59:23,759 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 10:59:23,760 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 10:59:23,762 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 10:59:23,764 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 10:59:23,766 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 10:59:23,768 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 10:59:23,769 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 10:59:23,772 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 10:59:23,773 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 10:59:23,776 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 10:59:23,777 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 10:59:23,779 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 10:59:23,781 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 10:59:23,783 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 10:59:23,784 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 10:59:23,786 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 10:59:23,787 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-24 10:59:23,793 - src.app.model_service - INFO - Prediction made successfully: 9348.01
+2026-02-24 10:59:34,119 - src.app.model_service - INFO - Loaded fitted FeatureEngineer from models/feature_engineer.joblib
+2026-02-24 10:59:34,124 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:34,124 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:34,129 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:34,130 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:34,132 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 10:59:34,133 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 10:59:34,135 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 10:59:34,138 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 10:59:34,140 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 10:59:34,141 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 10:59:34,143 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 10:59:34,145 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 10:59:34,149 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 10:59:34,153 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 10:59:34,155 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 10:59:34,156 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 10:59:34,158 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 10:59:34,160 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 10:59:34,163 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 10:59:34,169 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 10:59:34,171 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 10:59:34,174 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 10:59:34,178 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 10:59:34,182 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 10:59:34,185 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 10:59:34,187 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 10:59:34,189 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 10:59:34,192 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 10:59:34,193 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 10:59:34,197 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 10:59:34,198 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 10:59:34,202 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 10:59:34,203 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 10:59:34,205 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 10:59:34,207 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 10:59:34,209 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 10:59:34,211 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 10:59:34,212 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 10:59:34,215 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 10:59:34,215 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-24 10:59:34,221 - src.app.model_service - INFO - Prediction made successfully: 8746.49
+2026-02-24 10:59:47,174 - src.app.model_service - INFO - Loaded fitted FeatureEngineer from models/feature_engineer.joblib
+2026-02-24 10:59:47,181 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:47,181 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:47,188 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:47,188 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:59:47,191 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 10:59:47,193 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 10:59:47,195 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 10:59:47,200 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 10:59:47,206 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 10:59:47,207 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 10:59:47,210 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 10:59:47,212 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 10:59:47,215 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 10:59:47,218 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 10:59:47,219 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 10:59:47,222 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 10:59:47,224 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 10:59:47,227 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 10:59:47,232 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 10:59:47,234 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 10:59:47,236 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 10:59:47,239 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 10:59:47,242 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 10:59:47,245 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 10:59:47,248 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 10:59:47,249 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 10:59:47,251 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 10:59:47,253 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 10:59:47,255 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 10:59:47,257 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 10:59:47,259 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 10:59:47,264 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 10:59:47,266 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 10:59:47,268 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 10:59:47,270 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 10:59:47,272 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 10:59:47,274 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 10:59:47,276 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 10:59:47,279 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 10:59:47,280 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-24 10:59:47,285 - src.app.model_service - INFO - Prediction made successfully: 6394.83
+2026-02-24 11:01:57,786 - src.app.model_service - INFO - Loaded fitted FeatureEngineer from models/feature_engineer.joblib
+2026-02-24 11:01:57,792 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:01:57,792 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:01:57,799 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:01:57,799 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:01:57,803 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 11:01:57,804 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 11:01:57,807 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 11:01:57,810 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 11:01:57,813 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 11:01:57,815 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 11:01:57,818 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 11:01:57,820 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 11:01:57,823 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 11:01:57,825 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 11:01:57,827 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 11:01:57,830 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 11:01:57,831 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 11:01:57,833 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 11:01:57,835 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 11:01:57,837 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 11:01:57,840 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 11:01:57,843 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 11:01:57,846 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 11:01:57,848 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 11:01:57,850 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 11:01:57,856 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 11:01:57,862 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 11:01:57,864 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 11:01:57,866 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 11:01:57,868 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 11:01:57,871 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 11:01:57,875 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 11:01:57,876 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 11:01:57,878 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 11:01:57,880 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 11:01:57,882 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 11:01:57,884 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 11:01:57,886 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 11:01:57,888 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 11:01:57,888 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-24 11:01:57,893 - src.app.model_service - INFO - Prediction made successfully: 52764.15
+2026-02-24 11:02:17,322 - src.app.model_service - INFO - Loaded fitted FeatureEngineer from models/feature_engineer.joblib
+2026-02-24 11:02:17,327 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:02:17,327 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:02:17,333 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:02:17,333 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:02:17,336 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 11:02:17,337 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 11:02:17,340 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 11:02:17,342 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 11:02:17,345 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 11:02:17,346 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 11:02:17,352 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 11:02:17,354 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 11:02:17,356 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 11:02:17,357 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 11:02:17,359 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 11:02:17,361 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 11:02:17,364 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 11:02:17,366 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 11:02:17,367 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 11:02:17,369 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 11:02:17,369 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 11:02:17,372 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 11:02:17,373 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 11:02:17,376 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 11:02:17,379 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 11:02:17,380 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 11:02:17,383 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 11:02:17,385 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 11:02:17,387 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 11:02:17,390 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 11:02:17,391 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 11:02:17,395 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 11:02:17,398 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 11:02:17,400 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 11:02:17,402 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 11:02:17,403 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 11:02:17,404 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 11:02:17,411 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 11:02:17,412 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 11:02:17,414 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-24 11:02:17,418 - src.app.model_service - INFO - Prediction made successfully: 52746.39
+2026-02-24 11:06:01,477 - src.app.model_service - INFO - Loaded fitted FeatureEngineer from models/feature_engineer.joblib
+2026-02-24 11:06:01,481 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:01,481 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:01,489 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:01,489 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:01,491 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 11:06:01,493 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 11:06:01,494 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 11:06:01,495 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 11:06:01,497 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 11:06:01,499 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 11:06:01,501 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 11:06:01,502 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 11:06:01,507 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 11:06:01,509 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 11:06:01,510 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 11:06:01,513 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 11:06:01,516 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 11:06:01,519 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 11:06:01,521 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 11:06:01,523 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 11:06:01,524 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 11:06:01,527 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 11:06:01,528 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 11:06:01,532 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 11:06:01,535 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 11:06:01,537 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 11:06:01,538 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 11:06:01,541 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 11:06:01,541 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 11:06:01,543 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 11:06:01,545 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 11:06:01,549 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 11:06:01,552 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 11:06:01,554 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 11:06:01,557 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 11:06:01,559 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 11:06:01,559 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 11:06:01,562 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 11:06:01,563 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 11:06:01,564 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-24 11:06:01,571 - src.app.model_service - INFO - Prediction made successfully: 9047.76
+2026-02-24 11:06:15,422 - src.app.model_service - INFO - Loaded fitted FeatureEngineer from models/feature_engineer.joblib
+2026-02-24 11:06:15,425 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:15,425 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:15,431 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:15,431 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:15,434 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 11:06:15,436 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 11:06:15,439 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 11:06:15,441 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 11:06:15,443 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 11:06:15,444 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 11:06:15,447 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 11:06:15,449 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 11:06:15,452 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 11:06:15,456 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 11:06:15,459 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 11:06:15,461 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 11:06:15,464 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 11:06:15,466 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 11:06:15,468 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 11:06:15,471 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 11:06:15,472 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 11:06:15,474 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 11:06:15,477 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 11:06:15,479 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 11:06:15,482 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 11:06:15,485 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 11:06:15,486 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 11:06:15,489 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 11:06:15,499 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 11:06:15,502 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 11:06:15,503 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 11:06:15,505 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 11:06:15,507 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 11:06:15,509 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 11:06:15,510 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 11:06:15,514 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 11:06:15,516 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 11:06:15,517 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 11:06:15,519 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 11:06:15,519 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-24 11:06:15,523 - src.app.model_service - INFO - Prediction made successfully: 12129.05
+2026-02-24 11:06:33,716 - src.app.model_service - INFO - Loaded fitted FeatureEngineer from models/feature_engineer.joblib
+2026-02-24 11:06:33,719 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:33,719 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:33,727 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:33,728 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:33,731 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 11:06:33,733 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 11:06:33,735 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 11:06:33,737 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 11:06:33,740 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 11:06:33,742 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 11:06:33,743 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 11:06:33,746 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 11:06:33,748 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 11:06:33,751 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 11:06:33,754 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 11:06:33,755 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 11:06:33,758 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 11:06:33,760 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 11:06:33,762 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 11:06:33,764 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 11:06:33,767 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 11:06:33,769 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 11:06:33,771 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 11:06:33,773 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 11:06:33,774 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 11:06:33,778 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 11:06:33,781 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 11:06:33,784 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 11:06:33,786 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 11:06:33,788 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 11:06:33,791 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 11:06:33,793 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 11:06:33,795 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 11:06:33,798 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 11:06:33,799 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 11:06:33,802 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 11:06:33,804 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 11:06:33,805 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 11:06:33,807 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 11:06:33,808 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-24 11:06:33,812 - src.app.model_service - INFO - Prediction made successfully: 9047.76
+2026-02-24 11:06:41,827 - src.app.model_service - INFO - Loaded fitted FeatureEngineer from models/feature_engineer.joblib
+2026-02-24 11:06:41,830 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:41,831 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:41,837 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:41,837 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:41,841 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 11:06:41,843 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 11:06:41,845 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 11:06:41,847 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 11:06:41,849 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 11:06:41,850 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 11:06:41,851 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 11:06:41,852 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 11:06:41,853 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 11:06:41,854 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 11:06:41,859 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 11:06:41,861 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 11:06:41,864 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 11:06:41,867 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 11:06:41,869 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 11:06:41,871 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 11:06:41,873 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 11:06:41,877 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 11:06:41,879 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 11:06:41,882 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 11:06:41,884 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 11:06:41,888 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 11:06:41,892 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 11:06:41,895 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 11:06:41,897 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 11:06:41,900 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 11:06:41,903 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 11:06:41,905 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 11:06:41,910 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 11:06:41,912 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 11:06:41,913 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 11:06:41,916 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 11:06:41,917 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 11:06:41,921 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 11:06:41,924 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 11:06:41,926 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-24 11:06:41,933 - src.app.model_service - INFO - Prediction made successfully: 8746.49
+2026-02-24 11:06:53,802 - src.app.model_service - INFO - Loaded fitted FeatureEngineer from models/feature_engineer.joblib
+2026-02-24 11:06:53,809 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:53,809 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:53,814 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:53,816 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 11:06:53,820 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 11:06:53,821 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 11:06:53,823 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 11:06:53,839 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 11:06:53,840 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 11:06:53,841 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 11:06:53,843 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 11:06:53,845 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 11:06:53,847 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 11:06:53,847 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 11:06:53,849 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 11:06:53,851 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 11:06:53,853 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 11:06:53,854 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 11:06:53,857 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 11:06:53,859 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 11:06:53,861 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 11:06:53,863 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 11:06:53,866 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 11:06:53,869 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 11:06:53,871 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 11:06:53,873 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 11:06:53,874 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 11:06:53,875 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 11:06:53,879 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 11:06:53,880 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 11:06:53,883 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 11:06:53,887 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 11:06:53,889 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 11:06:53,891 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 11:06:53,893 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 11:06:53,895 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 11:06:53,897 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 11:06:53,899 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 11:06:53,903 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 11:06:53,904 - src.app.model_service - INFO - Input data preprocessed successfully
+2026-02-24 11:06:53,909 - src.app.model_service - INFO - Prediction made successfully: 6670.43

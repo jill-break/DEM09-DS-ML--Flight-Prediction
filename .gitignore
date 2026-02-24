@@ -29,3 +29,4 @@ htmlcov/
 .pytest_cache/
 
 models/real/*
+notebooks
