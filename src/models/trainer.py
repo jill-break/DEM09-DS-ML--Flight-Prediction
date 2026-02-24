@@ -20,7 +20,7 @@ from sklearn.model_selection import cross_val_score, GridSearchCV, RandomizedSea
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from src.config import config
 from src.utils.logger import get_logger
-from src.utils.helpers import save_pickle
+from src.utils.helpers import save_joblib
 
 logger = get_logger(__name__)
 
@@ -263,7 +263,7 @@ class ModelTrainer:
             model: Trained model to save
             filepath: Destination file path
         """
-        save_pickle(model, filepath)
+        save_joblib(model, filepath)
         logger.info(f"Model saved successfully to {filepath}")
     
     def get_feature_importance(self, model: Any, feature_names: list) -> pd.DataFrame:

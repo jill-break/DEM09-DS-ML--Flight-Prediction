@@ -1,6 +1,8 @@
 """Utils module initialization"""
 from .logger import get_logger, setup_logger
 from .helpers import (
+    save_joblib, 
+    load_joblib, 
     save_pickle, 
     load_pickle, 
     save_json, 

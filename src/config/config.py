@@ -30,8 +30,8 @@ TRAIN_DATA_FILE = PROCESSED_DATA_DIR / "train.csv"
 TEST_DATA_FILE = PROCESSED_DATA_DIR / "test.csv"
 
 # Model files
-BEST_MODEL_FILE = MODELS_DIR / "best_model.pkl"
-FEATURE_ENGINEER_FILE = MODELS_DIR / "feature_engineer.pkl"
+BEST_MODEL_FILE = MODELS_DIR / "best_model.joblib"
+FEATURE_ENGINEER_FILE = MODELS_DIR / "feature_engineer.joblib"
 MODEL_METRICS_FILE = MODELS_DIR / "model_metrics.json"
 
 # Logging configuration

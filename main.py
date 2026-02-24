@@ -380,8 +380,8 @@ def main():
         
         # Save fitted feature engineer (encoders + scalers)
         # This ensures the prediction service uses the EXACT same transformations
-        from src.utils.helpers import save_pickle
-        save_pickle(feature_engineer, config.FEATURE_ENGINEER_FILE)
+        from src.utils.helpers import save_joblib
+        save_joblib(feature_engineer, config.FEATURE_ENGINEER_FILE)
         logger.info(f"Saved fitted FeatureEngineer to {config.FEATURE_ENGINEER_FILE}")
         
         # Save evaluation results

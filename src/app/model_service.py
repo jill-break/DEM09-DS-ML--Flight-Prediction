@@ -5,7 +5,7 @@ This module handles loading the trained model and making predictions.
 It serves as the bridge between the web app and the ML model.
 """
 
-import pickle
+import joblib
 import pandas as pd
 import numpy as np
 from pathlib import Path
@@ -28,7 +28,7 @@ class ModelService:
     Handles model loading, input preprocessing, and predictions.
     """
     
-    def __init__(self, model_path: str = "models/best_model.pkl"):
+    def __init__(self, model_path: str = "models/best_model.joblib"):
         """
         Initialize ModelService.
         
@@ -57,8 +57,7 @@ class ModelService:
             if not _self.model_path.exists():
                 raise FileNotFoundError(f"Model file not found: {_self.model_path}")
             
-            with open(_self.model_path, 'rb') as f:
-                model = pickle.load(f)
+            model = joblib.load(_self.model_path)
             
             _self.model = model
             _self.is_loaded = True
@@ -164,8 +163,8 @@ class ModelService:
         fitted_engineer = None
         try:
             import joblib
-            fitted_engineer = joblib.load('models/feature_engineer.pkl')
-            logger.info("Loaded fitted FeatureEngineer from models/feature_engineer.pkl")
+            fitted_engineer = joblib.load('models/feature_engineer.joblib')
+            logger.info("Loaded fitted FeatureEngineer from models/feature_engineer.joblib")
         except Exception as e:
             logger.warning(f"Could not load fitted FeatureEngineer: {str(e)}")
             logger.warning("Falling back to fresh FeatureEngineer (predictions may be inaccurate)")

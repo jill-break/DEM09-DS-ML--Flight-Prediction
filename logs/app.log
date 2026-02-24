@@ -35607,3 +35607,759 @@ Ridge (alpha=1.0)    0.5649  53859.0316  40226.7595  256.7050
 2026-02-16 16:10:05,107 - src.evaluation.evaluator - INFO - Summary report generated
 2026-02-16 16:10:05,114 - src.utils.helpers - INFO - JSON data successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_summary.json
 2026-02-16 16:10:05,117 - src.evaluation.evaluator - INFO - Saved summary report to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_summary.json
+2026-02-17 07:17:46,919 - __main__ - INFO - ================================================================================
+2026-02-17 07:17:46,919 - __main__ - INFO - FLIGHT FARE PREDICTION - ML PIPELINE STARTED
+2026-02-17 07:17:46,920 - __main__ - INFO - ================================================================================
+2026-02-17 07:17:46,920 - src.utils.helpers - INFO - Random seed set to 42 for reproducibility
+2026-02-17 07:17:46,920 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:17:46,920 - __main__ - INFO - STEP 1: DATA LOADING
+2026-02-17 07:17:46,921 - __main__ - INFO - ================================================================================
+2026-02-17 07:17:46,921 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\data\raw\Flight_Price_Dataset_of_Bangladesh.csv
+2026-02-17 07:17:46,921 - src.utils.helpers - INFO - File validated: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\data\raw\Flight_Price_Dataset_of_Bangladesh.csv
+2026-02-17 07:17:47,209 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\data\raw\Flight_Price_Dataset_of_Bangladesh.csv
+2026-02-17 07:17:47,210 - src.data.data_loader - INFO - ============================================================
+2026-02-17 07:17:47,210 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-17 07:17:47,210 - src.data.data_loader - INFO - ============================================================
+2026-02-17 07:17:47,210 - src.data.data_loader - INFO - Shape: 57000 rows × 17 columns
+2026-02-17 07:17:47,281 - src.data.data_loader - INFO - Memory usage: 48.22 MB
+2026-02-17 07:17:47,281 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-17 07:17:47,284 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,284 - src.data.data_loader - INFO -   - Source: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,287 - src.data.data_loader - INFO -   - Source Name: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,289 - src.data.data_loader - INFO -   - Destination: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,290 - src.data.data_loader - INFO -   - Destination Name: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,293 - src.data.data_loader - INFO -   - Departure Date & Time: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,295 - src.data.data_loader - INFO -   - Arrival Date & Time: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,295 - src.data.data_loader - INFO -   - Duration (hrs): float64 | Missing: 0 (0.00%)
+2026-02-17 07:17:47,299 - src.data.data_loader - INFO -   - Stopovers: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,301 - src.data.data_loader - INFO -   - Aircraft Type: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,303 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,304 - src.data.data_loader - INFO -   - Booking Source: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,305 - src.data.data_loader - INFO -   - Base Fare (BDT): float64 | Missing: 0 (0.00%)
+2026-02-17 07:17:47,306 - src.data.data_loader - INFO -   - Tax & Surcharge (BDT): float64 | Missing: 0 (0.00%)
+2026-02-17 07:17:47,306 - src.data.data_loader - INFO -   - Total Fare (BDT): float64 | Missing: 0 (0.00%)
+2026-02-17 07:17:47,307 - src.data.data_loader - INFO -   - Seasonality: object | Missing: 0 (0.00%)
+2026-02-17 07:17:47,308 - src.data.data_loader - INFO -   - Days Before Departure: int64 | Missing: 0 (0.00%)
+2026-02-17 07:17:47,308 - src.data.data_loader - INFO - ============================================================
+2026-02-17 07:17:47,348 - src.data.data_loader - INFO - No missing values detected in dataset
+2026-02-17 07:17:47,348 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:17:47,349 - __main__ - INFO - STEP 2: DATA PREPROCESSING
+2026-02-17 07:17:47,349 - __main__ - INFO - ================================================================================
+2026-02-17 07:17:47,353 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (57000, 17)
+2026-02-17 07:17:47,431 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-17 07:17:47,431 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-17 07:17:47,557 - src.data.preprocessor - INFO - Returning processed data with shape: (57000, 17)
+2026-02-17 07:17:47,557 - __main__ - INFO - Preprocessing complete. Final shape: (57000, 17)
+2026-02-17 07:17:47,557 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:17:47,557 - __main__ - INFO - STEP 3: EXPLORATORY DATA ANALYSIS
+2026-02-17 07:17:47,557 - __main__ - INFO - ================================================================================
+2026-02-17 07:17:47,563 - src.eda.analyzer - INFO - EDAAnalyzer initialized with 57000 rows and 17 columns
+2026-02-17 07:17:47,564 - src.visualization.plotter - INFO - Plotter initialized with output directory: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures
+2026-02-17 07:17:47,834 - src.eda.analyzer - INFO - Generated descriptive statistics for all features
+2026-02-17 07:17:47,851 - __main__ - INFO - 
+Descriptive Statistics:
+                         count  ...    dtype
+Airline                  57000  ...   object
+Source                   57000  ...   object
+Source Name              57000  ...   object
+Destination              57000  ...   object
+Destination Name         57000  ...   object
+Departure Date & Time    57000  ...   object
+Arrival Date & Time      57000  ...   object
+Duration (hrs)         57000.0  ...  float64
+Stopovers                57000  ...   object
+Aircraft Type            57000  ...   object
+
+[10 rows x 14 columns]
+2026-02-17 07:17:47,853 - __main__ - INFO - Using 'Duration (hrs)' as target variable for demonstration
+2026-02-17 07:17:47,860 - src.eda.analyzer - INFO - Target 'Duration (hrs)' distribution:
+2026-02-17 07:17:47,861 - src.eda.analyzer - INFO -   Mean: 3.99, Median: 2.64
+2026-02-17 07:17:47,861 - src.eda.analyzer - INFO -   Std: 4.09, IQR: 4.49
+2026-02-17 07:17:47,861 - src.eda.analyzer - INFO -   Skewness: 1.47, Kurtosis: 1.13
+2026-02-17 07:17:49,372 - src.visualization.plotter - INFO - Saved distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\target_distribution.png
+2026-02-17 07:17:49,396 - src.eda.analyzer - INFO - Top 10 categories for 'Airline':
+2026-02-17 07:17:49,398 - src.eda.analyzer - INFO -   US-Bangla Airlines: 4496 (7.89%)
+2026-02-17 07:17:49,398 - src.eda.analyzer - INFO -   Lufthansa: 2368 (4.15%)
+2026-02-17 07:17:49,398 - src.eda.analyzer - INFO -   Vistara: 2368 (4.15%)
+2026-02-17 07:17:49,399 - src.eda.analyzer - INFO -   FlyDubai: 2346 (4.12%)
+2026-02-17 07:17:49,399 - src.eda.analyzer - INFO -   Biman Bangladesh Airlines: 2344 (4.11%)
+2026-02-17 07:17:49,858 - src.visualization.plotter - INFO - Saved categorical distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\Airline_distribution.png
+2026-02-17 07:17:49,883 - src.eda.analyzer - INFO - Top 10 categories for 'Source':
+2026-02-17 07:17:49,885 - src.eda.analyzer - INFO -   CGP: 7241 (12.7%)
+2026-02-17 07:17:49,886 - src.eda.analyzer - INFO -   ZYL: 7179 (12.59%)
+2026-02-17 07:17:49,886 - src.eda.analyzer - INFO -   JSR: 7149 (12.54%)
+2026-02-17 07:17:49,886 - src.eda.analyzer - INFO -   DAC: 7146 (12.54%)
+2026-02-17 07:17:49,888 - src.eda.analyzer - INFO -   BZL: 7102 (12.46%)
+2026-02-17 07:17:50,498 - src.visualization.plotter - INFO - Saved categorical distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\Source_distribution.png
+2026-02-17 07:17:50,522 - src.eda.analyzer - INFO - Top 10 categories for 'Source Name':
+2026-02-17 07:17:50,523 - src.eda.analyzer - INFO -   Shah Amanat International Airport, Chittagong: 7241 (12.7%)
+2026-02-17 07:17:50,523 - src.eda.analyzer - INFO -   Osmani International Airport, Sylhet: 7179 (12.59%)
+2026-02-17 07:17:50,524 - src.eda.analyzer - INFO -   Jessore Airport: 7149 (12.54%)
+2026-02-17 07:17:50,524 - src.eda.analyzer - INFO -   Hazrat Shahjalal International Airport, Dhaka: 7146 (12.54%)
+2026-02-17 07:17:50,524 - src.eda.analyzer - INFO -   Barisal Airport: 7102 (12.46%)
+2026-02-17 07:17:51,298 - src.visualization.plotter - INFO - Saved categorical distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\Source Name_distribution.png
+2026-02-17 07:17:51,336 - src.eda.analyzer - INFO - Computed pearson correlation matrix for 5 features
+2026-02-17 07:17:51,340 - src.eda.analyzer - INFO - Found 3 highly correlated feature pairs (|r| > 0.8):
+2026-02-17 07:17:51,340 - src.eda.analyzer - INFO -   Base Fare (BDT) <-> Tax & Surcharge (BDT): 0.978
+2026-02-17 07:17:51,340 - src.eda.analyzer - INFO -   Base Fare (BDT) <-> Total Fare (BDT): 0.998
+2026-02-17 07:17:51,340 - src.eda.analyzer - INFO -   Tax & Surcharge (BDT) <-> Total Fare (BDT): 0.982
+2026-02-17 07:17:52,292 - src.visualization.plotter - INFO - Saved correlation heatmap to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\correlation_heatmap.png
+2026-02-17 07:17:52,310 - src.eda.analyzer - INFO - Generated 3 insights from EDA
+2026-02-17 07:17:52,311 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:17:52,311 - __main__ - INFO - KEY INSIGHTS FROM EDA:
+2026-02-17 07:17:52,311 - __main__ - INFO - ================================================================================
+2026-02-17 07:17:52,311 - __main__ - INFO - 1. Target variable is highly skewed (1.47). Consider transformation.
+2026-02-17 07:17:52,311 - __main__ - INFO - 2. Target variable has high variance (CV=1.02)
+2026-02-17 07:17:52,312 - __main__ - INFO - 3. High multicollinearity detected between 3 feature pairs
+2026-02-17 07:17:52,312 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:17:52,312 - __main__ - INFO - STEP 4: FEATURE ENGINEERING & DATA SPLITTING
+2026-02-17 07:17:52,312 - __main__ - INFO - ================================================================================
+2026-02-17 07:17:52,312 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-17 07:17:52,314 - __main__ - INFO - Extracting temporal features...
+2026-02-17 07:17:52,322 - src.features.feature_engineer - WARNING - Column 'Departure Date & Time' is not datetime type, attempting conversion
+2026-02-17 07:17:52,433 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-17 07:17:52,435 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-17 07:17:52,474 - src.features.feature_engineer - WARNING - Column 'Arrival Date & Time' is not datetime type, attempting conversion
+2026-02-17 07:17:52,578 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-17 07:17:52,578 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-17 07:17:52,606 - __main__ - INFO - Extracting route features...
+2026-02-17 07:17:56,537 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-17 07:17:57,970 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-17 07:17:57,984 - __main__ - INFO - Encoding ordinal and binary features...
+2026-02-17 07:17:58,064 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-17 07:17:58,196 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-17 07:17:58,261 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-17 07:17:58,307 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-17 07:17:58,336 - __main__ - INFO - Dropped leaky columns: ['Base Fare (BDT)', 'Tax & Surcharge (BDT)']
+2026-02-17 07:17:58,354 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (57000, 30)
+2026-02-17 07:17:58,422 - src.data.preprocessor - INFO - Data split completed:
+2026-02-17 07:17:58,422 - src.data.preprocessor - INFO -   Training set: 45600 samples (80%)
+2026-02-17 07:17:58,423 - src.data.preprocessor - INFO -   Test set: 11400 samples (20%)
+2026-02-17 07:17:58,423 - src.data.preprocessor - INFO -   Features: 29
+2026-02-17 07:17:58,429 - __main__ - INFO - Target column: Total Fare (BDT)
+2026-02-17 07:17:58,429 - __main__ - INFO - Training set: (45600, 29), Test set: (11400, 29)
+2026-02-17 07:17:58,435 - __main__ - INFO - Encoding categorical columns: ['Airline', 'Source', 'Source Name', 'Destination', 'Destination Name', 'Aircraft Type', 'Booking Source', 'Seasonality', 'Dep_Season', 'Arr_Season', 'route_type'] using ONE-HOT Encoding
+2026-02-17 07:17:58,498 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-17 07:17:58,537 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-17 07:17:58,603 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-17 07:17:58,656 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-17 07:17:58,706 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-17 07:17:58,740 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-17 07:17:58,776 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-17 07:17:58,814 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-17 07:17:58,844 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-17 07:17:58,879 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-17 07:17:58,916 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-17 07:17:59,603 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-17 07:18:00,121 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-17 07:18:00,824 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-17 07:18:01,507 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-17 07:18:02,311 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-17 07:18:02,733 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-17 07:18:03,399 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-17 07:18:04,189 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-17 07:18:04,793 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-17 07:18:05,361 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-17 07:18:05,839 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-17 07:18:05,857 - __main__ - INFO - Scaling numerical columns: 18 columns
+2026-02-17 07:18:05,919 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-17 07:18:05,946 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-17 07:18:05,971 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-17 07:18:05,992 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-17 07:18:06,013 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-17 07:18:06,027 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-17 07:18:06,039 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-17 07:18:06,054 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-17 07:18:06,072 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-17 07:18:06,086 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-17 07:18:06,098 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-17 07:18:06,110 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-17 07:18:06,128 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-17 07:18:06,145 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-17 07:18:06,161 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-17 07:18:06,173 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-17 07:18:06,182 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-17 07:18:06,198 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-17 07:18:06,230 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-17 07:18:06,239 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-17 07:18:06,244 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-17 07:18:06,253 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-17 07:18:06,259 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-17 07:18:06,264 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-17 07:18:06,272 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-17 07:18:06,278 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-17 07:18:06,288 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-17 07:18:06,307 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-17 07:18:06,324 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-17 07:18:06,341 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-17 07:18:06,357 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-17 07:18:06,375 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-17 07:18:06,393 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-17 07:18:06,409 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-17 07:18:06,428 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-17 07:18:06,443 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-17 07:18:06,460 - __main__ - INFO - Sanitized column names for model compatibility
+2026-02-17 07:18:06,472 - src.features.feature_engineer - INFO - Total features: 109
+2026-02-17 07:18:06,481 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:18:06,489 - __main__ - INFO - STEP 4b: SAVING CLEANED DATASET
+2026-02-17 07:18:06,495 - __main__ - INFO - ================================================================================
+2026-02-17 07:18:13,417 - __main__ - INFO - Saved cleaned training data ((45600, 110)) to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\data\processed\train.csv
+2026-02-17 07:18:13,428 - __main__ - INFO - Saved cleaned test data ((11400, 110)) to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\data\processed\test.csv
+2026-02-17 07:18:13,429 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:18:13,429 - __main__ - INFO - STEP 5: BASELINE MODEL TRAINING
+2026-02-17 07:18:13,439 - __main__ - INFO - ================================================================================
+2026-02-17 07:18:13,441 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-17 07:18:13,456 - src.models.trainer - INFO - Training baseline models...
+2026-02-17 07:18:13,466 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-17 07:18:14,361 - src.models.trainer - INFO - Linear Regression - Train R²: 0.5687, RMSE: 53716.86, MAE: 40118.28
+2026-02-17 07:18:14,367 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-17 07:18:15,004 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.5688, RMSE: 53716.21, MAE: 40122.76
+2026-02-17 07:18:15,005 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-17 07:19:09,752 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.5688, RMSE: 53716.71, MAE: 40122.47
+2026-02-17 07:19:09,816 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-17 07:19:12,087 - src.models.trainer - INFO - Decision Tree - Train R²: 0.7198, RMSE: 43297.90, MAE: 25962.02
+2026-02-17 07:19:12,089 - src.models.trainer - INFO - Training Random Forest...
+2026-02-17 07:21:36,744 - src.models.trainer - INFO - Random Forest - Train R²: 0.9539, RMSE: 17559.24, MAE: 10454.72
+2026-02-17 07:21:36,746 - src.models.trainer - INFO - Training XGBoost...
+2026-02-17 07:21:39,728 - src.models.trainer - INFO - XGBoost - Train R²: 0.7973, RMSE: 36828.05, MAE: 23087.74
+2026-02-17 07:21:39,731 - src.models.trainer - INFO - Training LightGBM...
+2026-02-17 07:21:41,157 - src.models.trainer - INFO - LightGBM - Train R²: 0.7323, RMSE: 42325.64, MAE: 26074.86
+2026-02-17 07:21:41,160 - src.models.trainer - INFO - Baseline model training completed
+2026-02-17 07:21:41,162 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:21:41,168 - __main__ - INFO - STEP 6: MODEL EVALUATION
+2026-02-17 07:21:41,176 - __main__ - INFO - ================================================================================
+2026-02-17 07:21:41,179 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-17 07:21:41,179 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-17 07:21:41,211 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-17 07:21:41,211 - src.models.trainer - INFO -   R² Score: 0.5649
+2026-02-17 07:21:41,211 - src.models.trainer - INFO -   RMSE: 53857.61
+2026-02-17 07:21:41,212 - src.models.trainer - INFO -   MAE: 40222.52
+2026-02-17 07:21:41,216 - src.models.trainer - INFO -   MAPE: 256.39%
+2026-02-17 07:21:41,228 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.5648820843120215
+2026-02-17 07:21:43,779 - src.visualization.plotter - INFO - Saved actual vs predicted plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\linear_regression_predictions.png
+2026-02-17 07:21:45,098 - src.visualization.plotter - INFO - Saved residual plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\linear_regression_residuals.png
+2026-02-17 07:21:45,131 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-17 07:21:45,149 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-17 07:21:45,149 - src.models.trainer - INFO -   R² Score: 0.5649
+2026-02-17 07:21:45,149 - src.models.trainer - INFO -   RMSE: 53859.03
+2026-02-17 07:21:45,149 - src.models.trainer - INFO -   MAE: 40226.76
+2026-02-17 07:21:45,150 - src.models.trainer - INFO -   MAPE: 256.70%
+2026-02-17 07:21:45,151 - src.evaluation.evaluator - INFO - Added results for Ridge (alpha=1.0): R²=0.5648591547969035
+2026-02-17 07:21:45,153 - src.models.trainer - INFO - Evaluating Lasso (alpha=1.0) on test set...
+2026-02-17 07:21:45,178 - src.models.trainer - INFO - Lasso (alpha=1.0) Test Metrics:
+2026-02-17 07:21:45,178 - src.models.trainer - INFO -   R² Score: 0.5649
+2026-02-17 07:21:45,179 - src.models.trainer - INFO -   RMSE: 53855.90
+2026-02-17 07:21:45,180 - src.models.trainer - INFO -   MAE: 40225.34
+2026-02-17 07:21:45,180 - src.models.trainer - INFO -   MAPE: 256.71%
+2026-02-17 07:21:45,180 - src.evaluation.evaluator - INFO - Added results for Lasso (alpha=1.0): R²=0.5649097636466914
+2026-02-17 07:21:45,181 - src.models.trainer - INFO - Evaluating Decision Tree on test set...
+2026-02-17 07:21:45,208 - src.models.trainer - INFO - Decision Tree Test Metrics:
+2026-02-17 07:21:45,208 - src.models.trainer - INFO -   R² Score: 0.6453
+2026-02-17 07:21:45,209 - src.models.trainer - INFO -   RMSE: 48626.33
+2026-02-17 07:21:45,209 - src.models.trainer - INFO -   MAE: 28689.30
+2026-02-17 07:21:45,210 - src.models.trainer - INFO -   MAPE: 46.40%
+2026-02-17 07:21:45,210 - src.evaluation.evaluator - INFO - Added results for Decision Tree: R²=0.6453044525617269
+2026-02-17 07:21:45,210 - src.models.trainer - INFO - Evaluating Random Forest on test set...
+2026-02-17 07:21:45,463 - src.models.trainer - INFO - Random Forest Test Metrics:
+2026-02-17 07:21:45,465 - src.models.trainer - INFO -   R² Score: 0.6675
+2026-02-17 07:21:45,465 - src.models.trainer - INFO -   RMSE: 47079.03
+2026-02-17 07:21:45,468 - src.models.trainer - INFO -   MAE: 28188.22
+2026-02-17 07:21:45,471 - src.models.trainer - INFO -   MAPE: 46.06%
+2026-02-17 07:21:45,472 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.6675182288062664
+2026-02-17 07:21:46,923 - src.visualization.plotter - INFO - Saved actual vs predicted plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\random_forest_predictions.png
+2026-02-17 07:21:48,260 - src.visualization.plotter - INFO - Saved residual plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\random_forest_residuals.png
+2026-02-17 07:21:48,295 - src.models.trainer - INFO - Evaluating XGBoost on test set...
+2026-02-17 07:21:48,354 - src.models.trainer - INFO - XGBoost Test Metrics:
+2026-02-17 07:21:48,355 - src.models.trainer - INFO -   R² Score: 0.6560
+2026-02-17 07:21:48,356 - src.models.trainer - INFO -   RMSE: 47886.32
+2026-02-17 07:21:48,356 - src.models.trainer - INFO -   MAE: 29191.89
+2026-02-17 07:21:48,356 - src.models.trainer - INFO -   MAPE: 56.59%
+2026-02-17 07:21:48,359 - src.evaluation.evaluator - INFO - Added results for XGBoost: R²=0.6560180104962301
+2026-02-17 07:21:48,359 - src.models.trainer - INFO - Evaluating LightGBM on test set...
+2026-02-17 07:21:48,409 - src.models.trainer - INFO - LightGBM Test Metrics:
+2026-02-17 07:21:48,410 - src.models.trainer - INFO -   R² Score: 0.6776
+2026-02-17 07:21:48,410 - src.models.trainer - INFO -   RMSE: 46358.44
+2026-02-17 07:21:48,410 - src.models.trainer - INFO -   MAE: 27882.91
+2026-02-17 07:21:48,411 - src.models.trainer - INFO -   MAPE: 47.28%
+2026-02-17 07:21:48,411 - src.evaluation.evaluator - INFO - Added results for LightGBM: R²=0.6776183255112265
+2026-02-17 07:21:48,414 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-17 07:21:48,419 - src.evaluation.evaluator - INFO - 
+                   r2_score        rmse         mae      mape
+LightGBM             0.6776  46358.4373  27882.9146   47.2802
+Random Forest        0.6675  47079.0330  28188.2231   46.0631
+XGBoost              0.6560  47886.3204  29191.8876   56.5927
+Decision Tree        0.6453  48626.3289  28689.3047   46.3985
+Lasso (alpha=1.0)    0.5649  53855.8994  40225.3434  256.7055
+Linear Regression    0.5649  53857.6125  40222.5196  256.3900
+Ridge (alpha=1.0)    0.5649  53859.0316  40226.7595  256.7050
+2026-02-17 07:21:48,421 - src.evaluation.evaluator - INFO - 
+======================================================================
+2026-02-17 07:21:48,423 - src.evaluation.evaluator - INFO - MODEL RANKING BY R2_SCORE
+2026-02-17 07:21:48,424 - src.evaluation.evaluator - INFO - ======================================================================
+2026-02-17 07:21:48,425 - src.evaluation.evaluator - INFO - 1. LightGBM                       | r2_score: 0.6776
+2026-02-17 07:21:48,426 - src.evaluation.evaluator - INFO - 2. Random Forest                  | r2_score: 0.6675
+2026-02-17 07:21:48,427 - src.evaluation.evaluator - INFO - 3. XGBoost                        | r2_score: 0.6560
+2026-02-17 07:21:48,427 - src.evaluation.evaluator - INFO - 4. Decision Tree                  | r2_score: 0.6453
+2026-02-17 07:21:48,428 - src.evaluation.evaluator - INFO - 5. Lasso (alpha=1.0)              | r2_score: 0.5649
+2026-02-17 07:21:48,428 - src.evaluation.evaluator - INFO - 6. Linear Regression              | r2_score: 0.5649
+2026-02-17 07:21:48,428 - src.evaluation.evaluator - INFO - 7. Ridge (alpha=1.0)              | r2_score: 0.5649
+2026-02-17 07:21:48,428 - src.evaluation.evaluator - INFO - ======================================================================
+
+2026-02-17 07:21:48,430 - src.evaluation.evaluator - INFO - Best model by r2_score: LightGBM (r2_score=0.6776)
+2026-02-17 07:21:48,430 - __main__ - INFO - 
+Best Model: LightGBM with R² = 0.6776
+2026-02-17 07:21:48,431 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:21:48,431 - __main__ - INFO - STEP 7: HYPERPARAMETER TUNING
+2026-02-17 07:21:48,432 - __main__ - INFO - ================================================================================
+2026-02-17 07:21:48,432 - __main__ - INFO - Tuning XGBoost hyperparameters...
+2026-02-17 07:21:48,433 - src.models.trainer - INFO - Tuning hyperparameters for xgboost using grid search...
+2026-02-17 07:27:57,399 - src.models.trainer - INFO - Best parameters: {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 1.0}
+2026-02-17 07:27:57,400 - src.models.trainer - INFO - Best CV RMSE: 45935.71
+2026-02-17 07:27:57,400 - src.models.trainer - INFO - Evaluating XGBoost (Tuned) on test set...
+2026-02-17 07:27:57,457 - src.models.trainer - INFO - XGBoost (Tuned) Test Metrics:
+2026-02-17 07:27:57,459 - src.models.trainer - INFO -   R² Score: 0.6799
+2026-02-17 07:27:57,459 - src.models.trainer - INFO -   RMSE: 46194.24
+2026-02-17 07:27:57,460 - src.models.trainer - INFO -   MAE: 28007.21
+2026-02-17 07:27:57,460 - src.models.trainer - INFO -   MAPE: 49.03%
+2026-02-17 07:27:57,460 - src.evaluation.evaluator - INFO - Added results for XGBoost (Tuned): R²=0.6798980376626336
+2026-02-17 07:27:57,461 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:27:57,461 - __main__ - INFO - STEP 8: FEATURE IMPORTANCE ANALYSIS
+2026-02-17 07:27:57,461 - __main__ - INFO - ================================================================================
+2026-02-17 07:27:57,464 - src.models.trainer - INFO - Extracted Feature Importance for 109 features
+2026-02-17 07:27:57,465 - src.models.trainer - INFO - Top 5 features: ['Days_Before_Departure', 'Duration_hrs', 'Class', 'Dep_DayOfYear', 'route_distance']
+2026-02-17 07:27:57,465 - __main__ - INFO - 
+Top 10 Most Important Features:
+2026-02-17 07:27:57,468 - __main__ - INFO -                   Feature  Importance
+3   Days_Before_Departure         411
+0            Duration_hrs         286
+2                   Class         245
+7           Dep_DayOfYear         227
+16         route_distance         203
+8                Dep_Hour         189
+14               Arr_Hour         156
+5                 Dep_Day         135
+11                Arr_Day         117
+6             Dep_Weekday          97
+2026-02-17 07:27:58,559 - src.visualization.plotter - INFO - Saved feature importance plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\feature_importance.png
+2026-02-17 07:27:58,599 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:27:58,600 - __main__ - INFO - STEP 9: SAVING RESULTS
+2026-02-17 07:27:58,601 - __main__ - INFO - ================================================================================
+2026-02-17 07:27:58,618 - src.utils.helpers - INFO - Object successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-17 07:27:58,618 - src.models.trainer - INFO - Model saved successfully to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-17 07:27:58,622 - src.utils.helpers - INFO - Object successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\feature_engineer.pkl
+2026-02-17 07:27:58,627 - __main__ - INFO - Saved fitted FeatureEngineer to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\feature_engineer.pkl
+2026-02-17 07:27:58,632 - src.evaluation.evaluator - INFO - Saved comparison table to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\model_comparison.csv
+2026-02-17 07:27:58,638 - src.utils.helpers - INFO - JSON data successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_results.json
+2026-02-17 07:27:58,638 - src.evaluation.evaluator - INFO - Saved detailed results to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_results.json
+2026-02-17 07:27:58,640 - src.evaluation.evaluator - INFO - Best model by r2_score: LightGBM (r2_score=0.6776)
+2026-02-17 07:27:58,643 - src.evaluation.evaluator - INFO - Best model by rmse: LightGBM (rmse=46358.4373)
+2026-02-17 07:27:58,644 - src.evaluation.evaluator - INFO - Best model by mae: LightGBM (mae=27882.9146)
+2026-02-17 07:27:58,645 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=46.0631)
+2026-02-17 07:27:58,649 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-17 07:27:58,652 - src.utils.helpers - INFO - JSON data successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_summary.json
+2026-02-17 07:27:58,653 - src.evaluation.evaluator - INFO - Saved summary report to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_summary.json
+2026-02-17 07:27:58,654 - __main__ - INFO - 
+================================================================================
+2026-02-17 07:27:58,655 - __main__ - INFO - PIPELINE EXECUTION COMPLETED SUCCESSFULLY
+2026-02-17 07:27:58,656 - __main__ - INFO - ================================================================================
+2026-02-17 07:27:58,657 - src.evaluation.evaluator - INFO - Best model by r2_score: LightGBM (r2_score=0.6776)
+2026-02-17 07:27:58,664 - src.evaluation.evaluator - INFO - Best model by rmse: LightGBM (rmse=46358.4373)
+2026-02-17 07:27:58,665 - src.evaluation.evaluator - INFO - Best model by mae: LightGBM (mae=27882.9146)
+2026-02-17 07:27:58,667 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=46.0631)
+2026-02-17 07:27:58,673 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-17 07:27:58,677 - __main__ - INFO - 
+Total Models Evaluated: 7
+2026-02-17 07:27:58,678 - __main__ - INFO - Best Model: LightGBM
+2026-02-17 07:27:58,678 - __main__ - INFO - Best R² Score: 0.6776
+2026-02-17 07:27:58,679 - __main__ - INFO - 
+Output Files:
+2026-02-17 07:27:58,680 - __main__ - INFO -   - Best Model: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.pkl
+2026-02-17 07:27:58,681 - __main__ - INFO -   - Visualizations: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures
+2026-02-17 07:27:58,684 - __main__ - INFO -   - Evaluation Results: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models
+2026-02-17 07:27:58,688 - __main__ - INFO -   - Logs: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\logs\app.log
+2026-02-24 10:41:36,710 - __main__ - INFO - ================================================================================
+2026-02-24 10:41:36,710 - __main__ - INFO - FLIGHT FARE PREDICTION - ML PIPELINE STARTED
+2026-02-24 10:41:36,711 - __main__ - INFO - ================================================================================
+2026-02-24 10:41:36,712 - src.utils.helpers - INFO - Random seed set to 42 for reproducibility
+2026-02-24 10:41:36,713 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:41:36,713 - __main__ - INFO - STEP 1: DATA LOADING
+2026-02-24 10:41:36,713 - __main__ - INFO - ================================================================================
+2026-02-24 10:41:36,713 - src.data.data_loader - INFO - DataLoader initialized for file: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\data\raw\Flight_Price_Dataset_of_Bangladesh.csv
+2026-02-24 10:41:36,714 - src.utils.helpers - INFO - File validated: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\data\raw\Flight_Price_Dataset_of_Bangladesh.csv
+2026-02-24 10:41:37,045 - src.data.data_loader - INFO - Successfully loaded data from C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\data\raw\Flight_Price_Dataset_of_Bangladesh.csv
+2026-02-24 10:41:37,045 - src.data.data_loader - INFO - ============================================================
+2026-02-24 10:41:37,045 - src.data.data_loader - INFO - DATASET INFORMATION
+2026-02-24 10:41:37,045 - src.data.data_loader - INFO - ============================================================
+2026-02-24 10:41:37,045 - src.data.data_loader - INFO - Shape: 57000 rows × 17 columns
+2026-02-24 10:41:37,137 - src.data.data_loader - INFO - Memory usage: 48.22 MB
+2026-02-24 10:41:37,137 - src.data.data_loader - INFO - 
+Column Information:
+2026-02-24 10:41:37,140 - src.data.data_loader - INFO -   - Airline: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,143 - src.data.data_loader - INFO -   - Source: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,145 - src.data.data_loader - INFO -   - Source Name: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,147 - src.data.data_loader - INFO -   - Destination: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,149 - src.data.data_loader - INFO -   - Destination Name: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,153 - src.data.data_loader - INFO -   - Departure Date & Time: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,156 - src.data.data_loader - INFO -   - Arrival Date & Time: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,157 - src.data.data_loader - INFO -   - Duration (hrs): float64 | Missing: 0 (0.00%)
+2026-02-24 10:41:37,160 - src.data.data_loader - INFO -   - Stopovers: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,162 - src.data.data_loader - INFO -   - Aircraft Type: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,165 - src.data.data_loader - INFO -   - Class: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,167 - src.data.data_loader - INFO -   - Booking Source: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,167 - src.data.data_loader - INFO -   - Base Fare (BDT): float64 | Missing: 0 (0.00%)
+2026-02-24 10:41:37,169 - src.data.data_loader - INFO -   - Tax & Surcharge (BDT): float64 | Missing: 0 (0.00%)
+2026-02-24 10:41:37,169 - src.data.data_loader - INFO -   - Total Fare (BDT): float64 | Missing: 0 (0.00%)
+2026-02-24 10:41:37,172 - src.data.data_loader - INFO -   - Seasonality: object | Missing: 0 (0.00%)
+2026-02-24 10:41:37,173 - src.data.data_loader - INFO -   - Days Before Departure: int64 | Missing: 0 (0.00%)
+2026-02-24 10:41:37,173 - src.data.data_loader - INFO - ============================================================
+2026-02-24 10:41:37,233 - src.data.data_loader - INFO - No missing values detected in dataset
+2026-02-24 10:41:37,233 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:41:37,233 - __main__ - INFO - STEP 2: DATA PREPROCESSING
+2026-02-24 10:41:37,234 - __main__ - INFO - ================================================================================
+2026-02-24 10:41:37,238 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (57000, 17)
+2026-02-24 10:41:37,346 - src.data.preprocessor - INFO - No duplicate rows found
+2026-02-24 10:41:37,346 - src.data.preprocessor - INFO - Handling missing values with strategy: {'numerical': 'median', 'categorical': 'mode'}
+2026-02-24 10:41:37,479 - src.data.preprocessor - INFO - Returning processed data with shape: (57000, 17)
+2026-02-24 10:41:37,479 - __main__ - INFO - Preprocessing complete. Final shape: (57000, 17)
+2026-02-24 10:41:37,479 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:41:37,479 - __main__ - INFO - STEP 3: EXPLORATORY DATA ANALYSIS
+2026-02-24 10:41:37,480 - __main__ - INFO - ================================================================================
+2026-02-24 10:41:37,485 - src.eda.analyzer - INFO - EDAAnalyzer initialized with 57000 rows and 17 columns
+2026-02-24 10:41:37,488 - src.visualization.plotter - INFO - Plotter initialized with output directory: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures
+2026-02-24 10:41:37,766 - src.eda.analyzer - INFO - Generated descriptive statistics for all features
+2026-02-24 10:41:37,785 - __main__ - INFO - 
+Descriptive Statistics:
+                         count  unique                                            top   freq      mean       std  min       25%       50%       75%        max  missing  missing_pct    dtype
+Airline                  57000      24                             US-Bangla Airlines   4496       NaN       NaN  NaN       NaN       NaN       NaN        NaN        0          0.0   object
+Source                   57000       8                                            CGP   7241       NaN       NaN  NaN       NaN       NaN       NaN        NaN        0          0.0   object
+Source Name              57000       8  Shah Amanat International Airport, Chittagong   7241       NaN       NaN  NaN       NaN       NaN       NaN        NaN        0          0.0   object
+Destination              57000      20                                            JED   3071       NaN       NaN  NaN       NaN       NaN       NaN        NaN        0          0.0   object
+Destination Name         57000      20   King Abdulaziz International Airport, Jeddah   3071       NaN       NaN  NaN       NaN       NaN       NaN        NaN        0          0.0   object
+Departure Date & Time    57000   54126                            2025-11-15 15:33:00      4       NaN       NaN  NaN       NaN       NaN       NaN        NaN        0          0.0   object
+Arrival Date & Time      57000   56944                            2025-12-10 21:54:33      2       NaN       NaN  NaN       NaN       NaN       NaN        NaN        0          0.0   object
+Duration (hrs)         57000.0   53135                                            NaN    NaN  3.994955  4.094043  0.5  1.003745  2.644656  5.490104  15.831719        0          0.0  float64
+Stopovers                57000       3                                         Direct  36642       NaN       NaN  NaN       NaN       NaN       NaN        NaN        0          0.0   object
+Aircraft Type            57000       5                                    Airbus A320  23970       NaN       NaN  NaN       NaN       NaN       NaN        NaN        0          0.0   object
+2026-02-24 10:41:37,787 - __main__ - INFO - Using 'Duration (hrs)' as target variable for demonstration
+2026-02-24 10:41:37,808 - src.eda.analyzer - INFO - Target 'Duration (hrs)' distribution:
+2026-02-24 10:41:37,819 - src.eda.analyzer - INFO -   Mean: 3.99, Median: 2.64
+2026-02-24 10:41:37,823 - src.eda.analyzer - INFO -   Std: 4.09, IQR: 4.49
+2026-02-24 10:41:37,833 - src.eda.analyzer - INFO -   Skewness: 1.47, Kurtosis: 1.13
+2026-02-24 10:41:39,668 - src.visualization.plotter - INFO - Saved distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\target_distribution.png
+2026-02-24 10:41:39,698 - src.eda.analyzer - INFO - Top 10 categories for 'Airline':
+2026-02-24 10:41:39,700 - src.eda.analyzer - INFO -   US-Bangla Airlines: 4496 (7.89%)
+2026-02-24 10:41:39,700 - src.eda.analyzer - INFO -   Lufthansa: 2368 (4.15%)
+2026-02-24 10:41:39,700 - src.eda.analyzer - INFO -   Vistara: 2368 (4.15%)
+2026-02-24 10:41:39,701 - src.eda.analyzer - INFO -   FlyDubai: 2346 (4.12%)
+2026-02-24 10:41:39,701 - src.eda.analyzer - INFO -   Biman Bangladesh Airlines: 2344 (4.11%)
+2026-02-24 10:41:40,464 - src.visualization.plotter - INFO - Saved categorical distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\Airline_distribution.png
+2026-02-24 10:41:40,505 - src.eda.analyzer - INFO - Top 10 categories for 'Source':
+2026-02-24 10:41:40,507 - src.eda.analyzer - INFO -   CGP: 7241 (12.7%)
+2026-02-24 10:41:40,507 - src.eda.analyzer - INFO -   ZYL: 7179 (12.59%)
+2026-02-24 10:41:40,507 - src.eda.analyzer - INFO -   JSR: 7149 (12.54%)
+2026-02-24 10:41:40,508 - src.eda.analyzer - INFO -   DAC: 7146 (12.54%)
+2026-02-24 10:41:40,509 - src.eda.analyzer - INFO -   BZL: 7102 (12.46%)
+2026-02-24 10:41:41,476 - src.visualization.plotter - INFO - Saved categorical distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\Source_distribution.png
+2026-02-24 10:41:41,513 - src.eda.analyzer - INFO - Top 10 categories for 'Source Name':
+2026-02-24 10:41:41,514 - src.eda.analyzer - INFO -   Shah Amanat International Airport, Chittagong: 7241 (12.7%)
+2026-02-24 10:41:41,515 - src.eda.analyzer - INFO -   Osmani International Airport, Sylhet: 7179 (12.59%)
+2026-02-24 10:41:41,516 - src.eda.analyzer - INFO -   Jessore Airport: 7149 (12.54%)
+2026-02-24 10:41:41,516 - src.eda.analyzer - INFO -   Hazrat Shahjalal International Airport, Dhaka: 7146 (12.54%)
+2026-02-24 10:41:41,517 - src.eda.analyzer - INFO -   Barisal Airport: 7102 (12.46%)
+2026-02-24 10:41:42,261 - src.visualization.plotter - INFO - Saved categorical distribution plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\Source Name_distribution.png
+2026-02-24 10:41:42,320 - src.eda.analyzer - INFO - Computed pearson correlation matrix for 5 features
+2026-02-24 10:41:42,320 - src.eda.analyzer - INFO - Found 3 highly correlated feature pairs (|r| > 0.8):
+2026-02-24 10:41:42,321 - src.eda.analyzer - INFO -   Base Fare (BDT) <-> Tax & Surcharge (BDT): 0.978
+2026-02-24 10:41:42,322 - src.eda.analyzer - INFO -   Base Fare (BDT) <-> Total Fare (BDT): 0.998
+2026-02-24 10:41:42,322 - src.eda.analyzer - INFO -   Tax & Surcharge (BDT) <-> Total Fare (BDT): 0.982
+2026-02-24 10:41:43,374 - src.visualization.plotter - INFO - Saved correlation heatmap to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\correlation_heatmap.png
+2026-02-24 10:41:43,407 - src.eda.analyzer - INFO - Generated 3 insights from EDA
+2026-02-24 10:41:43,407 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:41:43,408 - __main__ - INFO - KEY INSIGHTS FROM EDA:
+2026-02-24 10:41:43,408 - __main__ - INFO - ================================================================================
+2026-02-24 10:41:43,408 - __main__ - INFO - 1. Target variable is highly skewed (1.47). Consider transformation.
+2026-02-24 10:41:43,409 - __main__ - INFO - 2. Target variable has high variance (CV=1.02)
+2026-02-24 10:41:43,409 - __main__ - INFO - 3. High multicollinearity detected between 3 feature pairs
+2026-02-24 10:41:43,409 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:41:43,409 - __main__ - INFO - STEP 4: FEATURE ENGINEERING & DATA SPLITTING
+2026-02-24 10:41:43,410 - __main__ - INFO - ================================================================================
+2026-02-24 10:41:43,410 - src.features.feature_engineer - INFO - FeatureEngineer initialized
+2026-02-24 10:41:43,410 - __main__ - INFO - Extracting temporal features...
+2026-02-24 10:41:43,417 - src.features.feature_engineer - WARNING - Column 'Departure Date & Time' is not datetime type, attempting conversion
+2026-02-24 10:41:43,514 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:41:43,514 - src.features.feature_engineer - INFO - Created temporal features from 'Departure Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:41:43,543 - src.features.feature_engineer - WARNING - Column 'Arrival Date & Time' is not datetime type, attempting conversion
+2026-02-24 10:41:43,624 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:41:43,624 - src.features.feature_engineer - INFO - Created temporal features from 'Arrival Date & Time': month, day, weekday, day_of_year, hour, season, is_weekend
+2026-02-24 10:41:43,651 - __main__ - INFO - Extracting route features...
+2026-02-24 10:41:45,923 - src.features.feature_engineer - INFO - Created 'route_distance' feature
+2026-02-24 10:41:46,427 - src.features.feature_engineer - INFO - Created 'route_type' feature
+2026-02-24 10:41:46,430 - __main__ - INFO - Encoding ordinal and binary features...
+2026-02-24 10:41:46,452 - src.features.feature_engineer - INFO - Ordinal encoded 'Class': Economy=0, Business=1, First Class=2
+2026-02-24 10:41:46,495 - src.features.feature_engineer - INFO - Binary encoded 'Stopovers': Direct=0, Any Stop=1
+2026-02-24 10:41:46,520 - src.features.feature_engineer - INFO - Created 'Dep_TimeBin' from 'Dep_Hour': EarlyMorning=0, Morning=1, Afternoon=2, Evening=3
+2026-02-24 10:41:46,542 - src.features.feature_engineer - INFO - Dropped 2 features: ['Departure Date & Time', 'Arrival Date & Time']
+2026-02-24 10:41:46,554 - __main__ - INFO - Dropped leaky columns: ['Base Fare (BDT)', 'Tax & Surcharge (BDT)']
+2026-02-24 10:41:46,560 - src.data.preprocessor - INFO - DataPreprocessor initialized with data shape: (57000, 30)
+2026-02-24 10:41:46,591 - src.data.preprocessor - INFO - Data split completed:
+2026-02-24 10:41:46,593 - src.data.preprocessor - INFO -   Training set: 45600 samples (80%)
+2026-02-24 10:41:46,594 - src.data.preprocessor - INFO -   Test set: 11400 samples (20%)
+2026-02-24 10:41:46,594 - src.data.preprocessor - INFO -   Features: 29
+2026-02-24 10:41:46,595 - __main__ - INFO - Target column: Total Fare (BDT)
+2026-02-24 10:41:46,595 - __main__ - INFO - Training set: (45600, 29), Test set: (11400, 29)
+2026-02-24 10:41:46,601 - __main__ - INFO - Encoding categorical columns: ['Airline', 'Source', 'Source Name', 'Destination', 'Destination Name', 'Aircraft Type', 'Booking Source', 'Seasonality', 'Dep_Season', 'Arr_Season', 'route_type'] using ONE-HOT Encoding
+2026-02-24 10:41:46,631 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 10:41:46,651 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 10:41:46,674 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 10:41:46,695 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 10:41:46,720 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 10:41:46,741 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 10:41:46,760 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 10:41:46,776 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 10:41:46,793 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 10:41:46,809 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 10:41:46,824 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 10:41:47,146 - src.features.feature_engineer - INFO - OneHot encoded 'Airline' using fitted encoder
+2026-02-24 10:41:47,392 - src.features.feature_engineer - INFO - OneHot encoded 'Source' using fitted encoder
+2026-02-24 10:41:47,641 - src.features.feature_engineer - INFO - OneHot encoded 'Source Name' using fitted encoder
+2026-02-24 10:41:48,094 - src.features.feature_engineer - INFO - OneHot encoded 'Destination' using fitted encoder
+2026-02-24 10:41:48,405 - src.features.feature_engineer - INFO - OneHot encoded 'Destination Name' using fitted encoder
+2026-02-24 10:41:48,654 - src.features.feature_engineer - INFO - OneHot encoded 'Aircraft Type' using fitted encoder
+2026-02-24 10:41:48,844 - src.features.feature_engineer - INFO - OneHot encoded 'Booking Source' using fitted encoder
+2026-02-24 10:41:49,080 - src.features.feature_engineer - INFO - OneHot encoded 'Seasonality' using fitted encoder
+2026-02-24 10:41:49,260 - src.features.feature_engineer - INFO - OneHot encoded 'Dep_Season' using fitted encoder
+2026-02-24 10:41:49,440 - src.features.feature_engineer - INFO - OneHot encoded 'Arr_Season' using fitted encoder
+2026-02-24 10:41:49,592 - src.features.feature_engineer - INFO - OneHot encoded 'route_type' using fitted encoder
+2026-02-24 10:41:49,595 - __main__ - INFO - Scaling numerical columns: 18 columns
+2026-02-24 10:41:49,605 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 10:41:49,610 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 10:41:49,613 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 10:41:49,617 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 10:41:49,624 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 10:41:49,628 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 10:41:49,633 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 10:41:49,637 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 10:41:49,640 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 10:41:49,645 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 10:41:49,648 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 10:41:49,653 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 10:41:49,657 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 10:41:49,661 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 10:41:49,665 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 10:41:49,669 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 10:41:49,673 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 10:41:49,677 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 10:41:49,687 - src.features.feature_engineer - INFO - Scaled 'Duration (hrs)' using standard scaling
+2026-02-24 10:41:49,690 - src.features.feature_engineer - INFO - Scaled 'Stopovers' using standard scaling
+2026-02-24 10:41:49,692 - src.features.feature_engineer - INFO - Scaled 'Class' using standard scaling
+2026-02-24 10:41:49,694 - src.features.feature_engineer - INFO - Scaled 'Days Before Departure' using standard scaling
+2026-02-24 10:41:49,696 - src.features.feature_engineer - INFO - Scaled 'Dep_Month' using standard scaling
+2026-02-24 10:41:49,699 - src.features.feature_engineer - INFO - Scaled 'Dep_Day' using standard scaling
+2026-02-24 10:41:49,701 - src.features.feature_engineer - INFO - Scaled 'Dep_Weekday' using standard scaling
+2026-02-24 10:41:49,703 - src.features.feature_engineer - INFO - Scaled 'Dep_DayOfYear' using standard scaling
+2026-02-24 10:41:49,706 - src.features.feature_engineer - INFO - Scaled 'Dep_Hour' using standard scaling
+2026-02-24 10:41:49,708 - src.features.feature_engineer - INFO - Scaled 'Dep_IsWeekend' using standard scaling
+2026-02-24 10:41:49,709 - src.features.feature_engineer - INFO - Scaled 'Arr_Month' using standard scaling
+2026-02-24 10:41:49,713 - src.features.feature_engineer - INFO - Scaled 'Arr_Day' using standard scaling
+2026-02-24 10:41:49,716 - src.features.feature_engineer - INFO - Scaled 'Arr_Weekday' using standard scaling
+2026-02-24 10:41:49,717 - src.features.feature_engineer - INFO - Scaled 'Arr_DayOfYear' using standard scaling
+2026-02-24 10:41:49,719 - src.features.feature_engineer - INFO - Scaled 'Arr_Hour' using standard scaling
+2026-02-24 10:41:49,722 - src.features.feature_engineer - INFO - Scaled 'Arr_IsWeekend' using standard scaling
+2026-02-24 10:41:49,724 - src.features.feature_engineer - INFO - Scaled 'route_distance' using standard scaling
+2026-02-24 10:41:49,727 - src.features.feature_engineer - INFO - Scaled 'Dep_TimeBin' using standard scaling
+2026-02-24 10:41:49,731 - __main__ - INFO - Sanitized column names for model compatibility
+2026-02-24 10:41:49,731 - src.features.feature_engineer - INFO - Total features: 109
+2026-02-24 10:41:49,731 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:41:49,731 - __main__ - INFO - STEP 5: BASELINE MODEL TRAINING
+2026-02-24 10:41:49,731 - __main__ - INFO - ================================================================================
+2026-02-24 10:41:49,733 - src.models.trainer - INFO - ModelTrainer initialized with random_state=42
+2026-02-24 10:41:49,733 - src.models.trainer - INFO - Training baseline models...
+2026-02-24 10:41:49,733 - src.models.trainer - INFO - Training Linear Regression...
+2026-02-24 10:41:50,213 - src.models.trainer - INFO - Linear Regression - Train R²: 0.5687, RMSE: 53716.86, MAE: 40118.28
+2026-02-24 10:41:50,213 - src.models.trainer - INFO - Training Ridge (alpha=1.0)...
+2026-02-24 10:41:50,372 - src.models.trainer - INFO - Ridge (alpha=1.0) - Train R²: 0.5688, RMSE: 53716.21, MAE: 40122.76
+2026-02-24 10:41:50,374 - src.models.trainer - INFO - Training Lasso (alpha=1.0)...
+2026-02-24 10:42:35,219 - src.models.trainer - INFO - Lasso (alpha=1.0) - Train R²: 0.5688, RMSE: 53716.71, MAE: 40122.47
+2026-02-24 10:42:35,219 - src.models.trainer - INFO - Training Decision Tree...
+2026-02-24 10:42:36,267 - src.models.trainer - INFO - Decision Tree - Train R²: 0.7198, RMSE: 43297.90, MAE: 25962.02
+2026-02-24 10:42:36,267 - src.models.trainer - INFO - Training Random Forest...
+2026-02-24 10:44:12,759 - src.models.trainer - INFO - Random Forest - Train R²: 0.9539, RMSE: 17559.24, MAE: 10454.72
+2026-02-24 10:44:12,759 - src.models.trainer - INFO - Training XGBoost...
+2026-02-24 10:44:15,655 - src.models.trainer - INFO - XGBoost - Train R²: 0.7973, RMSE: 36828.05, MAE: 23087.74
+2026-02-24 10:44:15,655 - src.models.trainer - INFO - Training LightGBM...
+2026-02-24 10:44:16,823 - src.models.trainer - INFO - LightGBM - Train R²: 0.7323, RMSE: 42325.64, MAE: 26074.86
+2026-02-24 10:44:16,824 - src.models.trainer - INFO - Baseline model training completed
+2026-02-24 10:44:16,824 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:44:16,825 - __main__ - INFO - STEP 6: MODEL EVALUATION
+2026-02-24 10:44:16,826 - __main__ - INFO - ================================================================================
+2026-02-24 10:44:16,826 - src.evaluation.evaluator - INFO - ModelEvaluator initialized
+2026-02-24 10:44:16,826 - src.models.trainer - INFO - Evaluating Linear Regression on test set...
+2026-02-24 10:44:16,847 - src.models.trainer - INFO - Linear Regression Test Metrics:
+2026-02-24 10:44:16,848 - src.models.trainer - INFO -   R² Score: 0.5649
+2026-02-24 10:44:16,848 - src.models.trainer - INFO -   RMSE: 53857.61
+2026-02-24 10:44:16,848 - src.models.trainer - INFO -   MAE: 40222.52
+2026-02-24 10:44:16,849 - src.models.trainer - INFO -   MAPE: 256.39%
+2026-02-24 10:44:16,849 - src.evaluation.evaluator - INFO - Added results for Linear Regression: R²=0.5648820843120215
+2026-02-24 10:44:18,248 - src.visualization.plotter - INFO - Saved actual vs predicted plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\linear_regression_predictions.png
+2026-02-24 10:44:20,048 - src.visualization.plotter - INFO - Saved residual plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\linear_regression_residuals.png
+2026-02-24 10:44:20,105 - src.models.trainer - INFO - Evaluating Ridge (alpha=1.0) on test set...
+2026-02-24 10:44:20,128 - src.models.trainer - INFO - Ridge (alpha=1.0) Test Metrics:
+2026-02-24 10:44:20,132 - src.models.trainer - INFO -   R² Score: 0.5649
+2026-02-24 10:44:20,133 - src.models.trainer - INFO -   RMSE: 53859.03
+2026-02-24 10:44:20,134 - src.models.trainer - INFO -   MAE: 40226.76
+2026-02-24 10:44:20,134 - src.models.trainer - INFO -   MAPE: 256.70%
+2026-02-24 10:44:20,134 - src.evaluation.evaluator - INFO - Added results for Ridge (alpha=1.0): R²=0.5648591547969035
+2026-02-24 10:44:20,136 - src.models.trainer - INFO - Evaluating Lasso (alpha=1.0) on test set...
+2026-02-24 10:44:20,161 - src.models.trainer - INFO - Lasso (alpha=1.0) Test Metrics:
+2026-02-24 10:44:20,162 - src.models.trainer - INFO -   R² Score: 0.5649
+2026-02-24 10:44:20,165 - src.models.trainer - INFO -   RMSE: 53855.90
+2026-02-24 10:44:20,165 - src.models.trainer - INFO -   MAE: 40225.34
+2026-02-24 10:44:20,166 - src.models.trainer - INFO -   MAPE: 256.71%
+2026-02-24 10:44:20,167 - src.evaluation.evaluator - INFO - Added results for Lasso (alpha=1.0): R²=0.5649097636466914
+2026-02-24 10:44:20,168 - src.models.trainer - INFO - Evaluating Decision Tree on test set...
+2026-02-24 10:44:20,204 - src.models.trainer - INFO - Decision Tree Test Metrics:
+2026-02-24 10:44:20,205 - src.models.trainer - INFO -   R² Score: 0.6453
+2026-02-24 10:44:20,205 - src.models.trainer - INFO -   RMSE: 48626.33
+2026-02-24 10:44:20,206 - src.models.trainer - INFO -   MAE: 28689.30
+2026-02-24 10:44:20,206 - src.models.trainer - INFO -   MAPE: 46.40%
+2026-02-24 10:44:20,207 - src.evaluation.evaluator - INFO - Added results for Decision Tree: R²=0.6453044525617269
+2026-02-24 10:44:20,208 - src.models.trainer - INFO - Evaluating Random Forest on test set...
+2026-02-24 10:44:20,499 - src.models.trainer - INFO - Random Forest Test Metrics:
+2026-02-24 10:44:20,502 - src.models.trainer - INFO -   R² Score: 0.6675
+2026-02-24 10:44:20,502 - src.models.trainer - INFO -   RMSE: 47079.03
+2026-02-24 10:44:20,503 - src.models.trainer - INFO -   MAE: 28188.22
+2026-02-24 10:44:20,504 - src.models.trainer - INFO -   MAPE: 46.06%
+2026-02-24 10:44:20,505 - src.evaluation.evaluator - INFO - Added results for Random Forest: R²=0.6675182288062667
+2026-02-24 10:44:22,099 - src.visualization.plotter - INFO - Saved actual vs predicted plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\random_forest_predictions.png
+2026-02-24 10:44:23,890 - src.visualization.plotter - INFO - Saved residual plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\random_forest_residuals.png
+2026-02-24 10:44:23,939 - src.models.trainer - INFO - Evaluating XGBoost on test set...
+2026-02-24 10:44:24,004 - src.models.trainer - INFO - XGBoost Test Metrics:
+2026-02-24 10:44:24,005 - src.models.trainer - INFO -   R² Score: 0.6560
+2026-02-24 10:44:24,008 - src.models.trainer - INFO -   RMSE: 47886.32
+2026-02-24 10:44:24,008 - src.models.trainer - INFO -   MAE: 29191.89
+2026-02-24 10:44:24,009 - src.models.trainer - INFO -   MAPE: 56.59%
+2026-02-24 10:44:24,010 - src.evaluation.evaluator - INFO - Added results for XGBoost: R²=0.6560180104962301
+2026-02-24 10:44:24,013 - src.models.trainer - INFO - Evaluating LightGBM on test set...
+2026-02-24 10:44:24,074 - src.models.trainer - INFO - LightGBM Test Metrics:
+2026-02-24 10:44:24,074 - src.models.trainer - INFO -   R² Score: 0.6776
+2026-02-24 10:44:24,074 - src.models.trainer - INFO -   RMSE: 46358.44
+2026-02-24 10:44:24,074 - src.models.trainer - INFO -   MAE: 27882.91
+2026-02-24 10:44:24,075 - src.models.trainer - INFO -   MAPE: 47.28%
+2026-02-24 10:44:24,076 - src.evaluation.evaluator - INFO - Added results for LightGBM: R²=0.6776183255112265
+2026-02-24 10:44:24,080 - src.evaluation.evaluator - INFO - Model comparison table created
+2026-02-24 10:44:24,086 - src.evaluation.evaluator - INFO - 
+                   r2_score        rmse         mae      mape
+LightGBM             0.6776  46358.4373  27882.9146   47.2802
+Random Forest        0.6675  47079.0330  28188.2231   46.0631
+XGBoost              0.6560  47886.3204  29191.8876   56.5927
+Decision Tree        0.6453  48626.3289  28689.3047   46.3985
+Lasso (alpha=1.0)    0.5649  53855.8994  40225.3434  256.7055
+Linear Regression    0.5649  53857.6125  40222.5196  256.3900
+Ridge (alpha=1.0)    0.5649  53859.0316  40226.7595  256.7050
+2026-02-24 10:44:24,087 - src.evaluation.evaluator - INFO - 
+======================================================================
+2026-02-24 10:44:24,087 - src.evaluation.evaluator - INFO - MODEL RANKING BY R2_SCORE
+2026-02-24 10:44:24,088 - src.evaluation.evaluator - INFO - ======================================================================
+2026-02-24 10:44:24,088 - src.evaluation.evaluator - INFO - 1. LightGBM                       | r2_score: 0.6776
+2026-02-24 10:44:24,096 - src.evaluation.evaluator - INFO - 2. Random Forest                  | r2_score: 0.6675
+2026-02-24 10:44:24,097 - src.evaluation.evaluator - INFO - 3. XGBoost                        | r2_score: 0.6560
+2026-02-24 10:44:24,098 - src.evaluation.evaluator - INFO - 4. Decision Tree                  | r2_score: 0.6453
+2026-02-24 10:44:24,099 - src.evaluation.evaluator - INFO - 5. Lasso (alpha=1.0)              | r2_score: 0.5649
+2026-02-24 10:44:24,100 - src.evaluation.evaluator - INFO - 6. Linear Regression              | r2_score: 0.5649
+2026-02-24 10:44:24,100 - src.evaluation.evaluator - INFO - 7. Ridge (alpha=1.0)              | r2_score: 0.5649
+2026-02-24 10:44:24,101 - src.evaluation.evaluator - INFO - ======================================================================
+
+2026-02-24 10:44:24,103 - src.evaluation.evaluator - INFO - Best model by r2_score: LightGBM (r2_score=0.6776)
+2026-02-24 10:44:24,104 - __main__ - INFO - 
+Best Model: LightGBM with R² = 0.6776
+2026-02-24 10:44:24,105 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:44:24,107 - __main__ - INFO - STEP 7: HYPERPARAMETER TUNING
+2026-02-24 10:44:24,108 - __main__ - INFO - ================================================================================
+2026-02-24 10:44:24,113 - __main__ - INFO - Tuning XGBoost hyperparameters...
+2026-02-24 10:44:24,113 - src.models.trainer - INFO - Tuning hyperparameters for xgboost using grid search...
+2026-02-24 10:50:08,398 - src.models.trainer - INFO - Best parameters: {'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 3, 'n_estimators': 100, 'subsample': 1.0}
+2026-02-24 10:50:08,399 - src.models.trainer - INFO - Best CV RMSE: 45935.71
+2026-02-24 10:50:08,399 - src.models.trainer - INFO - Evaluating XGBoost (Tuned) on test set...
+2026-02-24 10:50:08,461 - src.models.trainer - INFO - XGBoost (Tuned) Test Metrics:
+2026-02-24 10:50:08,461 - src.models.trainer - INFO -   R² Score: 0.6799
+2026-02-24 10:50:08,462 - src.models.trainer - INFO -   RMSE: 46194.24
+2026-02-24 10:50:08,462 - src.models.trainer - INFO -   MAE: 28007.21
+2026-02-24 10:50:08,462 - src.models.trainer - INFO -   MAPE: 49.03%
+2026-02-24 10:50:08,463 - src.evaluation.evaluator - INFO - Added results for XGBoost (Tuned): R²=0.6798980376626336
+2026-02-24 10:50:08,463 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:50:08,463 - __main__ - INFO - STEP 8: FEATURE IMPORTANCE ANALYSIS
+2026-02-24 10:50:08,463 - __main__ - INFO - ================================================================================
+2026-02-24 10:50:08,468 - src.models.trainer - INFO - Extracted Feature Importance for 109 features
+2026-02-24 10:50:08,469 - src.models.trainer - INFO - Top 5 features: ['Days_Before_Departure', 'Duration_hrs', 'Class', 'Dep_DayOfYear', 'route_distance']
+2026-02-24 10:50:08,470 - __main__ - INFO - 
+Top 10 Most Important Features:
+2026-02-24 10:50:08,474 - __main__ - INFO -                   Feature  Importance
+3   Days_Before_Departure         411
+0            Duration_hrs         286
+2                   Class         245
+7           Dep_DayOfYear         227
+16         route_distance         203
+8                Dep_Hour         189
+14               Arr_Hour         156
+5                 Dep_Day         135
+11                Arr_Day         117
+6             Dep_Weekday          97
+2026-02-24 10:50:09,660 - src.visualization.plotter - INFO - Saved feature importance plot to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures\feature_importance.png
+2026-02-24 10:50:09,707 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:50:09,708 - __main__ - INFO - STEP 9: SAVING RESULTS
+2026-02-24 10:50:09,708 - __main__ - INFO - ================================================================================
+2026-02-24 10:50:09,724 - src.utils.helpers - INFO - Object successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.joblib
+2026-02-24 10:50:09,724 - src.models.trainer - INFO - Model saved successfully to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.joblib
+2026-02-24 10:50:09,745 - src.utils.helpers - INFO - Object successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\feature_engineer.joblib
+2026-02-24 10:50:09,747 - __main__ - INFO - Saved fitted FeatureEngineer to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\feature_engineer.joblib
+2026-02-24 10:50:09,757 - src.evaluation.evaluator - INFO - Saved comparison table to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\model_comparison.csv
+2026-02-24 10:50:09,760 - src.utils.helpers - INFO - JSON data successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_results.json
+2026-02-24 10:50:09,760 - src.evaluation.evaluator - INFO - Saved detailed results to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_results.json
+2026-02-24 10:50:09,762 - src.evaluation.evaluator - INFO - Best model by r2_score: LightGBM (r2_score=0.6776)
+2026-02-24 10:50:09,763 - src.evaluation.evaluator - INFO - Best model by rmse: LightGBM (rmse=46358.4373)
+2026-02-24 10:50:09,763 - src.evaluation.evaluator - INFO - Best model by mae: LightGBM (mae=27882.9146)
+2026-02-24 10:50:09,763 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=46.0631)
+2026-02-24 10:50:09,767 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-24 10:50:09,774 - src.utils.helpers - INFO - JSON data successfully saved to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_summary.json
+2026-02-24 10:50:09,774 - src.evaluation.evaluator - INFO - Saved summary report to C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\evaluation_summary.json
+2026-02-24 10:50:09,774 - __main__ - INFO - 
+================================================================================
+2026-02-24 10:50:09,774 - __main__ - INFO - PIPELINE EXECUTION COMPLETED SUCCESSFULLY
+2026-02-24 10:50:09,776 - __main__ - INFO - ================================================================================
+2026-02-24 10:50:09,777 - src.evaluation.evaluator - INFO - Best model by r2_score: LightGBM (r2_score=0.6776)
+2026-02-24 10:50:09,777 - src.evaluation.evaluator - INFO - Best model by rmse: LightGBM (rmse=46358.4373)
+2026-02-24 10:50:09,778 - src.evaluation.evaluator - INFO - Best model by mae: LightGBM (mae=27882.9146)
+2026-02-24 10:50:09,781 - src.evaluation.evaluator - INFO - Best model by mape: Random Forest (mape=46.0631)
+2026-02-24 10:50:09,787 - src.evaluation.evaluator - INFO - Summary report generated
+2026-02-24 10:50:09,788 - __main__ - INFO - 
+Total Models Evaluated: 7
+2026-02-24 10:50:09,788 - __main__ - INFO - Best Model: LightGBM
+2026-02-24 10:50:09,788 - __main__ - INFO - Best R² Score: 0.6776
+2026-02-24 10:50:09,789 - __main__ - INFO - 
+Output Files:
+2026-02-24 10:50:09,789 - __main__ - INFO -   - Best Model: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models\best_model.joblib
+2026-02-24 10:50:09,790 - __main__ - INFO -   - Visualizations: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\reports\figures
+2026-02-24 10:50:09,790 - __main__ - INFO -   - Evaluation Results: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\models
+2026-02-24 10:50:09,791 - __main__ - INFO -   - Logs: C:\Users\CourageDei\Desktop\Moodle\DE\DEM09\logs\app.log

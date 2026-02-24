@@ -17,7 +17,7 @@ from pathlib import Path
 import os
 import shutil
 import json
-import pickle
+import joblib
 import pandas as pd
 
 from airflow import DAG
@@ -30,16 +30,16 @@ from airflow.utils.trigger_rule import TriggerRule
 
 PROJECT_ROOT = Path("/opt/airflow")
 DATA_PATH = PROJECT_ROOT / "data" / "raw" / "Flight_Price_Dataset_of_Bangladesh.csv"
-MODEL_PATH = PROJECT_ROOT / "models" / "best_model.pkl"
-FEATURE_ENGINEER_PATH = PROJECT_ROOT / "models" / "feature_engineer.pkl"
+MODEL_PATH = PROJECT_ROOT / "models" / "best_model.joblib"
+FEATURE_ENGINEER_PATH = PROJECT_ROOT / "models" / "feature_engineer.joblib"
 METRICS_RESULTS_PATH = PROJECT_ROOT / "models" / "evaluation_results.json"
 METRICS_SUMMARY_PATH = PROJECT_ROOT / "models" / "evaluation_summary.json"
 
 BACKUP_DIR = PROJECT_ROOT / "models" / "backups"
 
 # Staging paths for new artifacts
-NEW_MODEL_PATH = PROJECT_ROOT / "models" / "new_model.pkl"
-NEW_FEATURE_ENGINEER_PATH = PROJECT_ROOT / "models" / "new_feature_engineer.pkl"
+NEW_MODEL_PATH = PROJECT_ROOT / "models" / "new_model.joblib"
+NEW_FEATURE_ENGINEER_PATH = PROJECT_ROOT / "models" / "new_feature_engineer.joblib"
 NEW_METRICS_RESULTS_PATH = PROJECT_ROOT / "models" / "new_evaluation_results.json"
 NEW_METRICS_SUMMARY_PATH = PROJECT_ROOT / "models" / "new_evaluation_summary.json"
 
@@ -108,8 +108,8 @@ def backup_current_model(**context):
     
     # List of artifacts to backup
     artifacts = [
-        (MODEL_PATH, f"model_backup_{timestamp}.pkl"),
-        (FEATURE_ENGINEER_PATH, f"feature_engineer_backup_{timestamp}.pkl"),
+        (MODEL_PATH, f"model_backup_{timestamp}.joblib"),
+        (FEATURE_ENGINEER_PATH, f"feature_engineer_backup_{timestamp}.joblib"),
         (METRICS_RESULTS_PATH, f"metrics_results_backup_{timestamp}.json"),
         (METRICS_SUMMARY_PATH, f"metrics_summary_backup_{timestamp}.json")
     ]
@@ -327,8 +327,8 @@ def run_training_in_venv():
     # irrespective of whether main.py overwrote production files
     
     artifacts = [
-        ("models/best_model.pkl", "models/new_model.pkl"),
-        ("models/feature_engineer.pkl", "models/new_feature_engineer.pkl"),
+        ("models/best_model.joblib", "models/new_model.joblib"),
+        ("models/feature_engineer.joblib", "models/new_feature_engineer.joblib"),
         ("models/evaluation_results.json", "models/new_evaluation_results.json"),
         ("models/evaluation_summary.json", "models/new_evaluation_summary.json")
     ]
@@ -343,7 +343,7 @@ def run_training_in_venv():
         else:
             print(f"⚠ Warning: Expected artifact {src.name} not found!")
             if "model" in src.name:
-                raise FileNotFoundError("Training did not produce best_model.pkl")
+                raise FileNotFoundError("Training did not produce best_model.joblib")
     
     return True
 

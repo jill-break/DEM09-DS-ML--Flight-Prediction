@@ -18,7 +18,7 @@ from src.app.model_service import ModelService
 
 # Get project root directory for absolute paths
 PROJECT_ROOT = Path(__file__).parent.parent.parent
-MODEL_PATH = PROJECT_ROOT / "models" / "best_model.pkl"
+MODEL_PATH = PROJECT_ROOT / "models" / "best_model.joblib"
 
 
 @pytest.fixture

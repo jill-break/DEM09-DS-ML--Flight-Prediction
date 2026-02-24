@@ -9,7 +9,7 @@ and ensures consistent behavior across modules.
 """
 
 import json
-import pickle
+import joblib
 from pathlib import Path
 from typing import Any, Dict
 import numpy as np
@@ -18,9 +18,12 @@ from src.utils.logger import get_logger
 logger = get_logger(__name__)
 
 
-def save_pickle(obj: Any, filepath: Path) -> None:
+def save_joblib(obj: Any, filepath: Path) -> None:
     """
-    Serialize and save a Python object to disk using pickle.
+    Serialize and save a Python object to disk using joblib.
+    
+    Joblib is optimized for large numpy arrays and scikit-learn models,
+    providing better performance than pickle for ML artifacts.
     
     Args:
         obj: Python object to serialize
@@ -30,20 +33,19 @@ def save_pickle(obj: Any, filepath: Path) -> None:
         IOError: If file cannot be written
     """
     try:
-        with open(filepath, 'wb') as f:
-            pickle.dump(obj, f)
+        joblib.dump(obj, filepath)
         logger.info(f"Object successfully saved to {filepath}")
     except Exception as e:
         logger.error(f"Failed to save object to {filepath}: {str(e)}")
         raise
 
 
-def load_pickle(filepath: Path) -> Any:
+def load_joblib(filepath: Path) -> Any:
     """
-    Load and deserialize a pickled object from disk.
+    Load and deserialize a joblib object from disk.
     
     Args:
-        filepath: Path to the pickle file
+        filepath: Path to the joblib file
     
     Returns:
         Deserialized Python object
@@ -53,8 +55,7 @@ def load_pickle(filepath: Path) -> Any:
         IOError: If file cannot be read
     """
     try:
-        with open(filepath, 'rb') as f:
-            obj = pickle.load(f)
+        obj = joblib.load(filepath)
         logger.info(f"Object successfully loaded from {filepath}")
         return obj
     except FileNotFoundError:
@@ -63,6 +64,11 @@ def load_pickle(filepath: Path) -> Any:
     except Exception as e:
         logger.error(f"Failed to load object from {filepath}: {str(e)}")
         raise
+
+
+# Backward-compatible aliases
+save_pickle = save_joblib
+load_pickle = load_joblib
 
 
 def save_json(data: Dict, filepath: Path, indent: int = 4) -> None:

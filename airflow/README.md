@@ -156,7 +156,7 @@ docker-compose logs airflow-server
 
 Backups are stored in: `models/backups/`
 
-Format: `model_backup_YYYYMMDD_HHMMSS.pkl`
+Format: `model_backup_YYYYMMDD_HHMMSS.joblib`
 
 The system automatically keeps the last 5 backups.
 
@@ -227,7 +227,7 @@ If you need to rollback to a previous model:
 
 ```bash
 # Copy backup to current
-cp models/backups/model_backup_20240210_020000.pkl models/best_model.pkl
+cp models/backups/model_backup_20240210_020000.joblib models/best_model.joblib
 
 # Restart Streamlit app
 docker-compose restart airflow-server

@@ -246,7 +246,7 @@ Modify these parameters to customize the pipeline behavior.
 After execution, the following outputs are generated:
 
 1. **Models** (`models/`):
-   - `best_model.pkl`: Serialized best performing model
+   - `best_model.joblib`: Serialized best performing model
    - `model_comparison.csv`: Comparison table of all models
    - `evaluation_results.json`: Detailed metrics
    - `evaluation_summary.json`: Summary report
